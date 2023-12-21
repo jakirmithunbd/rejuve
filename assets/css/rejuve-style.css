@@ -111,6 +111,13 @@ h3 {
   }
 }
 
+h6 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 p {
   margin-bottom: 25px;
 }
@@ -172,6 +179,27 @@ img, svg {
 .btn:hover, .btn:focus {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-12.76%, #476DF4), color-stop(38.44%, #6083FF), color-stop(139.29%, #89A3FF));
   background: linear-gradient(180deg, #476DF4 -12.76%, #6083FF 38.44%, #89A3FF 139.29%);
+}
+
+.bg-shadow {
+  position: relative;
+  overflow-x: clip;
+}
+.bg-shadow::after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(259deg, rgba(138, 226, 234, 0.2) 13.81%, rgba(138, 226, 234, 0.2) 35.03%, rgba(138, 226, 234, 0.22) 56.67%, rgba(138, 226, 234, 0.2) 87.34%);
+  width: 100%;
+  height: 80%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-filter: blur(70px);
+          filter: blur(70px);
 }
 
 .text-center {
@@ -498,4 +526,77 @@ img, svg {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
   }
+}
+
+/* #####################################
+*           About Us HERO STYLE
+* ##################################### 
+*/
+.about-us-hero {
+  padding: 80px 0 100px;
+}
+@media only screen and (max-width: 1024px) {
+  .about-us-hero {
+    padding: 60px 0 80px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .about-us-hero {
+    padding: 40px 0 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content-wraper {
+    row-gap: 15px;
+  }
+}
+.content-wraper .content-side {
+  width: 47%;
+}
+@media only screen and (max-width: 767px) {
+  .content-wraper .content-side {
+    width: 100%;
+  }
+}
+.content-wraper .image-side {
+  width: 47%;
+}
+@media only screen and (max-width: 767px) {
+  .content-wraper .image-side {
+    width: 100%;
+  }
+}
+.content-wraper .image-side img {
+  border-radius: 12px;
+}
+
+/* #####################################
+*     About Us, our-value-section STYLE
+* ##################################### 
+*/
+.our-value .heading-side {
+  width: 47%;
+}
+@media only screen and (max-width: 768px) {
+  .our-value .heading-side {
+    width: 100%;
+    padding-bottom: 5px;
+  }
+}
+.our-value .content-side {
+  width: 47%;
+}
+@media only screen and (max-width: 768px) {
+  .our-value .content-side {
+    width: 100%;
+  }
+}
+
+/* #####################################
+*     About Us, commit-section STYLE
+* ##################################### 
+*/
+.commit-section {
+  background: #F5F5F5;
 }
