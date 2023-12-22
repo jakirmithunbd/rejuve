@@ -12,10 +12,10 @@
 
 
 @mixin font($size, $line-height: null) {
-    font-size: $size;
+    font-size: #{$size + px};
   
     @if $line-height != null {
-        line-height: $line-height;
+        line-height: #{$line-height + px};
     }
 }
 

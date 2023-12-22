@@ -179,27 +179,23 @@ img, svg {
   padding: 0 25px;
 }
 
-.transition {
+.transition, .btn {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .btn {
   display: inline-block;
-  padding: 14px 24px;
-  border-radius: 4px;
-  font-size: 17px;
-  line-height: 28px;
-  position: relative;
-  z-index: 1;
-  font-weight: 400;
+  padding: 19px 40px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
   color: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-12.76%, #89A3FF), color-stop(38.44%, #6083FF), color-stop(139.29%, #476DF4));
-  background: linear-gradient(180deg, #89A3FF -12.76%, #6083FF 38.44%, #476DF4 139.29%);
+  background: #32C0CC;
 }
 .btn:hover, .btn:focus {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-12.76%, #476DF4), color-stop(38.44%, #6083FF), color-stop(139.29%, #89A3FF));
-  background: linear-gradient(180deg, #476DF4 -12.76%, #6083FF 38.44%, #89A3FF 139.29%);
+  background: #282D41;
 }
 
 .bg-shadow {
@@ -292,9 +288,17 @@ img, svg {
       flex-wrap: nowrap;
 }
 
+.d-block {
+  display: block;
+}
+
 .d-grid, .responsiveGrid {
   display: -ms-grid;
   display: grid;
+}
+
+ul {
+  margin-left: 25px;
 }
 
 .unstyle {
@@ -510,6 +514,27 @@ img, svg {
 }
 
 /* #####################################
+*           SPLIT LAYOUT
+* ##################################### 
+*/
+.split-layout .responsiveGrid {
+  margin-bottom: 40px;
+}
+.split-layout .left-content span {
+  margin-bottom: 15px;
+}
+
+/* #####################################
+*           CONTENT WITH MEDIA
+* ##################################### 
+*/
+@media only screen and (min-width: 1280px) {
+  .content-with-media .responsiveGrid {
+    grid-gap: 80px;
+  }
+}
+
+/* #####################################
 *           HEADER STYLE
 * ##################################### 
 */
@@ -644,6 +669,10 @@ img, svg {
   }
 }
 
+/* #####################################
+*          SlIDER
+* ##################################### 
+*/
 /* #####################################
 *           About Us HERO STYLE
 * ##################################### 
