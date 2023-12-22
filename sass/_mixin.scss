@@ -1,14 +1,15 @@
 @mixin breakpoint($max-width) {
-    @media only screen and (max-width: $max-width) {
+    @media only screen and (max-width: #{$max-width + px}) {
         @content;
     }
 }
 
 @mixin minbreakpoint($min-width) {
-    @media only screen and (min-width: $min-width) {
+    @media only screen and (min-width: #{$min-width + px}) {
         @content;
     }
 }
+
 
 @mixin font($size, $line-height: null) {
     font-size: $size;

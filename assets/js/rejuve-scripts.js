@@ -30,3 +30,62 @@ function rejuveOnLoad(){
 }
 
 window.addEventListener('load', rejuveOnLoad);
+
+function gridAutoFit(element) {
+    const elementWidthPercentage = element.getAttribute('grid-width') || 100;
+  
+    element.style.gridTemplateColumns = `repeat(auto-fill, minmax(${elementWidthPercentage}px, 1fr))`;
+}
+  
+function gridCol(element) {
+    const dataColValue = element.getAttribute('grid-col');
+  
+    element.style.gridTemplateColumns = `repeat(${dataColValue}, 1fr)`;
+}
+
+function updateGrid() {
+    const gridContainers = document.querySelectorAll('.responsiveGrid');
+  
+    gridContainers.forEach(function(gridContainer) {
+        const screenWidth = window.innerWidth;
+        const gridColValues = gridContainer.getAttribute('grid-col').split(',').map(value => value.trim());
+      let gridColumn;
+  
+      if (screenWidth >= 1356) {
+        gridColumn = gridColValues[0] || 'auto';
+      } else if (screenWidth >= 1280) {
+        gridColumn = gridColValues[1] || 'auto';
+      } else if (screenWidth >= 992) {
+        gridColumn = gridColValues[2] || 'auto';
+      } else if (screenWidth >= 575) {
+        gridColumn = gridColValues[3] || 'auto';
+      } else {
+        gridColumn = gridColValues[4] || 'auto';
+      }
+  
+      gridContainer.style.gridTemplateColumns = `repeat(${gridColumn}, 1fr)`;
+    });
+}
+
+updateGrid();
+
+// Update the grid whenever the window is resized
+window.addEventListener('resize', updateGrid);
+  
+document.addEventListener('DOMContentLoaded', function () {
+    const elementsWithDataCol = document.querySelectorAll('[grid-col]');
+    const elementsWithDataWidth = document.querySelectorAll('[grid-width]');
+  
+    elementsWithDataCol.forEach(function (element) {
+      gridCol(element);
+    });
+  
+    elementsWithDataWidth.forEach(function (element) {
+      gridAutoFit(element);
+    });
+});
+  
+  
+  
+  
+  
