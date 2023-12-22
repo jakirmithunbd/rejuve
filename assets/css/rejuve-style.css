@@ -420,7 +420,7 @@ ul {
 .rejuve-image-box-wrapper .image-box .image-box-content {
   padding: 40px;
 }
-@media only screen and (max-width: 102xpx) {
+@media only screen and (max-width: 1024px) {
   .rejuve-image-box-wrapper .image-box .image-box-content {
     padding: 25px;
   }
@@ -680,7 +680,7 @@ ul {
 .about-us-hero {
   padding: 80px 0 100px;
 }
-@media only screen and (max-width: 102xpx) {
+@media only screen and (max-width: 1024px) {
   .about-us-hero {
     padding: 60px 0 80px;
   }
@@ -689,59 +689,4 @@ ul {
   .about-us-hero {
     padding: 40px 0 50px;
   }
-}
-
-@media only screen and (max-width: 768px) {
-  .content-wraper {
-    row-gap: 15px;
-  }
-}
-.content-wraper .content-side {
-  width: 47%;
-}
-@media only screen and (max-width: 767px) {
-  .content-wraper .content-side {
-    width: 100%;
-  }
-}
-.content-wraper .image-side {
-  width: 47%;
-}
-@media only screen and (max-width: 767px) {
-  .content-wraper .image-side {
-    width: 100%;
-  }
-}
-.content-wraper .image-side img {
-  border-radius: 12px;
-}
-
-/* #####################################
-*     About Us, our-value-section STYLE
-* ##################################### 
-*/
-.our-value .heading-side {
-  width: 47%;
-}
-@media only screen and (max-width: 768px) {
-  .our-value .heading-side {
-    width: 100%;
-    padding-bottom: 5px;
-  }
-}
-.our-value .content-side {
-  width: 47%;
-}
-@media only screen and (max-width: 768px) {
-  .our-value .content-side {
-    width: 100%;
-  }
-}
-
-/* #####################################
-*     About Us, commit-section STYLE
-* ##################################### 
-*/
-.commit-section {
-  background: #F5F5F5;
 }

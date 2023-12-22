@@ -371,7 +371,7 @@ ul {
         .image-box-content {
             padding: 40px;
 
-            @include breakpoint(102x){
+            @include breakpoint(1024){
                 padding: 25px;
             }
 
@@ -746,74 +746,12 @@ ul {
 .about-us-hero {
     padding: 80px 0 100px;
 
-    @include breakpoint(102x){
+    @include breakpoint(1024){
         padding: 60px 0 80px;
     }
 
     @include breakpoint(575){
         padding: 40px 0 50px;
     }
-
-}
-.content-wraper {
-
-    @include breakpoint(768){
-        row-gap: 15px;
-    }
-
-    .content-side {
-        width: 47%;
-        
-        @include breakpoint(767){
-            width: 100%;
-        }
-    }
-
-    .image-side {
-        width: 47%;
-        
-        @include breakpoint(767){
-            width: 100%;
-        }
-
-        img {
-            border-radius: 12px;
-        }
-    }
-}
-
-/* #####################################
-*     About Us, our-value-section STYLE
-* ##################################### 
-*/
-
-.our-value {
-
-    .heading-side {
-        width: 47%;
-
-        @include breakpoint(768){
-            width: 100%;
-            padding-bottom: 5px;
-        }
-    }
-    .content-side {
-        width: 47%;
-
-        @include breakpoint(768){
-            width: 100%;
-        }
-    }
-
-}
-
-
-/* #####################################
-*     About Us, commit-section STYLE
-* ##################################### 
-*/
-
-.commit-section {
-    background: #F5F5F5;
 
 }
