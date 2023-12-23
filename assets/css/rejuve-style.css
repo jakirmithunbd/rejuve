@@ -179,7 +179,7 @@ img, svg {
   padding: 0 25px;
 }
 
-.transition, .btn {
+.transition, .slick-slider-wrapper .next-previous img, .btn {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -217,6 +217,10 @@ img, svg {
           transform-origin: left;
   -webkit-filter: blur(70px);
           filter: blur(70px);
+}
+
+.bg-light-gradient {
+  background: linear-gradient(346deg, rgba(236, 254, 255, 0) 11.76%, #ECFEFF 51.87%, rgba(236, 254, 255, 0) 92%);
 }
 
 .text-center {
@@ -378,7 +382,7 @@ ul {
 }
 
 .section-title {
-  max-width: 768px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .section-title.section-title-left {
@@ -673,6 +677,54 @@ ul {
 *          SlIDER
 * ##################################### 
 */
+.slick-slider-wrapper .slick-slider-init .slick-slider .slider-content {
+  padding: 16px;
+}
+.slick-slider-wrapper .slick-slider-init .slick-slider .slider-content * {
+  color: #282D41;
+}
+.slick-slider-wrapper .slick-slider-init .slick-slider .slider-content p {
+  font-size: 20px;
+  line-height: 28px;
+}
+.slick-slider-wrapper .slick-slider-init .slick-slider .client-info img {
+  height: 56px;
+  width: 56px;
+  border-radius: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 16px;
+}
+.slick-slider-wrapper .slick-slider-init .slick-slider .client-info span {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.slick-slider-wrapper .next-previous img {
+  height: 48px;
+  width: 48px;
+  width: auto;
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid #C0C4CC;
+  cursor: pointer;
+}
+.slick-slider-wrapper .next-previous img:hover, .slick-slider-wrapper .next-previous img:focus {
+  border-color: #32C0CC;
+  background-color: #32C0CC;
+}
+.slick-slider-wrapper .slick-dots {
+  bottom: -70px;
+}
+.slick-slider-wrapper .slick-dots li button {
+  padding: 0;
+  width: 8px;
+  height: 8px;
+}
+.slick-slider-wrapper .slick-dots li button::before {
+  content: none;
+}
+
 /* #####################################
 *           About Us HERO STYLE
 * ##################################### 
