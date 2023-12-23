@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Rejuve</title>
+    <link rel="stylesheet" href="./assets/css/slick.min.css">
     <link rel="stylesheet" href="./assets/css/rejuve-style.css">
 </head>
 <body>
     <header class="rejuve-header">
-        <div class="container">
+        <div class="container-fluid">
             <div class="header-menu-wrap d-flex space-between align-center">
                 
                 <div class="logo-wrapper">
@@ -50,13 +51,17 @@
     </header>
     <div class="header_gutter"></div>
 
-    <section class="rejuve-hero p-relative flex-center" style="background-image: url(./assets/images/Hero.png);">
+    <section class="rejuve-hero p-relative" style="background-image: url(./assets/images/Hero.png);">
         <div class="container">
             <div class="hero-content">
-                <h1>Your Health and Wellness Journey Starts Here</h1>
-                <p>Offering Mobile IV Therapy & Advanced Technology Beauty Treatments In Sherman Oaks</p>
-                <a href="#" class="rejuve-btn">Book an Appointment</a>
+                <h1>Offering Mobile IV Therapy</h1>
+                <div class="spacer" data-space="42"></div>
+                <p>& Advanced Technology Beauty Treatments.</p>
+                <a href="#" class="rejuve-btn btn-large">Book IV Therapy</a>
             </div>
+        </div>
+        <div class="mobile-image d-none p-relative">
+            <img src="./assets/images/Hero-mobile.jpg" alt="">
         </div>
     </section>
 
@@ -64,7 +69,7 @@
     <section class="services section-spacing">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Rejuvenate, Revive & Relax. Feel good. Feel Rejuve.</h2>
+                <h2>Rejuvenate, Revive & Relax. <br /> Feel good. Feel Rejuve.</h2>
                 <p>Looking for a medical spa that offers rejuvenating and relaxing therapies? Look no further than Rejuve! Our team is dedicated to providing top-notch procedures using the latest technology to ensure that you receive the quality care you deserve. Whether you're looking to revive your skin, revitalize your body, or simply relax, we're here to help you achieve your goals.</p>
             </div>
 
@@ -74,10 +79,23 @@
                         <img src="./assets/images/IV-Therapy.jpg" alt="">
                     </div>
 
-                    <div class="image-box-content">
-                        <span class="service-category">IV Therapy</span>
+                    <div class="image-box-content" style="background-color: #E3FAFF;">
+                        <h6>IV Therapy</h6>
                         <h3>Get The Best of You Get IV Therapy</h3>
                         <p>Our safe and effective medical procedure delivers essential vitamins, minerals, and amino acids directly into your bloodstream. Administered by trained professionals, this method ensures that your body can use these nutrients quickly and effectively to help you feel your best.</p>
+                        <a href="#" class="read-more">View Therapies <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="image-box small-image-box image-left">
+                    <div class="image">
+                        <img src="./assets/images/Beauty-Treatments.jpg" alt="">
+                    </div>
+
+                    <div class="image-box-content">
+                        <h6>Beauty Treatments</h6>
+                        <h3>Get The Best of You Get IV Therapy</h3>
+                        <p>Our selection of treatments is carefully chosen to help enhance your natural features and accentuate your individual beauty.</p>
                         <a href="#" class="read-more">View Therapies <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
                     </div>
                 </div>
@@ -88,24 +106,146 @@
                     </div>
 
                     <div class="image-box-content">
-                        <span class="service-category">IV Therapy</span>
+                        <h6>Membership & Packages</h6>
                         <h3>Get The Best of You Get IV Therapy</h3>
                         <p>Our selection of treatments is carefully chosen to help enhance your natural features and accentuate your individual beauty.</p>
                         <a href="#" class="read-more">View Therapies <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="image-box small-image-box image-left">
-                    <div class="image">
-                        <img src="./assets/images/Beauty Treatments.jpg" alt="">
+    <section class="products-in-home section-spacing">
+        <div class="container">
+
+            <div class="section-title text-center">
+                <h2>Chose From Our <br >Wide Selection of <strong>IV Drips</strong></h2>
+                <p>Experience all the benefits of IV therapy in the comfort of your own home.</p>
+            </div>
+
+            <div class="products-wrapper">
+                <div class="responsiveGrid align-center products" grid-col="4, 4, 3, 2, 2">
+
+                    <div class="product text-center">
+                        <a href="single-product.html" class="product-image">
+                            <img src="./assets/images/Hangover Fix.png" alt="">
+                        </a>
+
+                        <div class="product-content">
+                            <div class="product-top flex-center">
+                                <a href="single-product.html" class="product-title">Hangover Fix</a>
+                                <div class="price">$185</div>
+                            </div>
+
+                            <p>Ascorbic Acid, Methylcobalamin (B12), Calcium, Vitamin B complex and more.</p>
+
+                            <a class="rejuve-btn small-btn" href="single.product.html">Book Now</a>
+                        </div>
                     </div>
 
-                    <div class="image-box-content">
-                        <span class="service-category">IV Therapy</span>
-                        <h3>Get The Best of You Get IV Therapy</h3>
-                        <p>Our selection of treatments is carefully chosen to help enhance your natural features and accentuate your individual beauty.</p>
-                        <a href="#" class="read-more">View Therapies <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
+                    <div class="product text-center">
+                        <a href="single-product.html" class="product-image">
+                            <img src="./assets/images/Hangover Fix.png" alt="">
+                        </a>
+
+                        <div class="product-content">
+                            <div class="product-top flex-center">
+                                <a href="single-product.html" class="product-title">Hangover Fix</a>
+                                <div class="price">$185</div>
+                            </div>
+
+                            <p>Ascorbic Acid, Methylcobalamin (B12), Calcium, Vitamin B complex and more.</p>
+
+                            <a class="rejuve-btn small-btn" href="single.product.html">Book Now</a>
+                        </div>
                     </div>
+
+                    <div class="product text-center">
+                        <a href="single-product.html" class="product-image">
+                            <img src="./assets/images/Hangover Fix.png" alt="">
+                        </a>
+
+                        <div class="product-content">
+                            <div class="product-top flex-center">
+                                <a href="single-product.html" class="product-title">Hangover Fix</a>
+                                <div class="price">$185</div>
+                            </div>
+
+                            <p>Ascorbic Acid, Methylcobalamin (B12), Calcium, Vitamin B complex and more.</p>
+
+                            <a class="rejuve-btn small-btn" href="single.product.html">Book Now</a>
+                        </div>
+                    </div>
+
+                    <div class="product text-center">
+                        <a href="single-product.html" class="product-image">
+                            <img src="./assets/images/Hangover Fix.png" alt="">
+                        </a>
+
+                        <div class="product-content">
+                            <div class="product-top flex-center">
+                                <a href="single-product.html" class="product-title">Hangover Fix</a>
+                                <div class="price">$185</div>
+                            </div>
+
+                            <p>Ascorbic Acid, Methylcobalamin (B12), Calcium, Vitamin B complex and more.</p>
+
+                            <a class="rejuve-btn small-btn" href="single.product.html">Book Now</a>
+                        </div>
+                    </div>
+
+                    <div class="product text-center">
+                        <a href="single-product.html" class="product-image">
+                            <img src="./assets/images/Hangover Fix.png" alt="">
+                        </a>
+
+                        <div class="product-content">
+                            <div class="product-top flex-center">
+                                <a href="single-product.html" class="product-title">Hangover Fix</a>
+                                <div class="price">$185</div>
+                            </div>
+
+                            <p>Ascorbic Acid, Methylcobalamin (B12), Calcium, Vitamin B complex and more.</p>
+
+                            <a class="rejuve-btn small-btn" href="single.product.html">Book Now</a>
+                        </div>
+                    </div>
+
+                    <div class="product text-center">
+                        <a href="single-product.html" class="product-image">
+                            <img src="./assets/images/Hangover Fix.png" alt="">
+                        </a>
+
+                        <div class="product-content">
+                            <div class="product-top flex-center">
+                                <a href="single-product.html" class="product-title">Hangover Fix</a>
+                                <div class="price">$185</div>
+                            </div>
+
+                            <p>Ascorbic Acid, Methylcobalamin (B12), Calcium, Vitamin B complex and more.</p>
+
+                            <a class="rejuve-btn small-btn" href="single.product.html">Book Now</a>
+                        </div>
+                    </div>
+
+                    <div class="product text-center">
+                        <a href="single-product.html" class="product-image">
+                            <img src="./assets/images/Hangover Fix.png" alt="">
+                        </a>
+
+                        <div class="product-content">
+                            <div class="product-top flex-center">
+                                <a href="single-product.html" class="product-title">Hangover Fix</a>
+                                <div class="price">$185</div>
+                            </div>
+
+                            <p>Ascorbic Acid, Methylcobalamin (B12), Calcium, Vitamin B complex and more.</p>
+
+                            <a class="rejuve-btn small-btn" href="single.product.html">Book Now</a>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -171,6 +311,12 @@
 
     <section class="booking-area">
         <div class="container">
+            <div class="section-title text-center">
+                <h2>Offering World-Class Med Spa Treatments In Sherman Oaks & Beyond</h2>
+                <p>Choose from a variety of IV drips and advanced beauty treatments available in Los Angeles, including injectables, dermal fillers, NAD+, ozone therapy, and much more. We also offer customized medical procedures tailored to your specific needs.  Our house call services can be booked five days a week and are only available for IV therapy, vitamin injections, NAD+, and anti-wrinkle services.</p>
+                <a class="read-more" href="#">Contact our doctor online <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
+            </div>
+
             <div class="rejuve-image-box-wrapper responsiveGrid" grid-col="2, 2, 2, 1, 1">
 
                 <div class="image-box image-bottoom">
@@ -207,13 +353,13 @@
             <div class="split-layout">
                 <div class="responsiveGrid" grid-col="2, 2, 2, 1, 1">
                     <div class="left-content">
-                        <span class="d-block">About Us</span>
-                        <h2>Rejuve's Mission: Empowering Your Health with Biohacking</h2>
+                        <h6>About Us</h6>
+                        <h2>Rejuve's Mission: Empowering Your <strong>Health</strong> with <strong>Biohacking</strong></h2>
                     </div>
     
                     <div class="right-content">
                         <div class="classic-editor">
-                            <p>Rejuve is committed to empowering your health with the latest biohacking techniques. Biohacking involves leveraging advanced science, medicine, and technology to optimize your biology and enhance your overall health. Our cutting-edge therapies are designed to induce significant changes in how you feel, look, and function, so you can take control of your health and live your best life. With biohacking, prevention is taken to the next level. Discover the many benefits of biohacking and experience optimal health and vitality with Rejuve.</p>
+                            <p>Rejuve is committed to <strong>empowering</strong> your health with the latest biohacking techniques. Biohacking involves leveraging advanced science, medicine, and technology to optimize your biology and enhance your overall health. Our cutting-edge therapies are designed to induce significant changes in how you feel, look, and function, so you can take control of your health and live your best life. With biohacking, prevention is taken to the next level. Discover the many benefits of biohacking and experience optimal health and vitality with Rejuve.</p>
     
                             <ul>
                                 <li>Premier biohacking treatment provider.</li>
@@ -251,28 +397,84 @@
         </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials section-spacing">
         <div class="container">
 
-            <div class="slick-slider-init">
-                <div class="slick-slider">
+            <div class="section-title text-center">
+                <h2>Most recent customer <strong>reviews</strong></h2>
+                <p>Check out what our clients have to say about us and see why we are the most trusted Med Spa in all of Los Angeles.</p>
+            </div>
+
+            <div class="slick-slider-wrapper">
+                <div class="slick-slider-init">
+
+                    <div class="slick-slider">
+                        <div class="slider-content">
+                            <p>"Hands down the best IV experience I have had to date. The most professional, sanitary and customer service oriented organization in the marketplace. Look forward to using you both personally and professionally consistently. The B12 treatment is absolutely incredible!" </p>
+    
+                            <div class="client-info">
+                                <img src="./assets/images/Avatar.jpg" alt="">
+                                <span>Gracie Jones</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="slick-slider">
+                        <div class="slider-content">
+                            <p>"Hands down the best IV experience I have had to date. The most professional, sanitary and customer service oriented organization in the marketplace. Look forward to using you both personally and professionally consistently. The B12 treatment is absolutely incredible!" </p>
+    
+                            <div class="client-info">
+                                <img src="./assets/images/Avatar.jpg" alt="">
+                                <span>Gracie Jones</span>
+                            </div>
+                        </div>
+                    </div>
                     
+                    <div class="slick-slider">
+                        <div class="slider-content">
+                            <p>"Hands down the best IV experience I have had to date. The most professional, sanitary and customer service oriented organization in the marketplace. Look forward to using you both personally and professionally consistently. The B12 treatment is absolutely incredible!" </p>
+    
+                            <div class="client-info">
+                                <img src="./assets/images/Avatar.jpg" alt="">
+                                <span>Gracie Jones</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="slick-slider">
+                        <div class="slider-content">
+                            <p>"Hands down the best IV experience I have had to date. The most professional, sanitary and customer service oriented organization in the marketplace. Look forward to using you both personally and professionally consistently. The B12 treatment is absolutely incredible!" </p>
+    
+                            <div class="client-info">
+                                <img src="./assets/images/Avatar.jpg" alt="">
+                                <span>Gracie Jones</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="next-previous d-flex space-between">
+                    <img class="prev" src="./assets/images/icons/slider-arrow-left.svg" alt="">
+                    <img class="next" src="./assets/images/icons/slider-arrow-right.svg" alt="">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta" style="background-color: #F5F5F5;">
-        <div class="container">
-            <div class="responsiveGrid align-center" grid-col="2, 2, 2, 1, 1">
+    <section class="cta">
+        <div class="responsiveGrid align-center" grid-col="2, 2, 2, 1, 1">
+            <div class="container">
                 <div class="classic-editor">
-                    <h2>Look better, feel better, and unlock the full potential of your body and mind at Rejuve</h2>
+                    <h2>Look better, feel better, and unlock the full potential of your body and mind at <strong>Rejuve</strong></h2>
 
                     <p>At Rejuve, you are part of an elite group of people who take their health and happiness seriously, and we make sure to treat you that way.</p>
 
-                    <a href="#" class="btn">Request a Free Consultation</a>
+                    <a href="#" class="rejuve-btn">Book an Appointment</a>
                 </div>
-
+            </div>
+            
+            <div class="container-fluid">
                 <div class="media">
                     <img src="./assets/images/cta.png" class="radius" alt="">
                 </div>
@@ -280,7 +482,90 @@
         </div>
     </section>
 
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer-top">
+                <div class="footer-intro">
+                    <a href="#" class="d-block">
+                        <img src="./assets/images/rejuve-logo.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="responsiveGrid footer-menus" grid-col="3, 3, 2, 1, 1">
+
+                    <div class="footer-menu">
+                        <h6>Treatments</h6>
+                        <ul>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu">
+                        <h6>Treatments</h6>
+                        <ul>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu">
+                        <h6>Social</h6>
+                        <div class="social-media">
+                            <a href="#"><img src="" alt=""></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="responsiveGrid d-flex space-between" grid-col="2, 2, 2, 1, 1">
+                    <span>© 2023 Rejuve. All rights reserved.</span>
+
+                    <div class="footer-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="./assets/js/jQuery.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
     <script src="./assets/js/rejuve-scripts.js"></script>
 </body>
 </html>

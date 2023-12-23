@@ -86,6 +86,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
   
   
-  
-  
-  
+
+(function($){
+
+    // Testimonial  Silder
+    $(".slick-slider-init").slick({
+        infinite: true,
+        draggable: true,
+        slidesToShow: 3,
+        // autoplay: true,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        prevArrow: '.next-previous .prev',
+        nextArrow: '.next-previous .next',
+        responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+            }
+        }
+      ]
+    });
+    
+})(jQuery);
+
+
