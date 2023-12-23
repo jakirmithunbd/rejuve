@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | Rejuve</title>
+    <link rel="stylesheet" href="./assets/css/rejuve-style.css">
+</head>
+<body>
+    <header class="rejuve-header">
+        <div class="container">
+            <div class="header-menu-wrap d-flex space-between align-center">
+                
+                <div class="logo-wrapper">
+                    <a href="/index.html" class="logo d-flex align-center"><img class="transition" src="/assets/images/rejuve-logo.svg" alt=""></a>
+                    <div class="bars d-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <ul class="main-header-menu d-flex">
+                    <li>
+                        <a href="./index.html" class="menu-link">Home</a>
+                    </li>
+                    
+                    <li class="current-menu-item">
+                        <a href="./About_Us.html" class="menu-link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="./Blog.html" class="menu-link">Blog</a>
+                    </li>
+                    <li class="contact-btn">
+                        <a href="#" class="menu-link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <ul class="main-header-menu header-right-menu d-flex align-center">
+                    <li>
+                        <a href="./sign-in.html" class="menu-link">Sign In</a>
+                    </li>
+                    
+                    <li class="current-menu-item book-now">
+                        <a href="./book-now.html" class="menu-link">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header_gutter"></div>
+
+    <section class="book-appointment-hero text-center">
+        <div class="container">
+            <div class="classic-editor">
+                <h1>Rejuve Medical Service Menu</h1>
+                <p>Returning costumer? <a href="#">Click here</a> to log in. This will auto-fill most of your information for a faster booking.</p>
+            </div>
+        </div>
+    </section><!-- Hero Section  -->
+
+    <section class="appontment-sectoin section-spacing">
+        <div class="container">
+            <div class="data-box">
+                <h4>Fill out your details</h4>
+                <div class="data-input-wrapper responsiveGrid radius" grid-col="2, 2, 2, 1">
+
+                    <div class="first-name">
+                        <label for="first-name">First name<span>*</span></label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Johnathan" required>
+                    </div>
+                    <div class="last-name">
+                        <label for="last-name">Last name<span>*</span></label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Smith" required>
+                    </div>
+                    <div class="email-address">
+                        <label for="email-address">Email address<span>*</span></label>
+                        <input type="email" id="email-address" name="email-address" placeholder="jonathan.s@gmail.com" required>
+                    </div>
+                    <div class="phone-number">
+                        <label for="phone-number">Phone number<span>*</span></label>
+                        <input type="number" id="phone-number" name="phone-number" placeholder="(123) 456-7890" required>
+                    </div>
+                    <div class="birth-date">
+                        <label for="birth-date">Date of Birth<span>*</span></label>
+                        <input type="date" id="birth-date" name="birth-date" placeholder="" required>
+                    </div>
+
+                </div><!-- Data Input Wrapper  -->
+            </div><!-- Data Box  -->
+
+            <div class="data-box">
+                <h4>Choose Location</h4>
+                <div class="data-input-wrapper responsiveGrid radius" grid-col="2, 2, 2, 1">
+
+                    <div class="rejuve-clinic">
+                        <div class="redio-button">
+                            <span class="check-mark checked"></span>Rejuve Clinics <span class="redio-after">At our locations</span>
+                        </div>
+                    </div>
+                    <div class="house-call">
+                        <div class="redio-button">
+                            <span class="check-mark"></span>House call <span class="redio-after">We come to you</span>
+                        </div>
+                    </div>
+                    <div class="clinic-address">
+                        <label for="clinic-address">Clinic's Address<span>*</span></label>
+                        <input type="email" id="clinic-address" name="clinic-address" placeholder="Rejuve Clinics Sherman Oaks, Address Lorem Ipsum jfvd ihb " required>
+                    </div>
+                </div><!-- Data Input Wrapper  -->
+            </div><!-- Data Box  -->
+
+        </div>
+    </section> <!-- Appointment Section  -->
+
+    <script src="./assets/js/jQuery.min.js"></script>
+    <script src="./assets/js/rejuve-scripts.js"></script>
+</body>
+</html>

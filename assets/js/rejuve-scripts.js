@@ -101,12 +101,18 @@ document.addEventListener('DOMContentLoaded', function () {
         prevArrow: '.next-previous .prev',
         nextArrow: '.next-previous .next',
         responsive: [
-          {
+        {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+            }
+        },
+        {
             breakpoint: 600,
             settings: {
               slidesToShow: 1,
             }
-          }
+        }
       ]
     });
     
