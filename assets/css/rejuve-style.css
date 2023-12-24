@@ -1184,17 +1184,17 @@ ul {
   line-height: 22px;
   padding-top: 5px;
 }
-.appontment-sectoin .data-box .data-input-wrapper .clinic-address {
+.appontment-sectoin .data-box .data-input-wrapper .clinic-address, .appontment-sectoin .data-box .data-input-wrapper .your-address {
   position: relative;
 }
 @media only screen and (min-width: 992px) {
-  .appontment-sectoin .data-box .data-input-wrapper .clinic-address {
+  .appontment-sectoin .data-box .data-input-wrapper .clinic-address, .appontment-sectoin .data-box .data-input-wrapper .your-address {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper .clinic-address::before {
+.appontment-sectoin .data-box .data-input-wrapper .clinic-address::before, .appontment-sectoin .data-box .data-input-wrapper .your-address::before {
   position: absolute;
   content: "";
   width: 11px;
@@ -1207,8 +1207,94 @@ ul {
   left: 25px;
   z-index: 1;
 }
-.appontment-sectoin .data-box .data-input-wrapper .clinic-address input {
+.appontment-sectoin .data-box .data-input-wrapper .clinic-address input, .appontment-sectoin .data-box .data-input-wrapper .your-address input {
   padding-left: 50px;
+  padding-right: 150px;
+}
+.appontment-sectoin .data-box .data-input-wrapper .clinic-address .save-button, .appontment-sectoin .data-box .data-input-wrapper .your-address .save-button {
+  position: absolute;
+  padding: 5px 10px;
+  background: transparent;
+  bottom: 8px;
+  right: 12px;
+  cursor: pointer;
+  color: #32C0CC;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+.appontment-sectoin .data-box .data-input-wrapper .saved-items {
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+  row-gap: 20px;
+}
+@media only screen and (min-width: 992px) {
+  .appontment-sectoin .data-box .data-input-wrapper .saved-items {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .appontment-sectoin .data-box .data-input-wrapper .saved-items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item {
+  width: 100%;
+  max-width: 200px;
+  background: #fff;
+  padding: 10px 10px 35px;
+  border: 1px solid rgba(192, 196, 204, 0.47);
+  border-radius: 4px;
+  position: relative;
+}
+.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .saved-address-type {
+  color: #5A5F73;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 25px 0 20px;
+  position: relative;
+}
+.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .saved-address-type::before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-image: url("/assets/images/icons/home-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 5px;
+  left: 0;
+  z-index: 1;
+}
+.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .edit-btn {
+  color: #C0C4CC;
+  font-size: 12px;
+  line-height: 22px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .delete-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .delete-btn img {
+  max-width: 27px;
 }
 @media only screen and (min-width: 992px) {
   .appontment-sectoin .data-box .data-input-wrapper .any-nurse {
