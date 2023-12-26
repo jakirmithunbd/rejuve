@@ -77,7 +77,7 @@ h2 {
   font-size: 48px;
   line-height: 57px;
 }
-@media only screen and (max-width: 102xpx) {
+@media only screen and (max-width: 1200xpx) {
   h2 {
     font-size: 42px;
     line-height: 50px;
@@ -89,7 +89,7 @@ h2 {
     line-height: 41px;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 575px) {
   h2 {
     font-size: 28px;
     line-height: 38px;
@@ -176,16 +176,20 @@ img, svg {
   }
 }
 
-.container {
+.container, .large-container {
   width: 100%;
   margin: 0 auto;
   max-width: 1360px;
   padding: 0 32px;
 }
 @media only screen and (max-width: 768px) {
-  .container {
+  .container, .large-container {
     padding: 0 16px;
   }
+}
+
+.large-container {
+  max-width: 1814px;
 }
 
 .container-fluid {
@@ -1816,3 +1820,157 @@ ul {
 *     Single Page STYLE
 * ##################################### 
 */
+.single-classic-editor {
+  padding-bottom: 35px;
+}
+@media only screen and (max-width: 768px) {
+  .single-classic-editor {
+    padding-bottom: 15px;
+  }
+}
+.single-classic-editor h2 {
+  color: #282D41;
+  font-size: 64px;
+  line-height: 76px;
+}
+@media only screen and (max-width: 768px) {
+  .single-classic-editor h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .single-classic-editor h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.single-classic-editor h6 {
+  color: #282D41;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+.single-classic-editor h5 {
+  color: #5A5F73;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+}
+.single-classic-editor h5 span {
+  font-weight: 600;
+  color: #32C0CC;
+}
+
+.single-split .left-content h6 {
+  color: #282D41;
+}
+.single-split .left-content h2 span {
+  color: #F6D66F;
+}
+.single-split .split-image {
+  padding-top: 100px;
+}
+@media only screen and (max-width: 768px) {
+  .single-split .split-image {
+    padding-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .product-description .left-content {
+    padding-bottom: 20px;
+  }
+}
+.product-description .left-content h2 span {
+  color: #EA78A1;
+}
+.product-description .right-content .description-item {
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.product-description .right-content .description-item h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 15px;
+}
+.product-description .right-content .description-item h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+.product-description .right-content .description-item h6 {
+  color: #5A5F73;
+  margin-bottom: 15px;
+}
+.product-description .right-content .description-item p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+.product-description .right-content .description-item:nth-child(1) {
+  background: #F1FFF9;
+}
+.product-description .right-content .description-item:nth-child(1) h2, .product-description .right-content .description-item:nth-child(1) h3 {
+  color: #70DCAE;
+}
+.product-description .right-content .description-item:nth-child(2) {
+  background: #E3FAFF;
+}
+.product-description .right-content .description-item:nth-child(2) h2, .product-description .right-content .description-item:nth-child(2) h3 {
+  color: #50BCEB;
+}
+.product-description .right-content .description-item:nth-child(3) {
+  background: #FFF4FA;
+}
+.product-description .right-content .description-item:nth-child(3) h2, .product-description .right-content .description-item:nth-child(3) h3 {
+  color: #EA78A1;
+}
+.product-description .right-content .description-item:last-child {
+  margin-bottom: 0;
+}
+
+.rejuve-faq .container {
+  max-width: 1670px;
+}
+.rejuve-faq .container .section-title {
+  max-width: 670px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 45px;
+}
+@media only screen and (max-width: 1200px) {
+  .rejuve-faq .container .section-title {
+    padding-bottom: 5px;
+    text-align: left;
+    max-width: 100%;
+  }
+}
+.rejuve-faq .container .faq .faq-item {
+  padding-bottom: 30px;
+}
+.rejuve-faq .container .faq .faq-item h6 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+@media only screen and (min-width: 1201px) {
+  .rejuve-faq .container .faq .faq-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .rejuve-faq .container .faq .faq-item h6 {
+    width: 26%;
+  }
+  .rejuve-faq .container .faq .faq-item p {
+    width: 72%;
+  }
+}
