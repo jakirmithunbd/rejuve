@@ -66,7 +66,7 @@ h1 {
     line-height: 38px;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 575px) {
   h1 {
     font-size: 28px;
     line-height: 36px;
@@ -112,7 +112,7 @@ h3 {
     line-height: 38px;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 575px) {
   h3 {
     font-size: 22px;
     line-height: 26px;
@@ -836,6 +836,8 @@ ul {
     position: absolute;
     top: -125px;
     left: 0;
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
     background: linear-gradient(346deg, rgba(236, 254, 255, 0) 11.76%, #ECFEFF 51.87%, rgba(236, 254, 255, 0) 92%);
   }
 }
@@ -1973,4 +1975,103 @@ ul {
   .rejuve-faq .container .faq .faq-item p {
     width: 72%;
   }
+}
+
+/* #####################################
+*     Single Page STYLE
+* ##################################### 
+*/
+.product-hero {
+  padding: 190px 0;
+}
+@media only screen and (max-width: 1220px) {
+  .product-hero {
+    padding: 240px 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .product-hero {
+    background-position-x: -480px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .product-hero {
+    padding: 50px 0 30px;
+  }
+}
+.product-hero .hero-content {
+  width: 100%;
+  max-width: 64%;
+  margin-left: auto;
+}
+@media only screen and (max-width: 768px) {
+  .product-hero .hero-content {
+    max-width: 100%;
+  }
+}
+.product-hero .hero-content h1 {
+  font-size: 48px;
+  line-height: 62px;
+}
+@media only screen and (max-width: 768px) {
+  .product-hero .hero-content h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.product-hero .hero-content p {
+  margin: 0 0 80px;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media only screen and (max-width: 1200px) {
+  .product-hero .hero-content p {
+    margin: 35px 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .product-hero .hero-content p {
+    margin: 42px 0;
+  }
+}
+.product-hero .mobile-image {
+  padding-top: 0;
+  margin-top: -25px;
+}
+.product-hero .mobile-image::before {
+  top: -200px;
+}
+@media only screen and (max-width: 560px) {
+  .product-hero .mobile-image::before {
+    top: -110px;
+  }
+}
+
+.product-section .container {
+  max-width: 1714px;
+}
+.product-section .container .products-wrapper {
+  grid-gap: 54px 24px;
+}
+@media only screen and (max-width: 1220px) {
+  .product-section .container .products-wrapper {
+    grid-gap: 32px 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .product-section .container .products-wrapper {
+    grid-gap: 24px;
+  }
+}
+.product-section .container .products-wrapper .product-item .product-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.product-section .container .products-wrapper .product-item .product-title .price {
+  color: currentColor;
+  padding-left: 10px;
+}
+.product-section .container .products-wrapper .product-item p {
+  font-size: 16px;
+  line-height: 22px;
 }
