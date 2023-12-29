@@ -945,6 +945,34 @@ ul {
     line-height: 28px;
   }
 }
+.page-banner .container .page-banner-content .product-type {
+  padding: 10px 0 30px;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+  row-gap: 12px;
+}
+@media only screen and (max-width: 768px) {
+  .page-banner .container .page-banner-content .product-type {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5px 0 12px;
+  }
+}
+.page-banner .container .page-banner-content .product-type .rejuve-btn {
+  width: 100%;
+  max-width: 153px;
+  padding: 16px;
+  background: #fff;
+  color: #414952;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.page-banner .container .page-banner-content .product-type .rejuve-btn:hover, .page-banner .container .page-banner-content .product-type .rejuve-btn.active {
+  color: #fff;
+  background: #414952;
+}
 .page-banner .container .page-banner-content .service-type {
   -webkit-column-gap: 70px;
      -moz-column-gap: 70px;
@@ -1349,6 +1377,12 @@ ul {
   top: calc(50% - 5px);
   left: calc(50% - 5px);
 }
+.appontment-sectoin .data-box .data-input-wrapper input.redio-button .redio-after, .appontment-sectoin .data-box .data-input-wrapper textarea.redio-button .redio-after, .appontment-sectoin .data-box .data-input-wrapper .redio-button.redio-button .redio-after {
+  color: #F6D66F;
+  padding: 0;
+  font-size: 14px;
+  line-height: 22px;
+}
 .appontment-sectoin .data-box .data-input-wrapper span {
   color: #282D41;
   font-size: 12px;
@@ -1595,60 +1629,64 @@ ul {
     text-align: center;
   }
 }
-.appontment-sectoin .calculator-box {
+.appontment-sectoin .calculator-box-wrap h4 {
+  font-size: 18px;
+  line-height: 22px;
+}
+.appontment-sectoin .calculator-box-wrap .calculator-box {
   padding: 40px 60px;
   background: #FFF9EB;
   margin-bottom: 35px;
 }
 @media only screen and (max-width: 1024px) {
-  .appontment-sectoin .calculator-box {
+  .appontment-sectoin .calculator-box-wrap .calculator-box {
     padding: 30px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .calculator-box {
+  .appontment-sectoin .calculator-box-wrap .calculator-box {
     padding: 20px;
   }
 }
-.appontment-sectoin .calculator-box .person {
+.appontment-sectoin .calculator-box-wrap .calculator-box .person {
   margin-bottom: 30px;
 }
-.appontment-sectoin .calculator-box .person h5 {
+.appontment-sectoin .calculator-box-wrap .calculator-box .person h5 {
   font-weight: 600;
   color: #282D41;
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 22px;
 }
-.appontment-sectoin .calculator-box .person .product-wrapper {
+.appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper {
   background: #FBF2DD;
   padding: 40px;
   row-gap: 40px;
 }
 @media only screen and (max-width: 1024px) {
-  .appontment-sectoin .calculator-box .person .product-wrapper {
+  .appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper {
     padding: 25px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .calculator-box .person .product-wrapper {
+  .appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper {
     padding: 15px;
   }
 }
-.appontment-sectoin .calculator-box .person .product-wrapper .product-item {
+.appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper .product-item {
   color: #282D41;
   font-size: 14px;
   line-height: 22px;
 }
-.appontment-sectoin .calculator-box .person .product-wrapper .product-item .product-price {
+.appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper .product-item .product-price {
   font-weight: 600;
 }
-.appontment-sectoin .calculator-box .summary {
+.appontment-sectoin .calculator-box-wrap .calculator-box .summary {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.appontment-sectoin .calculator-box .summary ul {
+.appontment-sectoin .calculator-box-wrap .calculator-box .summary ul {
   width: 100%;
   max-width: 300px;
   -webkit-box-orient: vertical;
@@ -1657,15 +1695,15 @@ ul {
           flex-direction: column;
   row-gap: 30px;
 }
-.appontment-sectoin .calculator-box .summary ul li {
+.appontment-sectoin .calculator-box-wrap .calculator-box .summary ul li {
   color: #282D41;
   font-size: 14px;
   line-height: 22px;
 }
-.appontment-sectoin .calculator-box .summary ul li .sum-pricy {
+.appontment-sectoin .calculator-box-wrap .calculator-box .summary ul li .sum-pricy {
   font-weight: 600;
 }
-.appontment-sectoin .calculator-box .summary ul li.total {
+.appontment-sectoin .calculator-box-wrap .calculator-box .summary ul li.total {
   font-weight: 600;
   font-size: 18px;
   border-top: 1px solid rgba(40, 45, 65, 0.22);
@@ -1910,11 +1948,16 @@ ul {
   color: #F6D66F;
 }
 .single-split .split-image {
-  padding-top: 100px;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 1220px) {
+  .single-split .split-image {
+    padding-top: 50px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .single-split .split-image {
-    padding-top: 10px;
+    padding-top: 0;
   }
 }
 
@@ -2257,4 +2300,61 @@ ul {
 .benefits-section .responsiveGrid .vertical-scroll-wrap .vertical-scroll .item p {
   font-size: 16px;
   line-height: 24px;
+}
+
+/* #####################################
+*     Privacy Policy Page STYLE
+* ##################################### 
+*/
+.privacy-policy {
+  padding: 20px 0 160px;
+}
+@media only screen and (max-width: 1220px) {
+  .privacy-policy {
+    padding: 40px 0 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .privacy-policy {
+    padding: 50px 0 100px;
+  }
+}
+.privacy-policy .container {
+  max-width: 1380px;
+}
+.privacy-policy .container .classic-editor h1 {
+  padding-top: 24px;
+  font-size: 40px;
+  line-height: 48px;
+}
+@media only screen and (max-width: 768px) {
+  .privacy-policy .container .classic-editor h1 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+.privacy-policy .container .classic-editor h2 {
+  padding-top: 24px;
+  font-size: 32px;
+  line-height: 41px;
+}
+@media only screen and (max-width: 768px) {
+  .privacy-policy .container .classic-editor h2 {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+.privacy-policy .container .classic-editor p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.privacy-policy .container .classic-editor p a {
+  color: currentColor;
+  text-decoration: underline;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.privacy-policy .container .classic-editor p a:hover {
+  color: #32C0CC;
 }
