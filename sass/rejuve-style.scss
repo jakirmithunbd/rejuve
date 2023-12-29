@@ -2,9 +2,9 @@
 
 @import 'mixin';
 
-$primary: #32C0CC;
-$secondary: #282D41;
-$body: #5A5F73;
+$primary: #32c0cc;
+$secondary: #282d41;
+$body: #5a5f73;
 
 $inter: 'Inter', sans-serif;
 $robo: 'Roboto', sans-serif;
@@ -25,7 +25,8 @@ html {
     font-size: 100%;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -45,15 +46,21 @@ body {
 * ##################################### 
 */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 24px;
     color: $secondary;
 
-    strong, span {
+    strong,
+    span {
         color: $primary;
     }
 
-    @include breakpoint(768){
+    @include breakpoint(768) {
         margin-bottom: 15px;
     }
 }
@@ -110,8 +117,8 @@ h4 {
     margin-bottom: 15px;
     @include font(20, 28);
 
-    @include breakpoint (1220) {
-        @include font (16, 22);
+    @include breakpoint(1220) {
+        @include font(16, 22);
     }
 }
 
@@ -133,7 +140,7 @@ h6 {
 p {
     margin-bottom: 25px;
 
-    @include breakpoint(768){
+    @include breakpoint(768) {
         margin-bottom: 15px;
     }
 }
@@ -142,7 +149,8 @@ a {
     color: $primary;
 }
 
-img, svg {
+img,
+svg {
     width: 100%;
     height: auto;
     display: block;
@@ -164,7 +172,8 @@ img, svg {
     }
 }
 
-.container, .large-container {
+.container,
+.large-container {
     width: 100%;
     margin: 0 auto;
     max-width: 1360px;
@@ -186,7 +195,7 @@ img, svg {
 }
 
 .transition {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .rejuve-btn {
@@ -215,8 +224,9 @@ img, svg {
     &.btn-large {
         min-width: 265px;
     }
-    
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
         background: $secondary;
     }
 }
@@ -227,8 +237,14 @@ img, svg {
 
     &::after {
         position: absolute;
-        content: "";
-        background-image: linear-gradient(259deg, rgba(138, 226, 234, 0.20) 13.81%, rgba(138, 226, 234, 0.20) 35.03%, rgba(138, 226, 234, 0.22) 56.67%, rgba(138, 226, 234, 0.20) 87.34%);
+        content: '';
+        background-image: linear-gradient(
+            259deg,
+            rgba(138, 226, 234, 0.2) 13.81%,
+            rgba(138, 226, 234, 0.2) 35.03%,
+            rgba(138, 226, 234, 0.22) 56.67%,
+            rgba(138, 226, 234, 0.2) 87.34%
+        );
         width: 100%;
         height: 80%;
         left: 0;
@@ -241,7 +257,12 @@ img, svg {
 }
 
 .bg-light-gradient {
-    background: linear-gradient(346deg, rgba(236, 254, 255, 0.00) 11.76%, #ECFEFF 51.87%, rgba(236, 254, 255, 0.00) 92%);
+    background: linear-gradient(
+        346deg,
+        rgba(236, 254, 255, 0) 11.76%,
+        #ecfeff 51.87%,
+        rgba(236, 254, 255, 0) 92%
+    );
 }
 
 .text-center {
@@ -306,7 +327,7 @@ ul {
 .unstyle {
     padding: 0;
     margin: 0;
-    
+
     li {
         list-style: none;
     }
@@ -350,7 +371,7 @@ ul {
         display: block;
         background-color: $primary;
         border-radius: 5px;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
 
         &:not(:last-child) {
             margin-bottom: 5px;
@@ -358,9 +379,7 @@ ul {
     }
 
     &.bar-active {
-
-        span { 
-
+        span {
             &:nth-child(1) {
                 transform: rotate(45deg);
                 transform-origin: 1px;
@@ -381,21 +400,21 @@ ul {
     margin: 0 auto;
     padding-bottom: 65px;
 
-    @include breakpoint(1200){
-        padding-bottom:45px;
+    @include breakpoint(1200) {
+        padding-bottom: 45px;
     }
 
-    @include breakpoint(768){
+    @include breakpoint(768) {
         padding-bottom: 30px;
     }
 
-    @include breakpoint(375){
+    @include breakpoint(375) {
         padding-bottom: 20px;
     }
 
     h2 {
-
-        strong, span {
+        strong,
+        span {
             color: $primary;
         }
     }
@@ -414,7 +433,7 @@ ul {
     @include font(16, 24);
     font-weight: 600;
 
-    @include minbreakpoint(768){
+    @include minbreakpoint(768) {
         padding: 8px 0;
     }
 
@@ -424,8 +443,8 @@ ul {
         @include transition();
     }
 
-    &:hover, &:focus {
-
+    &:hover,
+    &:focus {
         img {
             transform: translateX(10px);
         }
@@ -437,26 +456,25 @@ ul {
 * ##################################### 
 */
 .rejuve-image-box-wrapper {
-
     .image-box {
         overflow: hidden;
         background-color: #f5f5f5;
-        
+
         .image-box-content {
             padding: 40px;
 
-            @include breakpoint(1024){
+            @include breakpoint(1024) {
                 padding: 25px;
             }
 
-            @include breakpoint(768){
+            @include breakpoint(768) {
                 padding: 16px !important;
 
                 h3 {
                     margin-bottom: 16px !important;
                 }
             }
-            
+
             h6 {
                 display: block;
                 margin-bottom: 8px;
@@ -469,7 +487,6 @@ ul {
         }
 
         &.small-image-box {
-
             .image-box-content {
                 padding: 24px;
 
@@ -477,7 +494,7 @@ ul {
                     @include font(24, 33);
                     margin-bottom: 8px;
 
-                    @include breakpoint(768){
+                    @include breakpoint(768) {
                         @include font(22, 26);
                     }
                 }
@@ -491,7 +508,7 @@ ul {
                 flex: 0 0 50%;
 
                 img {
-                    @include minbreakpoint(881){
+                    @include minbreakpoint(881) {
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
@@ -502,8 +519,8 @@ ul {
             .image-box-content {
                 align-self: center;
             }
-            
-            @include breakpoint(768){
+
+            @include breakpoint(768) {
                 display: block;
             }
         }
@@ -515,18 +532,16 @@ ul {
     }
 }
 
-
 /* #####################################
 *           ICONBOX STYLE
 * ##################################### 
 */
 
 .rejuve-iconbox-wrapper {
-
     .icon-box {
         text-align: center;
 
-        @include breakpoint(575){
+        @include breakpoint(575) {
             margin-bottom: 30px;
         }
 
@@ -546,7 +561,6 @@ ul {
         }
 
         .icon-box-content {
-
             h5 {
                 margin-bottom: 16px;
             }
@@ -558,16 +572,14 @@ ul {
         }
 
         &:not(.left) {
-
             .icon {
-                
             }
         }
 
         &.left {
             text-align: left;
-            
-            @include minbreakpoint(575){
+
+            @include minbreakpoint(575) {
                 display: flex;
             }
 
@@ -585,13 +597,11 @@ ul {
 */
 
 .split-layout {
-
     .responsiveGrid {
         margin-bottom: 40px;
     }
 
     .left-content {
-
         span {
             margin-bottom: 15px;
         }
@@ -604,10 +614,8 @@ ul {
 */
 
 .content-with-media {
-
     .responsiveGrid {
-
-        @include minbreakpoint(1280){
+        @include minbreakpoint(1280) {
             grid-gap: 80px;
         }
 
@@ -615,11 +623,11 @@ ul {
             padding-top: 50px;
             column-gap: 24px;
 
-            @include breakpoint(1220){
+            @include breakpoint(1220) {
                 padding-top: 20px;
             }
 
-            @include breakpoint (575){
+            @include breakpoint(575) {
                 flex-direction: column;
                 row-gap: 20px;
             }
@@ -637,9 +645,7 @@ ul {
 */
 
 .products-wrapper {
-
     .products {
-
         &.responsiveGrid {
             grid-row-gap: 60px;
 
@@ -653,9 +659,7 @@ ul {
         }
 
         .product {
-
             .product-image {
-
                 img {
                     @extend .transition;
                     transform: scale(1);
@@ -668,7 +672,8 @@ ul {
                 .product-top {
                     margin-bottom: 12px;
 
-                    .product-title, .price {
+                    .product-title,
+                    .price {
                         color: $secondary;
                         font-weight: 600;
                         @include font(18, 27);
@@ -676,8 +681,8 @@ ul {
                     }
 
                     .product-title {
-
-                        &:hover, &:focus {
+                        &:hover,
+                        &:focus {
                             color: $primary;
                         }
                     }
@@ -693,8 +698,8 @@ ul {
                 }
             }
 
-            &:hover, &:focus {
-
+            &:hover,
+            &:focus {
                 img {
                     transform: scale(1.1);
                 }
@@ -717,15 +722,13 @@ ul {
     width: 100%;
     background-color: #fff;
     @include transition();
-    border-bottom: 1px solid #C0C4CC;
-    
+    border-bottom: 1px solid #c0c4cc;
+
     .header-menu-wrap {
-        
         .logo-wrapper {
             width: 140px;
-            
-            .logo {
 
+            .logo {
                 img {
                     max-width: 100%;
                     width: 100%;
@@ -735,7 +738,6 @@ ul {
         }
 
         .main-header-menu {
-                
             li {
                 list-style: none;
 
@@ -745,7 +747,8 @@ ul {
                     @include transition(all, 0.3s);
                     padding: 5px;
 
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                         color: $primary;
                     }
                 }
@@ -756,25 +759,23 @@ ul {
             }
 
             &.header-right-menu {
-
                 li {
-
                     a {
                         color: $primary;
                         font-weight: 600;
                     }
 
                     &.book-now {
-
                         a {
                             background-color: $primary;
                             padding: 8px 20px;
                             border-radius: 5px;
                             color: #ffffff;
-                            @include transition(all, .3s);
+                            @include transition(all, 0.3s);
                             display: block;
 
-                            &:hover, &:focus {
+                            &:hover,
+                            &:focus {
                                 background-color: $secondary;
                             }
                         }
@@ -818,11 +819,8 @@ ul {
         box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.1);
 
         .header-menu-wrap {
-
             .logo-wrapper {
-
                 .logo {
-                    
                     img {
                         max-width: 100px;
                     }
@@ -831,7 +829,6 @@ ul {
         }
     }
 }
-
 
 /* #####################################
 *           HOME HERO STYLE
@@ -919,20 +916,24 @@ ul {
 
             &::before {
                 width: 100%;
-                height: 100%; 
+                height: 100%;
                 transform: rotate(8.538deg);
                 flex-shrink: 0;
-                content: "";
+                content: '';
                 position: absolute;
                 top: -125px;
                 left: 0;
                 filter: blur(10px);
-                background: linear-gradient(346deg, rgba(236, 254, 255, 0.00) 11.76%, #ECFEFF 51.87%, rgba(236, 254, 255, 0.00) 92%);
+                background: linear-gradient(
+                    346deg,
+                    rgba(236, 254, 255, 0) 11.76%,
+                    #ecfeff 51.87%,
+                    rgba(236, 254, 255, 0) 92%
+                );
             }
         }
     }
 }
-
 
 /* #####################################
 *           Page Banner STYLE
@@ -941,11 +942,11 @@ ul {
 .page-banner {
     padding: 65px 0;
 
-    @include breakpoint(1024){
+    @include breakpoint(1024) {
         padding: 30px 0;
     }
 
-    @include breakpoint(575){
+    @include breakpoint(575) {
         padding: 25px 0;
     }
 
@@ -957,30 +958,29 @@ ul {
             position: relative;
             z-index: 1;
 
-            @include breakpoint(575){
+            @include breakpoint(575) {
                 padding: 0;
             }
 
             &::after {
                 position: absolute;
-                content: "";
+                content: '';
                 width: 100%;
                 height: 100%;
                 top: 0;
                 left: 0;
-                background: #F1FCFD;
+                background: #f1fcfd;
                 border-radius: 500px;
                 filter: blur(30px);
                 z-index: -1;
 
-                @include breakpoint(575){
+                @include breakpoint(575) {
                     filter: blur(70px);
                 }
             }
         }
         .page-banner-content {
-
-            @include breakpoint(575){
+            @include breakpoint(575) {
                 text-align: center;
             }
 
@@ -988,14 +988,14 @@ ul {
                 color: #000;
                 @include font(48, 62);
 
-                @include breakpoint(575){
+                @include breakpoint(575) {
                     @include font(24, 28);
                 }
             }
             .service-type {
                 column-gap: 70px;
 
-                @include breakpoint(575){
+                @include breakpoint(575) {
                     flex-direction: column;
                     align-items: center;
                     row-gap: 15px;
@@ -1006,7 +1006,7 @@ ul {
                     row-gap: 15px;
 
                     .price {
-                        color: #A6C3C6;
+                        color: #a6c3c6;
                         @include font(24, 29);
                         margin-bottom: 0;
                     }
@@ -1025,7 +1025,6 @@ ul {
                     }
 
                     &.active {
-                        
                         .price {
                             color: $primary;
                         }
@@ -1039,34 +1038,29 @@ ul {
     }
 }
 
-
-
 /* #####################################
 *           HOME SERVICE SECTION
 * ##################################### 
 */
 
 .services {
-
     @include minbreakpoint(880) {
-
         .rejuve-image-box-wrapper {
             display: grid;
             grid-template-areas:
-            "item-1 item-2"
-            "item-1 item-3";
+                'item-1 item-2'
+                'item-1 item-3';
             grid-gap: 24px;
-    
+
             .image-box {
-                
                 &:nth-child(1) {
                     grid-area: item-1;
                 }
-    
+
                 &:nth-child(2) {
                     grid-area: item-2;
                 }
-    
+
                 &:nth-child(3) {
                     grid-area: item-3;
                 }
@@ -1081,35 +1075,29 @@ ul {
 */
 
 .slick-slider-wrapper {
-
     .slick-slider-init {
-
         .slick-slider {
-    
             .slider-content {
                 padding: 16px;
-    
+
                 * {
                     color: $secondary;
                 }
-    
+
                 p {
                     @include font(20, 28);
 
                     @include breakpoint(768) {
-
                         @include font(18, 26);
                     }
 
                     @include breakpoint(768) {
-
                         @include font(18, 24);
                     }
                 }
             }
-    
+
             .client-info {
-    
                 img {
                     height: 56px;
                     width: 56px;
@@ -1117,7 +1105,7 @@ ul {
                     object-fit: cover;
                     margin-bottom: 8px;
                 }
-    
+
                 span {
                     @include font(16, 24);
                     font-weight: 600;
@@ -1127,18 +1115,18 @@ ul {
     }
 
     .next-previous {
-
         img {
             height: 48px;
             width: 48px;
             width: auto;
             padding: 10px;
             border-radius: 50px;
-            border: 1px solid #C0C4CC;
+            border: 1px solid #c0c4cc;
             cursor: pointer;
             @extend .transition;
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 border-color: $primary;
                 background-color: $primary;
             }
@@ -1149,7 +1137,6 @@ ul {
         bottom: -70px;
 
         li {
-
             button {
                 padding: 0;
                 width: 8px;
@@ -1164,14 +1151,13 @@ ul {
             }
 
             &:not(.slick-active) {
-
                 button {
-                    opacity: .5;
+                    opacity: 0.5;
                 }
             }
 
-            &:hover, &:focus {
-                
+            &:hover,
+            &:focus {
                 button {
                     opacity: 1;
                 }
@@ -1186,10 +1172,10 @@ ul {
 */
 
 .cta {
-    background-image: linear-gradient(to top, #E3FAFF 90%, transparent 50%);
-    
+    background-image: linear-gradient(to top, #e3faff 90%, transparent 50%);
+
     @include breakpoint(1024) {
-        background-image: linear-gradient(to top, #E3FAFF 100%, #E3FAFF 50%);
+        background-image: linear-gradient(to top, #e3faff 100%, #e3faff 50%);
     }
 
     .container {
@@ -1200,7 +1186,6 @@ ul {
         padding: 40px 0;
 
         .rejuve-btn {
-
             @include minbreakpoint(880) {
                 margin-top: 15px;
             }
@@ -1218,7 +1203,6 @@ ul {
     padding: 58px 0;
 
     .footer-menu {
-
         ul {
             margin: 0;
 
@@ -1228,14 +1212,15 @@ ul {
                 line-height: 0;
 
                 a {
-                    color: #AFB1B2;
+                    color: #afb1b2;
                     font-family: $robo;
                     font-weight: 400;
                     @include font(14, 21);
                     @extend .transition;
                     display: block;
 
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                         color: $primary;
                     }
                 }
@@ -1252,7 +1237,6 @@ ul {
             grid-column: 1/4;
 
             a {
-
                 img {
                     width: auto;
                 }
@@ -1263,15 +1247,12 @@ ul {
             grid-column: 4/-1;
 
             .footer-menu {
-
                 h6 {
                     color: #fff;
                 }
 
                 ul {
-
                     li {
-
                         a {
                             margin: 4px 0;
                         }
@@ -1283,18 +1264,17 @@ ul {
 
     .footer-bottom {
         padding-top: 32px;
-        border-top: 1px solid #7D7F84;
+        border-top: 1px solid #7d7f84;
 
         span {
             @include font(14, 21);
-            color: #AFB1B2;
+            color: #afb1b2;
         }
 
         .footer-menu {
             text-align: right;
 
             ul {
-
                 li {
                     display: inline-block;
 
@@ -1321,17 +1301,14 @@ ul {
 .about-us-hero {
     padding: 80px 0 100px;
 
-    @include breakpoint(1024){
+    @include breakpoint(1024) {
         padding: 60px 0 80px;
     }
 
-    @include breakpoint(575){
+    @include breakpoint(575) {
         padding: 40px 0 50px;
     }
-
 }
-
-
 
 /* #####################################
 *       Book Appointment HERO STYLE
@@ -1340,10 +1317,10 @@ ul {
 .book-appointment-hero {
     padding: 120px 0 20px;
 
-    @include breakpoint(1024){
+    @include breakpoint(1024) {
         padding: 80px 0 20px;
     }
-    @include breakpoint(768){
+    @include breakpoint(768) {
         padding: 60px 0 20px;
     }
 
@@ -1355,27 +1332,25 @@ ul {
             font-weight: 600;
             margin-bottom: 15px;
 
-            @include breakpoint(768){
+            @include breakpoint(768) {
                 @include font(28, 36);
             }
         }
     }
 }
 
-
 /* #####################################
 *     Appontment-sectoin STYLE
 * ##################################### 
 */
 .appontment-sectoin {
-
     .data-box {
         margin-bottom: 60px;
 
-        @include breakpoint(1200){
+        @include breakpoint(1200) {
             margin-bottom: 25px;
         }
-        @include breakpoint(768){
+        @include breakpoint(768) {
             margin-bottom: 20px;
         }
 
@@ -1384,7 +1359,7 @@ ul {
         }
 
         .data-input-wrapper {
-            background: #E3FAFF;
+            background: #e3faff;
             padding: 50px;
 
             h5 {
@@ -1394,10 +1369,10 @@ ul {
                 margin-bottom: 20px;
             }
 
-            @include breakpoint(1024){
+            @include breakpoint(1024) {
                 padding: 30px;
             }
-            @include breakpoint(768){
+            @include breakpoint(768) {
                 padding: 20px;
                 grid-gap: 15px;
             }
@@ -1410,15 +1385,17 @@ ul {
                 padding-bottom: 5px;
 
                 span {
-                    color: #32C0CC;
+                    color: #32c0cc;
                 }
             }
-            input, textarea, .redio-button {
+            input,
+            textarea,
+            .redio-button {
                 width: 100%;
                 @include font(14, 22);
                 padding: 12px;
                 background: #fff;
-                border: 1px solid #C0C4CC;
+                border: 1px solid #c0c4cc;
                 border-radius: 4px;
 
                 &.redio-button {
@@ -1429,7 +1406,7 @@ ul {
                     .radio-check {
                         width: 18px;
                         height: 18px;
-                        border: 1px solid #32C0CC;
+                        border: 1px solid #32c0cc;
                         border-radius: 500px;
                         display: inline-block;
                         cursor: pointer;
@@ -1439,10 +1416,10 @@ ul {
 
                             &::after {
                                 position: absolute;
-                                content: "";
+                                content: '';
                                 width: 10px;
                                 height: 10px;
-                                background: #32C0CC;
+                                background: #32c0cc;
                                 border-radius: 500px;
                                 top: calc(50% - 5px);
                                 left: calc(50% - 5px);
@@ -1456,20 +1433,21 @@ ul {
                 @include font(12, 22);
                 padding-top: 5px;
             }
-            
-            .clinic-address, .your-address {
+
+            .clinic-address,
+            .your-address {
                 position: relative;
-                
+
                 @include minbreakpoint(992) {
                     grid-column: 1/3;
                 }
 
                 &::before {
                     position: absolute;
-                    content: "";
+                    content: '';
                     width: 11px;
                     height: 14.5px;
-                    background-image: url("/assets/images/icons/mark.svg");
+                    background-image: url('/assets/images/icons/mark.svg');
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -1477,7 +1455,7 @@ ul {
                     left: 25px;
                     z-index: 1;
                 }
-                
+
                 input {
                     padding-left: 50px;
                     padding-right: 150px;
@@ -1493,17 +1471,16 @@ ul {
                     font-weight: 500;
                     @include font(14, 22);
                 }
-
             }
             .saved-items {
                 column-gap: 25px;
                 row-gap: 20px;
 
-                @include minbreakpoint(992){
+                @include minbreakpoint(992) {
                     grid-column: 1/3;
                 }
 
-                @include breakpoint(575){
+                @include breakpoint(575) {
                     justify-content: center;
                 }
 
@@ -1517,7 +1494,7 @@ ul {
                     position: relative;
 
                     .saved-address-type {
-                        color: #5A5F73;
+                        color: #5a5f73;
                         font-weight: 400;
                         @include font(14, 22);
                         padding: 0 25px 0 20px;
@@ -1525,10 +1502,10 @@ ul {
 
                         &::before {
                             position: absolute;
-                            content: "";
+                            content: '';
                             width: 13px;
                             height: 13px;
-                            background-image: url("/assets/images/icons/home-icon.svg");
+                            background-image: url('/assets/images/icons/home-icon.svg');
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: cover;
@@ -1542,7 +1519,7 @@ ul {
                         margin-bottom: 0;
                     }
                     .edit-btn {
-                        color:#C0C4CC;
+                        color: #c0c4cc;
                         @include font(12, 22);
                         position: absolute;
                         top: 10px;
@@ -1562,8 +1539,7 @@ ul {
                 }
             }
             .any-nurse {
-
-                @include minbreakpoint(992){
+                @include minbreakpoint(992) {
                     grid-column: 1/3;
 
                     .redio-button {
@@ -1579,21 +1555,19 @@ ul {
                     height: 48px;
                     padding: 10px;
 
-                    @include breakpoint(575){
+                    @include breakpoint(575) {
                         min-width: 140px;
                     }
                 }
-
             }
             .tip {
                 column-gap: 70px;
 
-                @include breakpoint(575){
+                @include breakpoint(575) {
                     column-gap: 40px;
                 }
 
                 .defult-tip {
-                    
                     .redio-button {
                         background: transparent;
                         border: 0;
@@ -1610,7 +1584,6 @@ ul {
                     }
 
                     .total-tip {
-
                         span {
                             color: $primary;
                             @include font(16, 22);
@@ -1622,24 +1595,25 @@ ul {
                 column-gap: 20px;
                 row-gap: 30px;
 
-                @include minbreakpoint(992){
+                @include minbreakpoint(992) {
                     grid-column: 1/3;
                 }
 
                 .card-number {
                     width: calc(50% - 16px);
 
-                    @include breakpoint(1024){
+                    @include breakpoint(1024) {
                         width: 100%;
                     }
                 }
-                .expiration, .cvc {
+                .expiration,
+                .cvc {
                     width: 23%;
 
-                    @include breakpoint(1024){
+                    @include breakpoint(1024) {
                         width: 48%;
                     }
-                    @include breakpoint(575){
+                    @include breakpoint(575) {
                         width: 46%;
                     }
                 }
@@ -1660,21 +1634,21 @@ ul {
         padding-top: 40px;
         margin-bottom: 60px;
 
-        @include breakpoint(1200){
+        @include breakpoint(1200) {
             padding-top: 20px;
             margin-bottom: 25px;
         }
-        @include breakpoint(768){
+        @include breakpoint(768) {
             padding-top: 10px;
             margin-bottom: 20px;
         }
         &.add-of-single {
             padding-top: 0;
 
-            @include breakpoint(1200){
+            @include breakpoint(1200) {
                 margin-bottom: 40px;
             }
-            @include breakpoint(575){
+            @include breakpoint(575) {
                 text-align: center;
             }
         }
@@ -1682,19 +1656,19 @@ ul {
 
     .calculator-box {
         padding: 40px 60px;
-        background: #FFF9EB;
+        background: #fff9eb;
         margin-bottom: 35px;
 
-        @include breakpoint(1024){
+        @include breakpoint(1024) {
             padding: 30px;
         }
-        @include breakpoint(768){
+        @include breakpoint(768) {
             padding: 20px;
-        } 
+        }
 
         .person {
             margin-bottom: 30px;
-            
+
             h5 {
                 font-weight: 600;
                 color: $secondary;
@@ -1703,16 +1677,16 @@ ul {
             }
 
             .product-wrapper {
-                background: #FBF2DD;
+                background: #fbf2dd;
                 padding: 40px;
                 row-gap: 40px;
 
-                @include breakpoint(1024){
+                @include breakpoint(1024) {
                     padding: 25px;
                 }
-                @include breakpoint(768){
+                @include breakpoint(768) {
                     padding: 15px;
-                } 
+                }
 
                 .product-item {
                     color: $secondary;
@@ -1723,7 +1697,6 @@ ul {
                     }
                 }
             }
-
         }
         .summary {
             justify-content: flex-end;
@@ -1760,24 +1733,25 @@ ul {
         column-gap: 10px;
         margin-bottom: 35px;
 
-        .square, .circle {
+        .square,
+        .circle {
             width: 20px;
             height: 20px;
             border: 1px solid#C0C4CC;
             border-radius: 3px;
             display: inline-block;
             cursor: pointer;
-            background:#FFFFFF;
+            background: #ffffff;
 
             &.checked {
                 position: relative;
 
                 &::after {
                     position: absolute;
-                    content: "";
+                    content: '';
                     width: 10px;
                     height: 10px;
-                    background: #32C0CC;
+                    background: #32c0cc;
                     border-radius: 500px;
                     top: calc(50% - 5px);
                     left: calc(50% - 5px);
@@ -1799,14 +1773,13 @@ ul {
         margin-bottom: 45px;
 
         .accordion-wrapper {
-
             .accordion-item {
-                background: #E3FAFF;
+                background: #e3faff;
                 padding: 25px 100px 30px;
                 border-radius: 12px;
                 margin-bottom: 12px;
 
-                @include breakpoint(768){
+                @include breakpoint(768) {
                     padding: 25px 15px 30px 40px;
                 }
 
@@ -1815,7 +1788,7 @@ ul {
                     position: relative;
                     font-weight: 600;
                     @include font(16, 22);
-                    
+
                     .open-or-close {
                         position: absolute;
                         width: 30px;
@@ -1840,21 +1813,20 @@ ul {
 
                         &::after {
                             position: absolute;
-                            content: "";
+                            content: '';
                             width: 16px;
                             height: 16px;
                             top: calc(50% - 5px);
                             right: 2px;
-                            background-image: url("/assets/images/icons/close-icon.svg");
+                            background-image: url('/assets/images/icons/close-icon.svg');
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: cover;
                             cursor: pointer;
                         }
                     }
-
                 }
-                
+
                 .accordion-body {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
@@ -1863,7 +1835,7 @@ ul {
                     padding: 40px 0;
                     display: none;
 
-                    @include breakpoint(768){
+                    @include breakpoint(768) {
                         grid-template-columns: repeat(1, 1fr);
                         padding: 35px 25px 20px 0;
                     }
@@ -1873,16 +1845,16 @@ ul {
                         justify-content: space-between;
                         @include font(16, 22);
 
-
                         .t-item-name {
                             color: $secondary;
                             padding-left: 32px;
                             position: relative;
                             cursor: pointer;
-                            
-                            &::after, &::before {
+
+                            &::after,
+                            &::before {
                                 position: absolute;
-                                content: "";
+                                content: '';
                             }
                             &::after {
                                 width: 20px;
@@ -1890,7 +1862,7 @@ ul {
                                 left: 0;
                                 top: 0;
                                 background: #fff;
-                                border: 1px solid #C0C4CC;
+                                border: 1px solid #c0c4cc;
                                 border-radius: 3px;
                             }
                             &::before {
@@ -1902,7 +1874,6 @@ ul {
                                 background: transparent;
                                 z-index: 1;
                             }
-
                         }
                         .t-item-price {
                             color: $primary;
@@ -1915,13 +1886,10 @@ ul {
                                 }
                             }
                         }
-
                     }
                 }
                 &.open {
-        
                     .accordion-header {
-        
                         .open-or-close {
                             transform: rotate(0deg);
                         }
@@ -1933,7 +1901,6 @@ ul {
             }
         }
     }
-
 }
 
 /* #####################################
@@ -1943,18 +1910,18 @@ ul {
 .single-classic-editor {
     padding-bottom: 35px;
 
-    @include breakpoint(768){
+    @include breakpoint(768) {
         padding-bottom: 15px;
     }
-    
+
     h2 {
         color: $secondary;
         @include font(64, 76);
 
-        @include breakpoint(768){
+        @include breakpoint(768) {
             @include font(32, 38);
         }
-        @include breakpoint(575){
+        @include breakpoint(575) {
             @include font(24, 28);
         }
     }
@@ -1977,49 +1944,44 @@ ul {
 }
 
 .single-split {
-
     .left-content {
-
         h6 {
             color: $secondary;
         }
         h2 {
-
             span {
-                color: #F6D66F;
+                color: #f6d66f;
             }
         }
     }
 
     .split-image {
         padding-top: 100px;
-        
-        @include breakpoint(768){
+
+        @include breakpoint(768) {
             padding-top: 10px;
         }
     }
 }
 .product-description {
-
     .left-content {
-       @include breakpoint(1279){
-        padding-bottom: 20px;
-       }
+        @include breakpoint(1279) {
+            padding-bottom: 20px;
+        }
 
         h2 {
             span {
-                color:#EA78A1;
+                color: #ea78a1;
             }
         }
     }
-
 }
 .vertical-scroll-wrap {
     position: relative;
-    
+
     &::after {
         position: absolute;
-        content: "";
+        content: '';
         width: calc(100% - 15px);
         height: 205px;
         left: 0;
@@ -2031,7 +1993,6 @@ ul {
     .vertical-scroll {
         height: 760px;
         overflow-y: scroll;
-        
 
         .description-item {
             padding: 30px;
@@ -2049,7 +2010,7 @@ ul {
                 margin-bottom: 15px;
             }
             h6 {
-                color: #5A5F73;
+                color: #5a5f73;
                 margin-bottom: 15px;
             }
             p {
@@ -2058,14 +2019,12 @@ ul {
             }
             &:last-child {
                 margin-bottom: 0;
-
             }
         }
     }
 }
 
 .rejuve-faq {
-
     .container {
         max-width: 1670px;
 
@@ -2083,7 +2042,6 @@ ul {
         }
 
         .faq {
-
             .faq-item {
                 padding-bottom: 30px;
 
@@ -2091,7 +2049,7 @@ ul {
                     font-weight: 700;
                     @include font(18, 27);
                 }
-                
+
                 @include minbreakpoint(1201) {
                     display: flex;
                     justify-content: space-between;
@@ -2138,10 +2096,10 @@ ul {
         }
 
         h1 {
-            @include font (48, 62);
+            @include font(48, 62);
 
-            @include breakpoint (768){
-                @include font (24, 28);
+            @include breakpoint(768) {
+                @include font(24, 28);
             }
         }
 
@@ -2165,63 +2123,57 @@ ul {
         &::before {
             top: -200px;
 
-            @include breakpoint (560){
+            @include breakpoint(560) {
                 top: -110px;
             }
         }
-
     }
 }
 
 .product-section {
-
     .container {
         max-width: 1714px;
 
         .products-wrapper {
             grid-gap: 54px 24px;
 
-            @include breakpoint (1220) {
+            @include breakpoint(1220) {
                 grid-gap: 32px 24px;
             }
 
-            @include breakpoint (768) {
+            @include breakpoint(768) {
                 grid-gap: 24px;
             }
 
             .product-item {
-
                 a {
                     display: inline-block;
-                    
+
                     .product-title {
                         font-weight: 600;
                         margin-bottom: 12px;
-                        transition: all .3s ease;
-    
+                        transition: all 0.3s ease;
+
                         .price {
                             color: currentColor;
                             padding-left: 10px;
                         }
                     }
                     &:hover {
-                       .product-title {
-                           color: $primary
-                       }
+                        .product-title {
+                            color: $primary;
+                        }
                     }
                 }
                 p {
                     @include font(16, 22);
                 }
-
             }
-
         }
     }
 }
 
 .flip-section {
-    
     .flip-item-wrapper {
         position: relative;
         width: 100%;
@@ -2237,95 +2189,92 @@ ul {
             width: 100%;
             left: 0;
             bottom: 0;
-            transition: all .3s ease;
-            
+            transition: all 0.3s ease;
+
             .responsiveGrid {
-                transition: all .3s ease;
+                transition: all 0.3s ease;
                 transform: rotateX(180deg);
             }
 
+            h6 {
+                @include font(18, 27);
+            }
+            h3 {
+                @include font(32, 38);
+            }
+
+            &:nth-child(1) {
+                background: #e3faff;
+                height: 820px;
+                z-index: 5;
+
+                @include breakpoint(991) {
+                    height: 1200px;
+                }
+
+                .responsiveGrid {
+                    transform: rotateX(0deg);
+                }
+
                 h6 {
-                    @include font(18, 27);
+                    color: #50bceb;
                 }
-                h3 {
-                    @include font(32, 38);
-                }
-        
-                &:nth-child(1) {
-                    background: #E3FAFF;
-                    height: 820px;
-                    z-index: 5;
+            }
+            &:nth-child(2) {
+                padding-top: 100px;
+                background: #fff4fa;
+                height: 870px;
+                z-index: 4;
 
-                    @include breakpoint(991) {
-                        height: 1200px;
-                    }
+                @include breakpoint(991) {
+                    height: 1240px;
+                    padding-top: 40px;
+                }
 
-                        .responsiveGrid {
-                            transform: rotateX(0deg);
-                        }
-        
-                    h6 {
-                        color:#50BCEB;
-                    }
+                h6 {
+                    color: #ea78a1;
                 }
-                &:nth-child(2) {
-                    padding-top: 100px;
-                    background:#FFF4FA;
-                    height: 870px;
-                    z-index: 4;
+            }
+            &:nth-child(3) {
+                padding-top: 150px;
+                background: #f1fff9;
+                height: 920px;
+                z-index: 3;
 
-                    @include breakpoint(991) {
-                        height: 1240px;
-                        padding-top: 40px;
-                    }
-        
-                    h6 {
-                        color:#EA78A1;
-                    }
+                @include breakpoint(991) {
+                    height: 1280px;
+                    padding-top: 80px;
                 }
-                &:nth-child(3) {
-                    padding-top: 150px;
-                    background: #F1FFF9;
-                    height: 920px;
-                    z-index: 3;
-                    
-                    @include breakpoint(991) {
-                        height: 1280px;
-                        padding-top: 80px;
-                    }
 
-                    h6 {
-                        color:#70DCAE;
-                    }
+                h6 {
+                    color: #70dcae;
                 }
-    
-                &:hover {
-                    z-index: 9;
-                    
-                        .responsiveGrid {
-                            transform: rotateX(0deg);
-                        }
+            }
+
+            &:hover {
+                z-index: 9;
+
+                .responsiveGrid {
+                    transform: rotateX(0deg);
                 }
+            }
         }
     }
 }
 
 .benefits-section {
-
     h2 {
-
-        @include minbreakpoint (769){
-            @include font (40, 48);
+        @include minbreakpoint(769) {
+            @include font(40, 48);
         }
         span {
-            color: #F6D66F;
+            color: #f6d66f;
         }
     }
     .responsiveGrid {
         grid-gap: 52px;
 
         .vertical-scroll-wrap {
-
             &::after {
                 height: 120px;
                 left: 32px;
@@ -2342,31 +2291,30 @@ ul {
 
                     &::before {
                         position: absolute;
-                        content: "";
+                        content: '';
                         width: 2px;
                         height: 100%;
                         top: 0;
                         left: 0;
                         background: transparent;
-                        transition: all .3s ease;
+                        transition: all 0.3s ease;
                     }
                     &:hover {
-
                         &::before {
-                            background: $primary
+                            background: $primary;
                         }
                     }
                     h4 {
-                        @include font (32, 41);
+                        @include font(32, 41);
                         margin-bottom: 15px;
                     }
                     p {
-                        @include font (16, 24);
+                        @include font(16, 24);
                     }
                 }
             }
         }
     }
-
-
 }
+
+@import './service-menu';
