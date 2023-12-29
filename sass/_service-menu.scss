@@ -1,4 +1,9 @@
 .rejuve-service-menu {
+    margin-bottom: 200px;
+
+    @include breakpoint(1024) {
+        margin-bottom: 100px;
+    }
     .container {
         max-width: 1540px;
     }
@@ -38,6 +43,11 @@
 
     .service-menu-wrapper {
         .service-menu-list-wrapper {
+            margin-bottom: 24px;
+
+            h4 {
+                margin-bottom: 24px;
+            }
             .service-menu {
                 background-color: currentColor;
                 @extend .radius;
@@ -59,18 +69,25 @@
                                 color: currentColor;
                                 @include font(16, 22);
                                 position: relative;
-                                padding-right: 25px;
+                                padding-right: 16px;
 
-                                &::after {
+                                &::after,
+                                &::before {
                                     position: absolute;
                                     content: '';
-                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 13L13 3' stroke='%2332C0CC' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13 13L3 3' stroke='%2332C0CC' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
-                                        center/contain no-repeat;
+                                    background-color: currentColor;
                                     height: 16px;
-                                    width: 16px;
+                                    width: 1px;
                                     right: 0;
                                     top: calc(50% - 8px);
-                                    stroke: currentColor;
+                                }
+
+                                &::after {
+                                    transform: rotate(45deg);
+                                }
+
+                                &::before {
+                                    transform: rotate(-45deg);
                                 }
                             }
                         }
@@ -81,7 +98,13 @@
                             margin-bottom: 0;
                         }
                         .menu-item {
-                            margin-bottom: 24px;
+                            &:not(:last-child) {
+                                margin-bottom: 24px;
+                                @include breakpoint(992) {
+                                    margin-bottom: 15px;
+                                }
+                            }
+
                             p {
                                 @include font(32, 38);
 
@@ -103,6 +126,7 @@
                                         background-color: #fff;
                                         display: inline-block;
                                         margin-right: 12px;
+                                        border: 1px solid #c0c4cc;
                                     }
                                 }
                                 &.price {
@@ -113,12 +137,41 @@
                             &.active {
                                 .product-name {
                                     span {
+                                        border-color: transparent;
                                         box-shadow: inset 0 0 0 5px currentColor;
                                     }
                                 }
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .order-summary-wrapper {
+        padding: 24px 60px;
+        @extend .radius;
+        background-color: #fff9eb;
+        margin-bottom: 70px;
+
+        @include breakpoint(992) {
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .order-summary {
+            padding: 35px 40px;
+            background-color: #fbf2dd;
+            border-radius: 4px;
+
+            @include breakpoint(992) {
+                padding: 20px;
+            }
+
+            .order-item {
+                &:not(:last-child) {
+                    margin-bottom: 40px;
                 }
             }
         }
