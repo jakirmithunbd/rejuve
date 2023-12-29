@@ -2602,6 +2602,21 @@ A
   padding: 70px 0;
   background: linear-gradient(95deg, #fff -7.12%, #cff3f6 33.11%, #ecfeff 82.46%, rgba(255, 255, 255, 0.4) 136.14%);
 }
+@media only screen and (max-width: 1024px) {
+  .membership-hero {
+    padding: 55px 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .membership-hero {
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .membership-hero {
+    padding: 30px 0;
+  }
+}
 .membership-hero .hero-content {
   margin: 0 auto;
 }
@@ -2613,9 +2628,150 @@ A
   color: #282d41;
 }
 .membership-hero .hero-content p {
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 }
 
 .membership-area {
-  padding: 40px 0;
+  padding: 40px 0 60px;
+}
+@media only screen and (max-width: 768px) {
+  .membership-area {
+    padding: 25px 0;
+  }
+}
+.membership-area .section-title {
+  padding-bottom: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .membership-area .section-title {
+    padding-bottom: 10px;
+  }
+}
+.membership-area .pricing-box-wrapper {
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 1024px) {
+  .membership-area .pricing-box-wrapper {
+    margin-bottom: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .membership-area .pricing-box-wrapper {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .membership-area .pricing-box-wrapper {
+    margin-bottom: 40px;
+  }
+}
+.membership-area .pricing-box-wrapper .pricing-box {
+  padding: 32px;
+  overflow: hidden;
+  background: #e3faff;
+}
+@media only screen and (max-width: 768px) {
+  .membership-area .pricing-box-wrapper .pricing-box {
+    padding: 20px;
+  }
+}
+.membership-area .pricing-box-wrapper .pricing-box h5 {
+  font-size: 20px;
+  line-height: 28px;
+}
+@media only screen and (max-width: 768px) {
+  .membership-area .pricing-box-wrapper .pricing-box h5 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+.membership-area .pricing-box-wrapper .pricing-box h5,
+.membership-area .pricing-box-wrapper .pricing-box p {
+  margin-bottom: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .membership-area .pricing-box-wrapper .pricing-box h5,
+  .membership-area .pricing-box-wrapper .pricing-box p {
+    margin-bottom: 20px;
+  }
+}
+.membership-area .pricing-box-wrapper .pricing-box ul {
+  margin-top: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .membership-area .pricing-box-wrapper .pricing-box ul {
+    margin-bottom: 20px;
+  }
+}
+.membership-area .pricing-box-wrapper .pricing-box p {
+  font-size: 56px;
+  line-height: 66px;
+  font-weight: 700;
+  color: #000;
+}
+@media only screen and (max-width: 768px) {
+  .membership-area .pricing-box-wrapper .pricing-box p {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .membership-area .pricing-box-wrapper .pricing-box p {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+.membership-area .pricing-box-wrapper .pricing-box p small {
+  font-size: 32px;
+  line-height: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .membership-area .pricing-box-wrapper .pricing-box p small {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .membership-area .pricing-box-wrapper .pricing-box p small {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.membership-area .pricing-box-wrapper .pricing-box ul {
+  margin-left: 0;
+}
+.membership-area .pricing-box-wrapper .pricing-box ul li {
+  color: #282d41;
+  list-style: none;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 16px;
+}
+.membership-area .pricing-box-wrapper .pricing-box ul li::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M20.3479 7.56384L9.7479 18.1638C9.65402 18.2585 9.52622 18.3117 9.3929 18.3117C9.25958 18.3117 9.13178 18.2585 9.0379 18.1638L3.6479 12.7738C3.55324 12.68 3.5 12.5522 3.5 12.4188C3.5 12.2855 3.55324 12.1577 3.6479 12.0638L4.3479 11.3638C4.44178 11.2692 4.56958 11.2159 4.7029 11.2159C4.83622 11.2159 4.96402 11.2692 5.0579 11.3638L9.3879 15.6938L18.9379 6.14384C19.1357 5.95205 19.4501 5.95205 19.6479 6.14384L20.3479 6.85384C20.4426 6.94772 20.4958 7.07552 20.4958 7.20884C20.4958 7.34216 20.4426 7.46995 20.3479 7.56384Z' fill='%2332C0CC'/%3E%3C/svg%3E") center/contain no-repeat;
+  height: 24px;
+  width: 24px;
+  top: 0;
+}
+.membership-area .pricing-box-wrapper .pricing-box.popular {
+  position: relative;
+}
+.membership-area .pricing-box-wrapper .pricing-box.popular .popular-option {
+  background-color: #282d41;
+  color: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  text-align: center;
+  top: 45px;
+  left: 150px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+}
+.membership-area .pricing-box-wrapper .pricing-box .rejuve-btn {
+  padding: 13px;
 }
