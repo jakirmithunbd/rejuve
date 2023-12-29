@@ -1,0 +1,31 @@
+.membership-hero {
+    padding: 70px 0;
+    background: linear-gradient(
+        95deg,
+        #fff -7.12%,
+        #cff3f6 33.11%,
+        #ecfeff 82.46%,
+        rgba(255, 255, 255, 0.4) 136.14%
+    );
+
+    .hero-content {
+        margin: 0 auto;
+
+        h1,
+        h6 {
+            margin-bottom: 24px;
+        }
+
+        h6 {
+            color: $secondary;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.membership-area {
+    padding: 40px 0;
+}

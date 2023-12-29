@@ -399,11 +399,11 @@ ul {
   position: relative;
 }
 
-.radius, .rejuve-iconbox-wrapper .icon-box .icon {
+.radius, .rejuve-service-menu .order-summary-wrapper, .rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu, .rejuve-iconbox-wrapper .icon-box .icon {
   border-radius: 12px;
 }
 @media only screen and (max-width: 768px) {
-  .radius, .rejuve-iconbox-wrapper .icon-box .icon {
+  .radius, .rejuve-service-menu .order-summary-wrapper, .rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu, .rejuve-iconbox-wrapper .icon-box .icon {
     border-radius: 10px;
   }
 }
@@ -1419,7 +1419,7 @@ A
 .appontment-sectoin .data-box .data-input-wrapper input.redio-button .redio-after,
 .appontment-sectoin .data-box .data-input-wrapper textarea.redio-button .redio-after,
 .appontment-sectoin .data-box .data-input-wrapper .redio-button.redio-button .redio-after {
-  color: #F6D66F;
+  color: #f6d66f;
   padding: 0;
   font-size: 14px;
   line-height: 22px;
@@ -1729,7 +1729,7 @@ A
   line-height: 22px;
 }
 .appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper {
-  background: #FBF2DD;
+  background: #fbf2dd;
   padding: 40px;
   row-gap: 40px;
 }
@@ -2430,4 +2430,192 @@ A
 }
 .privacy-policy .container .classic-editor p a:hover {
   color: #32c0cc;
+}
+
+.rejuve-service-menu {
+  margin-bottom: 200px;
+}
+@media only screen and (max-width: 1024px) {
+  .rejuve-service-menu {
+    margin-bottom: 100px;
+  }
+}
+.rejuve-service-menu .container {
+  max-width: 1540px;
+}
+.rejuve-service-menu .section-title {
+  padding: 75px 0;
+  max-width: 735px;
+  margin: 0 auto;
+}
+.rejuve-service-menu .section-title h4 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #282d41;
+  margin-bottom: 12px;
+}
+@media only screen and (max-width: 1024px) {
+  .rejuve-service-menu .section-title h4 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .rejuve-service-menu .section-title h4 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.rejuve-service-menu .section-title p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #282d41;
+}
+@media only screen and (max-width: 768px) {
+  .rejuve-service-menu .section-title p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+.rejuve-service-menu .section-title p a {
+  color: #32c0cc;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper {
+  margin-bottom: 24px;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper h4 {
+  margin-bottom: 24px;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu {
+  background-color: currentColor;
+  padding: 32px;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-menu-header {
+  margin-bottom: 40px;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-menu-header h6 {
+  color: #282d41;
+  margin-bottom: 0;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-menu-header .selected-item span {
+  color: currentColor;
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+  padding-right: 16px;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-menu-header .selected-item span::after, .rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-menu-header .selected-item span::before {
+  position: absolute;
+  content: "";
+  background-color: currentColor;
+  height: 16px;
+  width: 1px;
+  right: 0;
+  top: calc(50% - 8px);
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-menu-header .selected-item span::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-menu-header .selected-item span::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list p {
+  margin-bottom: 0;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list .menu-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media only screen and (max-width: 992px) {
+  .rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list .menu-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list .menu-item p {
+  font-size: 32px;
+  line-height: 38px;
+}
+@media only screen and (max-width: 1024px) {
+  .rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list .menu-item p {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list .menu-item p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list .menu-item p.product-name {
+  color: #282d41 !important;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list .menu-item p.product-name span {
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background-color: #fff;
+  display: inline-block;
+  margin-right: 12px;
+  border: 1px solid #c0c4cc;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list .menu-item p.price {
+  color: currentColor;
+}
+.rejuve-service-menu .service-menu-wrapper .service-menu-list-wrapper .service-menu .service-menu-container .service-list .menu-item.active .product-name span {
+  border-color: transparent;
+  -webkit-box-shadow: inset 0 0 0 5px currentColor;
+          box-shadow: inset 0 0 0 5px currentColor;
+}
+.rejuve-service-menu .order-summary-wrapper {
+  padding: 24px 60px;
+  background-color: #fff9eb;
+  margin-bottom: 70px;
+}
+@media only screen and (max-width: 992px) {
+  .rejuve-service-menu .order-summary-wrapper {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+}
+.rejuve-service-menu .order-summary-wrapper .order-summary {
+  padding: 35px 40px;
+  background-color: #fbf2dd;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 992px) {
+  .rejuve-service-menu .order-summary-wrapper .order-summary {
+    padding: 20px;
+  }
+}
+.rejuve-service-menu .order-summary-wrapper .order-summary .order-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.membership-hero {
+  padding: 70px 0;
+  background: linear-gradient(95deg, #fff -7.12%, #cff3f6 33.11%, #ecfeff 82.46%, rgba(255, 255, 255, 0.4) 136.14%);
+}
+.membership-hero .hero-content {
+  margin: 0 auto;
+}
+.membership-hero .hero-content h1,
+.membership-hero .hero-content h6 {
+  margin-bottom: 24px;
+}
+.membership-hero .hero-content h6 {
+  color: #282d41;
+}
+.membership-hero .hero-content p {
+  margin-bottom: 30px;
+}
+
+.membership-area {
+  padding: 40px 0;
 }
