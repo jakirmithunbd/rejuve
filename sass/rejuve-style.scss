@@ -736,6 +736,17 @@ A
                     @include transition();
                 }
             }
+
+            @include breakpoint(1024) {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .bars {
+                    display: block !important;
+                }
+            }
         }
 
         .main-header-menu {
@@ -755,7 +766,7 @@ A
                 }
 
                 &:not(:last-child) {
-                    margin-right: 22px;
+                    margin-right: 15px;
                 }
             }
 
@@ -790,30 +801,33 @@ A
         }
     }
 
-    // .main-header-menu {
-    //     background: #414055;
-    //     position: absolute;
-    //     right: -100%;
-    //     top: 100%;
-    //     transition: all .3s ease;
-    //     width: 100%;
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: flex-start;
-    //     padding: 30px 25px;
-    //     row-gap: 5px;
+    @include breakpoint(1024) {
+        .main-header-menu {
+            background: #414055;
+            position: absolute;
+            top: -1200px;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 30px 25px;
+            row-gap: 5px;
+            left: 0;
+            margin: 0;
 
-    //     &.show-menu {
-    //        right: 0;
-    //     }
+            &.show-menu {
+                top: 70px;
+            }
 
-    //     li {
-    //         a {
-    //             color: #fff;
-    //             padding: 10px 0;
-    //         }
-    //     }
-    // }
+            li {
+                a {
+                    color: #fff !important;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
 
     &.sticky {
         padding: 8px 0;
@@ -1259,8 +1273,16 @@ A
         display: grid;
         grid-template-columns: repeat(10, 1fr);
 
+        @include breakpoint(768) {
+            display: block;
+        }
+
         .footer-intro {
             grid-column: 1/4;
+
+            @include breakpoint(880) {
+                margin-bottom: 15px;
+            }
 
             a {
                 img {
@@ -1271,6 +1293,10 @@ A
 
         .footer-menus {
             grid-column: 4/-1;
+
+            @include breakpoint(880) {
+                grid-gap: 10px;
+            }
 
             .footer-menu {
                 h6 {
@@ -1292,21 +1318,34 @@ A
         padding-top: 32px;
         border-top: 1px solid #7d7f84;
 
+        @include breakpoint(880) {
+            .responsiveGrid {
+                grid-gap: 10px;
+            }
+        }
+
         span {
             @include font(14, 21);
             color: #afb1b2;
         }
 
         .footer-menu {
-            text-align: right;
+            @include minbreakpoint(881) {
+                text-align: right;
+            }
 
             ul {
                 li {
                     display: inline-block;
 
                     a {
-                        margin-left: 24px;
                         text-decoration: underline;
+                    }
+
+                    &:not(:first-child) {
+                        a {
+                            margin-left: 24px;
+                        }
                     }
                 }
             }
@@ -1316,6 +1355,25 @@ A
             .footer-menu {
                 text-align: center;
             }
+        }
+    }
+}
+
+.social-media {
+    a {
+        display: inline-flex;
+        width: 100%;
+        margin-bottom: 15px;
+
+        img {
+            width: auto;
+            margin-right: 12px;
+        }
+
+        span {
+            color: #bdbdbd;
+            @include font(14, 21);
+            font-weight: 400;
         }
     }
 }
