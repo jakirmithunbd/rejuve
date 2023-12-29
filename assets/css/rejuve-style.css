@@ -2095,9 +2095,15 @@ A
 }
 .single-classic-editor h5 {
   color: #5a5f73;
+  font-weight: 400;
   font-size: 24px;
   line-height: 36px;
-  font-weight: 400;
+}
+@media only screen and (max-width: 768px) {
+  .single-classic-editor h5 {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 .single-classic-editor h5 span {
   font-weight: 600;
@@ -2520,6 +2526,163 @@ A
 }
 .privacy-policy .container .classic-editor p a:hover {
   color: #32c0cc;
+}
+
+/* #####################################
+*     Beauty-Banner STYLE
+* ##################################### 
+*/
+.beauty-banner {
+  min-height: 777px;
+  padding: 120px 0;
+}
+@media only screen and (min-width: 769px) {
+  .beauty-banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .beauty-banner {
+    padding: 50px 0 40px;
+    min-height: inherit;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .beauty-banner {
+    padding: 40px 0 30px;
+  }
+}
+.beauty-banner .hero-content {
+  width: 100%;
+  max-width: 620px;
+  margin-left: auto;
+}
+@media only screen and (min-width: 1221px) {
+  .beauty-banner .hero-content h1 {
+    font-size: 56px;
+    line-height: 72px;
+  }
+}
+.beauty-banner .hero-content p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 0 32px;
+}
+
+/* #####################################
+*     Beauty treatment section STYLE
+* ##################################### 
+*/
+.beuty-treatment-section .beuty-cat-item {
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 1220px) {
+  .beuty-treatment-section .beuty-cat-item {
+    margin-bottom: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .beuty-treatment-section .beuty-cat-item {
+    margin-bottom: 40px;
+  }
+}
+.beuty-treatment-section .beuty-cat-item:last-child {
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 1220px) {
+  .beuty-treatment-section .beuty-cat-item:last-child {
+    margin-bottom: 0;
+  }
+}
+.beuty-treatment-section .beuty-cat-item .cats-product-wrapper .cat-product-item {
+  padding: 50px 10px 10px;
+}
+@media only screen and (max-width: 1220px) {
+  .beuty-treatment-section .beuty-cat-item .cats-product-wrapper .cat-product-item {
+    padding: 30px 10px 10px;
+  }
+}
+.beuty-treatment-section .beuty-cat-item .cats-product-wrapper .cat-product-item a img {
+  max-width: 210px;
+}
+.beuty-treatment-section .beuty-cat-item .cats-product-wrapper .cat-product-item .title-price {
+  padding: 70px 0 12px;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  font-weight: 600;
+  color: #282d41;
+  font-size: 20px;
+  line-height: 30px;
+}
+@media only screen and (max-width: 1220px) {
+  .beuty-treatment-section .beuty-cat-item .cats-product-wrapper .cat-product-item .title-price {
+    padding: 40px 0 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .beuty-treatment-section .beuty-cat-item .cats-product-wrapper .cat-product-item .title-price {
+    padding: 25px 0 10px;
+  }
+}
+.beuty-treatment-section .beuty-cat-item .cats-product-wrapper .cat-product-item .title-price .bp-title {
+  color: #282d41;
+  font-size: 18px;
+  line-height: 27px;
+}
+.beuty-treatment-section .beuty-cat-item .cats-product-wrapper .cat-product-item .title-price span {
+  font-weight: 300;
+}
+
+/* #####################################
+*     Bokking Beuty Banner STYLE
+* ##################################### 
+*/
+.booking-beuty-banner {
+  padding-bottom: 0;
+}
+.booking-beuty-banner .beuty-banner-content h1 {
+  font-weight: 600;
+}
+@media only screen and (min-width: 1221px) {
+  .booking-beuty-banner .beuty-banner-content h1 {
+    font-size: 48px;
+    line-height: 57px;
+  }
+}
+.booking-beuty-banner .beuty-banner-content p {
+  color: #282d41;
+  font-size: 32px;
+  line-height: 38px;
+}
+@media only screen and (max-width: 768px) {
+  .booking-beuty-banner .beuty-banner-content p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.quantity-input-section {
+  padding: 35px 0 40px;
+}
+.quantity-input-section h5 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.quantity-input-section input {
+  width: 150px;
+  background: #fff;
+  border: 1px solid #C0C4CC;
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 7px 10px;
+  margin-bottom: 15px;
 }
 
 .rejuve-service-menu {

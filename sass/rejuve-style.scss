@@ -2050,8 +2050,12 @@ A
     }
     h5 {
         color: $body;
-        @include font(24, 36);
         font-weight: 400;
+        @include font(24, 36);
+
+        @include breakpoint(768) {
+            @include font(18, 26);
+        }
 
         span {
             font-weight: 600;
@@ -2493,6 +2497,155 @@ A
         }
     }
 }
+
+/* #####################################
+*     Beauty-Banner STYLE
+* ##################################### 
+*/
+.beauty-banner {
+    min-height: 777px;
+    padding: 120px 0;
+
+    @include minbreakpoint (769) {
+        display: flex;
+        align-items: center;
+    }
+
+    @include breakpoint (768) {
+        padding: 50px 0 40px;
+        min-height: inherit;
+    }
+    @include breakpoint (575) {
+        padding: 40px 0 30px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 620px;
+        margin-left: auto;
+
+        h1 {
+            @include minbreakpoint(1221){
+                @include font(56, 72);
+            }
+        }
+        p {
+            @include font(18, 27);
+            margin: 0 0 32px;
+        }
+    }
+}
+
+/* #####################################
+*     Beauty treatment section STYLE
+* ##################################### 
+*/
+.beuty-treatment-section {
+
+    .beuty-cat-item {
+        margin-bottom: 100px;
+
+        @include breakpoint(1220) {
+            margin-bottom: 70px;
+        }
+
+        @include breakpoint(768) {
+            margin-bottom: 40px;
+        }
+
+        &:last-child {
+            margin-bottom: 40px;
+
+            @include breakpoint(1220){
+                margin-bottom: 0;
+            }
+        }
+
+        .cats-product-wrapper {
+
+            .cat-product-item {
+                padding: 50px 10px 10px;
+
+                @include breakpoint(1220) {
+                    padding: 30px 10px 10px;
+                }
+
+                a {
+
+                    img {
+                        max-width: 210px
+                    }
+                }
+                .title-price {
+                    padding: 70px 0 12px;
+                    column-gap: 15px;
+                    font-weight: 600;
+                    color: $secondary;
+                    @include font(20, 30);
+
+                    @include breakpoint(1220){
+                        padding: 40px 0 10px;
+                    }
+                    @include breakpoint(768){
+                        padding: 25px 0 10px;
+                    }
+
+                    .bp-title {
+                        color: $secondary;
+                        @include font(18, 27);
+                    }
+                    span {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* #####################################
+*     Bokking Beuty Banner STYLE
+* ##################################### 
+*/
+.booking-beuty-banner {
+    padding-bottom: 0;
+
+    .beuty-banner-content {
+
+        h1 {
+            font-weight: 600;
+            @include minbreakpoint (1221) {
+                @include font (48, 57);
+            }
+        }
+        p {
+            color: $secondary;
+            @include font (32, 38);
+
+            @include breakpoint (768) {
+                @include font (20, 28);
+            }
+        }
+    }
+}
+.quantity-input-section {
+    padding: 35px 0 40px;
+
+    h5 {
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    input {
+        width: 150px;
+        background: #fff;
+        border: 1px solid #C0C4CC;
+        border-radius: 5px;
+        @include font (20, 24);
+        padding: 7px 10px;
+        margin-bottom: 15px;
+    }
+}
+
 
 @import './service-menu';
 @import './membership';
