@@ -236,7 +236,7 @@ svg {
   padding: 0 32px;
 }
 
-.transition, .labs-services .labs-services-list .labs-service .labs-item span.action-btn::before, .labs-services .labs-services-list .labs-service .labs-item span.action-btn, .appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-header .open-or-close, .footer .footer-menu ul li a, .slick-slider-wrapper .slick-dots li button, .slick-slider-wrapper .next-previous img, .products-wrapper .products .product .product-content .product-top .product-title,
+.transition, .labs-services .labs-services-list .labs-service .labs-item span.action-btn::before, .labs-services .labs-services-list .labs-service .labs-item span.action-btn, .appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-header .open-or-close, .footer .footer-menu ul li a, .slick-slider-wrapper .slick-dots li button, .slick-slider-wrapper .next-previous img, .products-wrapper .products .product .product-content .product-top .product-title,
 .products-wrapper .products .product .product-content .product-top .price, .products-wrapper .products .product .product-image img, .rejuve-btn {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1312,31 +1312,31 @@ A
 }
 
 /* #####################################
-*     Appontment-sectoin STYLE
+*     appointment-section STYLE
 * ##################################### 
 */
-.appontment-sectoin .data-box {
+.appointment-section .data-box {
   margin-bottom: 60px;
 }
 @media only screen and (max-width: 1200px) {
-  .appontment-sectoin .data-box {
+  .appointment-section .data-box {
     margin-bottom: 25px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .data-box {
+  .appointment-section .data-box {
     margin-bottom: 20px;
   }
 }
-.appontment-sectoin .data-box h4 {
+.appointment-section .data-box h4 {
   font-size: 18px;
   line-height: 22px;
 }
-.appontment-sectoin .data-box .data-input-wrapper {
+.appointment-section .data-box .data-input-wrapper {
   background: #e3faff;
   padding: 50px;
 }
-.appontment-sectoin .data-box .data-input-wrapper h5 {
+.appointment-section .data-box .data-input-wrapper h5 {
   color: #282d41;
   font-weight: 600;
   font-size: 16px;
@@ -1344,17 +1344,17 @@ A
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 1024px) {
-  .appontment-sectoin .data-box .data-input-wrapper {
+  .appointment-section .data-box .data-input-wrapper {
     padding: 30px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .data-box .data-input-wrapper {
+  .appointment-section .data-box .data-input-wrapper {
     padding: 20px;
     grid-gap: 15px;
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper label {
+.appointment-section .data-box .data-input-wrapper label {
   color: #282d41;
   font-weight: 500;
   font-size: 14px;
@@ -1362,12 +1362,12 @@ A
   display: block;
   padding-bottom: 5px;
 }
-.appontment-sectoin .data-box .data-input-wrapper label span {
+.appointment-section .data-box .data-input-wrapper label span {
   color: #32c0cc;
 }
-.appontment-sectoin .data-box .data-input-wrapper input,
-.appontment-sectoin .data-box .data-input-wrapper textarea,
-.appontment-sectoin .data-box .data-input-wrapper .redio-button {
+.appointment-section .data-box .data-input-wrapper input,
+.appointment-section .data-box .data-input-wrapper textarea,
+.appointment-section .data-box .data-input-wrapper .redio-button {
   width: 100%;
   font-size: 14px;
   line-height: 22px;
@@ -1376,9 +1376,9 @@ A
   border: 1px solid #c0c4cc;
   border-radius: 4px;
 }
-.appontment-sectoin .data-box .data-input-wrapper input.redio-button,
-.appontment-sectoin .data-box .data-input-wrapper textarea.redio-button,
-.appontment-sectoin .data-box .data-input-wrapper .redio-button.redio-button {
+.appointment-section .data-box .data-input-wrapper input.redio-button,
+.appointment-section .data-box .data-input-wrapper textarea.redio-button,
+.appointment-section .data-box .data-input-wrapper .redio-button.redio-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1389,9 +1389,9 @@ A
      -moz-column-gap: 8px;
           column-gap: 8px;
 }
-.appontment-sectoin .data-box .data-input-wrapper input.redio-button .radio-check,
-.appontment-sectoin .data-box .data-input-wrapper textarea.redio-button .radio-check,
-.appontment-sectoin .data-box .data-input-wrapper .redio-button.redio-button .radio-check {
+.appointment-section .data-box .data-input-wrapper input.redio-button .radio-check,
+.appointment-section .data-box .data-input-wrapper textarea.redio-button .radio-check,
+.appointment-section .data-box .data-input-wrapper .redio-button.redio-button .radio-check {
   width: 18px;
   height: 18px;
   border: 1px solid #32c0cc;
@@ -1399,14 +1399,14 @@ A
   display: inline-block;
   cursor: pointer;
 }
-.appontment-sectoin .data-box .data-input-wrapper input.redio-button .radio-check.checked,
-.appontment-sectoin .data-box .data-input-wrapper textarea.redio-button .radio-check.checked,
-.appontment-sectoin .data-box .data-input-wrapper .redio-button.redio-button .radio-check.checked {
+.appointment-section .data-box .data-input-wrapper input.redio-button .radio-check.checked,
+.appointment-section .data-box .data-input-wrapper textarea.redio-button .radio-check.checked,
+.appointment-section .data-box .data-input-wrapper .redio-button.redio-button .radio-check.checked {
   position: relative;
 }
-.appontment-sectoin .data-box .data-input-wrapper input.redio-button .radio-check.checked::after,
-.appontment-sectoin .data-box .data-input-wrapper textarea.redio-button .radio-check.checked::after,
-.appontment-sectoin .data-box .data-input-wrapper .redio-button.redio-button .radio-check.checked::after {
+.appointment-section .data-box .data-input-wrapper input.redio-button .radio-check.checked::after,
+.appointment-section .data-box .data-input-wrapper textarea.redio-button .radio-check.checked::after,
+.appointment-section .data-box .data-input-wrapper .redio-button.redio-button .radio-check.checked::after {
   position: absolute;
   content: "";
   width: 10px;
@@ -1416,34 +1416,34 @@ A
   top: calc(50% - 5px);
   left: calc(50% - 5px);
 }
-.appontment-sectoin .data-box .data-input-wrapper input.redio-button .redio-after,
-.appontment-sectoin .data-box .data-input-wrapper textarea.redio-button .redio-after,
-.appontment-sectoin .data-box .data-input-wrapper .redio-button.redio-button .redio-after {
+.appointment-section .data-box .data-input-wrapper input.redio-button .redio-after,
+.appointment-section .data-box .data-input-wrapper textarea.redio-button .redio-after,
+.appointment-section .data-box .data-input-wrapper .redio-button.redio-button .redio-after {
   color: #f6d66f;
   padding: 0;
   font-size: 14px;
   line-height: 22px;
 }
-.appontment-sectoin .data-box .data-input-wrapper span {
+.appointment-section .data-box .data-input-wrapper span {
   color: #282d41;
   font-size: 12px;
   line-height: 22px;
   padding-top: 5px;
 }
-.appontment-sectoin .data-box .data-input-wrapper .clinic-address,
-.appontment-sectoin .data-box .data-input-wrapper .your-address {
+.appointment-section .data-box .data-input-wrapper .clinic-address,
+.appointment-section .data-box .data-input-wrapper .your-address {
   position: relative;
 }
 @media only screen and (min-width: 992px) {
-  .appontment-sectoin .data-box .data-input-wrapper .clinic-address,
-  .appontment-sectoin .data-box .data-input-wrapper .your-address {
+  .appointment-section .data-box .data-input-wrapper .clinic-address,
+  .appointment-section .data-box .data-input-wrapper .your-address {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper .clinic-address::before,
-.appontment-sectoin .data-box .data-input-wrapper .your-address::before {
+.appointment-section .data-box .data-input-wrapper .clinic-address::before,
+.appointment-section .data-box .data-input-wrapper .your-address::before {
   position: absolute;
   content: "";
   width: 11px;
@@ -1456,13 +1456,13 @@ A
   left: 25px;
   z-index: 1;
 }
-.appontment-sectoin .data-box .data-input-wrapper .clinic-address input,
-.appontment-sectoin .data-box .data-input-wrapper .your-address input {
+.appointment-section .data-box .data-input-wrapper .clinic-address input,
+.appointment-section .data-box .data-input-wrapper .your-address input {
   padding-left: 50px;
   padding-right: 150px;
 }
-.appontment-sectoin .data-box .data-input-wrapper .clinic-address .save-button,
-.appontment-sectoin .data-box .data-input-wrapper .your-address .save-button {
+.appointment-section .data-box .data-input-wrapper .clinic-address .save-button,
+.appointment-section .data-box .data-input-wrapper .your-address .save-button {
   position: absolute;
   padding: 5px 10px;
   background: transparent;
@@ -1474,27 +1474,27 @@ A
   font-size: 14px;
   line-height: 22px;
 }
-.appontment-sectoin .data-box .data-input-wrapper .saved-items {
+.appointment-section .data-box .data-input-wrapper .saved-items {
   -webkit-column-gap: 25px;
      -moz-column-gap: 25px;
           column-gap: 25px;
   row-gap: 20px;
 }
 @media only screen and (min-width: 992px) {
-  .appontment-sectoin .data-box .data-input-wrapper .saved-items {
+  .appointment-section .data-box .data-input-wrapper .saved-items {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
   }
 }
 @media only screen and (max-width: 575px) {
-  .appontment-sectoin .data-box .data-input-wrapper .saved-items {
+  .appointment-section .data-box .data-input-wrapper .saved-items {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item {
+.appointment-section .data-box .data-input-wrapper .saved-items .saved-item {
   width: 100%;
   max-width: 200px;
   background: #fff;
@@ -1503,7 +1503,7 @@ A
   border-radius: 4px;
   position: relative;
 }
-.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .saved-address-type {
+.appointment-section .data-box .data-input-wrapper .saved-items .saved-item .saved-address-type {
   color: #5a5f73;
   font-weight: 400;
   font-size: 14px;
@@ -1511,7 +1511,7 @@ A
   padding: 0 25px 0 20px;
   position: relative;
 }
-.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .saved-address-type::before {
+.appointment-section .data-box .data-input-wrapper .saved-items .saved-item .saved-address-type::before {
   position: absolute;
   content: "";
   width: 13px;
@@ -1524,12 +1524,12 @@ A
   left: 0;
   z-index: 1;
 }
-.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item p {
+.appointment-section .data-box .data-input-wrapper .saved-items .saved-item p {
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 0;
 }
-.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .edit-btn {
+.appointment-section .data-box .data-input-wrapper .saved-items .saved-item .edit-btn {
   color: #c0c4cc;
   font-size: 12px;
   line-height: 22px;
@@ -1538,225 +1538,225 @@ A
   right: 10px;
   cursor: pointer;
 }
-.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .delete-btn {
+.appointment-section .data-box .data-input-wrapper .saved-items .saved-item .delete-btn {
   position: absolute;
   bottom: 10px;
   right: 10px;
   cursor: pointer;
 }
-.appontment-sectoin .data-box .data-input-wrapper .saved-items .saved-item .delete-btn img {
+.appointment-section .data-box .data-input-wrapper .saved-items .saved-item .delete-btn img {
   max-width: 27px;
 }
 @media only screen and (min-width: 992px) {
-  .appontment-sectoin .data-box .data-input-wrapper .any-nurse {
+  .appointment-section .data-box .data-input-wrapper .any-nurse {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
   }
-  .appontment-sectoin .data-box .data-input-wrapper .any-nurse .redio-button {
+  .appointment-section .data-box .data-input-wrapper .any-nurse .redio-button {
     max-width: calc(50% - 16px);
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper .discount {
+.appointment-section .data-box .data-input-wrapper .discount {
   -webkit-column-gap: 15px;
      -moz-column-gap: 15px;
           column-gap: 15px;
 }
-.appontment-sectoin .data-box .data-input-wrapper .discount .discount-btn {
+.appointment-section .data-box .data-input-wrapper .discount .discount-btn {
   min-width: 168px;
   height: 48px;
   padding: 10px;
 }
 @media only screen and (max-width: 575px) {
-  .appontment-sectoin .data-box .data-input-wrapper .discount .discount-btn {
+  .appointment-section .data-box .data-input-wrapper .discount .discount-btn {
     min-width: 140px;
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper .tip {
+.appointment-section .data-box .data-input-wrapper .tip {
   -webkit-column-gap: 70px;
      -moz-column-gap: 70px;
           column-gap: 70px;
 }
 @media only screen and (max-width: 575px) {
-  .appontment-sectoin .data-box .data-input-wrapper .tip {
+  .appointment-section .data-box .data-input-wrapper .tip {
     -webkit-column-gap: 40px;
        -moz-column-gap: 40px;
             column-gap: 40px;
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper .tip .defult-tip .redio-button {
+.appointment-section .data-box .data-input-wrapper .tip .defult-tip .redio-button {
   background: transparent;
   border: 0;
   padding-left: 0;
   padding-top: 0;
 }
-.appontment-sectoin .data-box .data-input-wrapper .tip .custom-tip {
+.appointment-section .data-box .data-input-wrapper .tip .custom-tip {
   width: 75%;
   row-gap: 20px;
 }
-.appontment-sectoin .data-box .data-input-wrapper .tip .custom-tip .check-mark {
+.appointment-section .data-box .data-input-wrapper .tip .custom-tip .check-mark {
   margin-bottom: 0;
 }
-.appontment-sectoin .data-box .data-input-wrapper .tip .custom-tip .total-tip span {
+.appointment-section .data-box .data-input-wrapper .tip .custom-tip .total-tip span {
   color: #32c0cc;
   font-size: 16px;
   line-height: 22px;
 }
-.appontment-sectoin .data-box .data-input-wrapper .card-details {
+.appointment-section .data-box .data-input-wrapper .card-details {
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
   row-gap: 30px;
 }
 @media only screen and (min-width: 992px) {
-  .appontment-sectoin .data-box .data-input-wrapper .card-details {
+  .appointment-section .data-box .data-input-wrapper .card-details {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper .card-details .card-number {
+.appointment-section .data-box .data-input-wrapper .card-details .card-number {
   width: calc(50% - 16px);
 }
 @media only screen and (max-width: 1024px) {
-  .appontment-sectoin .data-box .data-input-wrapper .card-details .card-number {
+  .appointment-section .data-box .data-input-wrapper .card-details .card-number {
     width: 100%;
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper .card-details .expiration,
-.appontment-sectoin .data-box .data-input-wrapper .card-details .cvc {
+.appointment-section .data-box .data-input-wrapper .card-details .expiration,
+.appointment-section .data-box .data-input-wrapper .card-details .cvc {
   width: 23%;
 }
 @media only screen and (max-width: 1024px) {
-  .appontment-sectoin .data-box .data-input-wrapper .card-details .expiration,
-  .appontment-sectoin .data-box .data-input-wrapper .card-details .cvc {
+  .appointment-section .data-box .data-input-wrapper .card-details .expiration,
+  .appointment-section .data-box .data-input-wrapper .card-details .cvc {
     width: 48%;
   }
 }
 @media only screen and (max-width: 575px) {
-  .appontment-sectoin .data-box .data-input-wrapper .card-details .expiration,
-  .appontment-sectoin .data-box .data-input-wrapper .card-details .cvc {
+  .appointment-section .data-box .data-input-wrapper .card-details .expiration,
+  .appointment-section .data-box .data-input-wrapper .card-details .cvc {
     width: 46%;
   }
 }
-.appontment-sectoin .data-box .data-input-wrapper .card-details .special-instructions {
+.appointment-section .data-box .data-input-wrapper .card-details .special-instructions {
   width: 100%;
 }
-.appontment-sectoin .data-box .data-input-wrapper .card-details .special-instructions label {
+.appointment-section .data-box .data-input-wrapper .card-details .special-instructions label {
   color: #32c0cc;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   padding-bottom: 20px;
 }
-.appontment-sectoin .add-person-btn {
+.appointment-section .add-person-btn {
   padding-top: 40px;
   margin-bottom: 60px;
 }
 @media only screen and (max-width: 1200px) {
-  .appontment-sectoin .add-person-btn {
+  .appointment-section .add-person-btn {
     padding-top: 20px;
     margin-bottom: 25px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .add-person-btn {
+  .appointment-section .add-person-btn {
     padding-top: 10px;
     margin-bottom: 20px;
   }
 }
-.appontment-sectoin .add-person-btn.add-of-single {
+.appointment-section .add-person-btn.add-of-single {
   padding-top: 0;
 }
 @media only screen and (max-width: 1200px) {
-  .appontment-sectoin .add-person-btn.add-of-single {
+  .appointment-section .add-person-btn.add-of-single {
     margin-bottom: 40px;
   }
 }
 @media only screen and (max-width: 575px) {
-  .appontment-sectoin .add-person-btn.add-of-single {
+  .appointment-section .add-person-btn.add-of-single {
     text-align: center;
   }
 }
-.appontment-sectoin .calculator-box-wrap h4 {
+.appointment-section .calculator-box-wrap h4 {
   font-size: 18px;
   line-height: 22px;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box {
+.appointment-section .calculator-box-wrap .calculator-box {
   padding: 40px 60px;
   background: #fff9eb;
   margin-bottom: 35px;
 }
 @media only screen and (max-width: 1024px) {
-  .appontment-sectoin .calculator-box-wrap .calculator-box {
+  .appointment-section .calculator-box-wrap .calculator-box {
     padding: 30px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .calculator-box-wrap .calculator-box {
+  .appointment-section .calculator-box-wrap .calculator-box {
     padding: 20px;
   }
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .person {
+.appointment-section .calculator-box-wrap .calculator-box .person {
   margin-bottom: 30px;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .person h5 {
+.appointment-section .calculator-box-wrap .calculator-box .person h5 {
   font-weight: 600;
   color: #282d41;
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 22px;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper {
+.appointment-section .calculator-box-wrap .calculator-box .person .product-wrapper {
   background: #fbf2dd;
   padding: 40px;
   row-gap: 40px;
 }
 @media only screen and (max-width: 1024px) {
-  .appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper {
+  .appointment-section .calculator-box-wrap .calculator-box .person .product-wrapper {
     padding: 25px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper {
+  .appointment-section .calculator-box-wrap .calculator-box .person .product-wrapper {
     padding: 15px;
   }
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper .product-item {
+.appointment-section .calculator-box-wrap .calculator-box .person .product-wrapper .product-item {
   color: #282d41;
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 22px;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper {
+.appointment-section .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper {
   background: #fbf2dd;
   padding: 40px;
   row-gap: 40px;
 }
 @media only screen and (max-width: 1024px) {
-  .appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper {
+  .appointment-section .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper {
     padding: 25px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper {
+  .appointment-section .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper {
     padding: 15px;
   }
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper .product-item {
+.appointment-section .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper .product-item {
   color: #282d41;
   font-size: 14px;
   line-height: 22px;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper .product-item .product-price {
+.appointment-section .calculator-box-wrap .calculator-box .person .product-wrapper .product-wrapper .product-item .product-price {
   font-weight: 600;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .summary {
+.appointment-section .calculator-box-wrap .calculator-box .summary {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .summary ul {
+.appointment-section .calculator-box-wrap .calculator-box .summary ul {
   width: 100%;
   max-width: 300px;
   -webkit-box-orient: vertical;
@@ -1765,21 +1765,21 @@ A
           flex-direction: column;
   row-gap: 30px;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .summary ul li {
+.appointment-section .calculator-box-wrap .calculator-box .summary ul li {
   color: #282d41;
   font-size: 14px;
   line-height: 22px;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .summary ul li .sum-pricy {
+.appointment-section .calculator-box-wrap .calculator-box .summary ul li .sum-pricy {
   font-weight: 600;
 }
-.appontment-sectoin .calculator-box-wrap .calculator-box .summary ul li.total {
+.appointment-section .calculator-box-wrap .calculator-box .summary ul li.total {
   font-weight: 600;
   font-size: 18px;
   border-top: 1px solid rgba(40, 45, 65, 0.22);
   padding-top: 5px;
 }
-.appontment-sectoin .check-mark {
+.appointment-section .check-mark {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -1795,8 +1795,8 @@ A
           column-gap: 10px;
   margin-bottom: 35px;
 }
-.appontment-sectoin .check-mark .square,
-.appontment-sectoin .check-mark .circle {
+.appointment-section .check-mark .square,
+.appointment-section .check-mark .circle {
   width: 20px;
   height: 20px;
   border: 1px solid #C0C4CC;
@@ -1805,12 +1805,12 @@ A
   cursor: pointer;
   background: #ffffff;
 }
-.appontment-sectoin .check-mark .square.checked,
-.appontment-sectoin .check-mark .circle.checked {
+.appointment-section .check-mark .square.checked,
+.appointment-section .check-mark .circle.checked {
   position: relative;
 }
-.appontment-sectoin .check-mark .square.checked::after,
-.appontment-sectoin .check-mark .circle.checked::after {
+.appointment-section .check-mark .square.checked::after,
+.appointment-section .check-mark .circle.checked::after {
   position: absolute;
   content: "";
   width: 10px;
@@ -1820,37 +1820,37 @@ A
   top: calc(50% - 5px);
   left: calc(50% - 5px);
 }
-.appontment-sectoin .check-mark .circle {
+.appointment-section .check-mark .circle {
   border-radius: 500px;
 }
-.appontment-sectoin .check-mark .cm-content {
+.appointment-section .check-mark .cm-content {
   width: 90%;
 }
-.appontment-sectoin .check-mark .recom {
+.appointment-section .check-mark .recom {
   font-weight: 600;
 }
-.appontment-sectoin .accordion-box {
+.appointment-section .accordion-box {
   margin-bottom: 45px;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item {
   background: #e3faff;
   padding: 25px 100px 30px;
   border-radius: 12px;
   margin-bottom: 12px;
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .accordion-box .accordion-wrapper .accordion-item {
+  .appointment-section .accordion-box .accordion-wrapper .accordion-item {
     padding: 25px 15px 30px 40px;
   }
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-header {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-header {
   padding-right: 35px;
   position: relative;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-header .open-or-close {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-header .open-or-close {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -1862,17 +1862,17 @@ A
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-header .accordion-title {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-header .accordion-title {
   color: #282d41;
   padding: 5px 9px 0 0;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-header .selected-item {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-header .selected-item {
   color: #32c0cc;
   padding: 5px 30px 0 9px;
   position: relative;
   display: inline-block;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-header .selected-item::after {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-header .selected-item::after {
   position: absolute;
   content: "";
   width: 16px;
@@ -1885,7 +1885,7 @@ A
   background-size: cover;
   cursor: pointer;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 60px 1fr;
@@ -1896,22 +1896,22 @@ A
   padding: 40px 0;
   display: none;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body > *:nth-child(1) {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body > *:nth-child(2) {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body > *:nth-child(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
 }
 @media only screen and (max-width: 768px) {
-  .appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body {
+  .appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body {
     -ms-grid-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
     padding: 35px 25px 20px 0;
   }
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1924,17 +1924,17 @@ A
   font-size: 16px;
   line-height: 22px;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name {
   color: #282d41;
   padding-left: 32px;
   position: relative;
   cursor: pointer;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name::after, .appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name::before {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name::after, .appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name::before {
   position: absolute;
   content: "";
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name::after {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name::after {
   width: 20px;
   height: 20px;
   left: 0;
@@ -1943,7 +1943,7 @@ A
   border: 1px solid #c0c4cc;
   border-radius: 3px;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name::before {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-name::before {
   width: 11px;
   height: 11px;
   left: 6px;
@@ -1952,17 +1952,17 @@ A
   background: transparent;
   z-index: 1;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-price {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item .t-item-price {
   color: #32c0cc;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item.selected .t-item-name::before {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item .accordion-body .treatment-item.selected .t-item-name::before {
   background: #32c0cc;
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item.open .accordion-header .open-or-close {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item.open .accordion-header .open-or-close {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
-.appontment-sectoin .accordion-box .accordion-wrapper .accordion-item.open .accordion-body {
+.appointment-section .accordion-box .accordion-wrapper .accordion-item.open .accordion-body {
   display: -ms-grid;
   display: grid;
 }

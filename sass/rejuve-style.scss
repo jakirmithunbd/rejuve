@@ -1366,10 +1366,10 @@ A
 }
 
 /* #####################################
-*     Appontment-sectoin STYLE
+*     appointment-section STYLE
 * ##################################### 
 */
-.appontment-sectoin {
+.appointment-section {
     .data-box {
         margin-bottom: 60px;
 
@@ -1782,6 +1782,7 @@ A
             }
         }
     }
+
     .check-mark {
         font-weight: 400;
         @include font(16, 24);
