@@ -356,6 +356,25 @@ ul {
     grid-gap: 32px;
 }
 
+.hide-desktop {
+    @include minbreakpoint (1221){
+        display: none;
+    }
+}
+.hide-tab {
+    @include breakpoint (1220) {
+        display: none;
+    }
+    @include breakpoint (768) {
+        display: block;
+    }
+}
+.hide-mobile {
+    @include breakpoint (768) {
+        display: none;
+    }
+}
+
 // Mobile Toggler
 .bars {
     display: flex;
@@ -768,6 +787,51 @@ A
                 &:not(:last-child) {
                     margin-right: 15px;
                 }
+
+
+                // for sub menu css start
+                position: relative;
+
+                ul.sub-menu {
+
+                    a {
+                        @include font(14, 22);
+                    }
+                }
+                @include minbreakpoint (1025) {
+                    &.has-children {
+
+                        >a {
+                            position: relative;
+
+                            &::after {
+                                position: absolute;
+                                content: url("/assets/images/icons/arrow-down.svg");
+                                right: -20px;
+                                top: 3px;
+    
+                            }
+                        }
+                    }
+                    ul.sub-menu {
+                        margin: 0;
+                        position: absolute;
+                        left: 0;
+                        top: 30px;
+                        padding: 10px;
+                        background: rgb(232 232 232 / 72%);
+                        display: none;
+                    }
+    
+                    &:hover {
+                        ul.sub-menu {
+                            display: block;
+                        }
+                    }
+                }
+                // for sub menu css end 
+
+
             }
 
             &.header-right-menu {
@@ -2643,6 +2707,362 @@ A
         @include font (20, 24);
         padding: 7px 10px;
         margin-bottom: 15px;
+    }
+}
+
+/* #####################################
+*     Account  Page STYLE
+* ##################################### 
+*/
+.account-tab {
+
+    .tab-menu {
+        width: 100%;
+        max-width: 380px;
+        background:#F5F5F5;
+        padding: 65px 20px 220px;
+
+        @include breakpoint(1220) {
+            max-width: 300px;
+            padding: 30px 10px 100px;
+        }
+
+        @include breakpoint (768) {
+            max-width: 100%;
+            padding: 48px 20px 100px;
+            background: transparent;
+            row-gap: 50px;
+        }
+
+        .tab-menu-wrap {
+
+            @include breakpoint (768) {
+                width: 100%;
+            }
+
+            .tab-menu-item {
+                width: 100%;
+                min-width: 252px;
+                padding: 16px;
+                column-gap: 16px;
+                margin-bottom: 8px;
+                border-radius: 8px;
+                cursor: pointer;
+                
+                &:hover, &.active {
+                    background: #E9E9E9;
+                }
+
+                @include breakpoint (768) {
+                    max-width: 100%;
+                    border-bottom: 1px solid#C0C4CC;
+                    border-radius: 0;
+                    position: relative;
+                    margin-bottom: 0;
+
+                    &:hover, &.active {
+                        background: transparent;
+                    }
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: url("/assets/images/icons/arrow-down.svg");
+                        right: 5px;
+                        top: 13px;
+                        transform: rotate(-90deg);
+                    }
+
+                    &.active {
+                        border-bottom: 0;
+                        padding-left: 57px;
+
+                        img {
+                            display: none;
+                        }
+
+                        &::after {
+                            right: inherit;
+                            left: 5px;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+
+                img {
+                    max-width: 24px;
+                }
+
+                span {
+                    font-weight: 500;
+                    color: $secondary;
+                    @include font(18, 22);
+                }
+
+                &.active {
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .sign-out-btn {
+            width: 100%;
+            max-width: 252px;
+            column-gap: 55px;
+            padding: 16px;
+            border-radius: 8px;
+
+            @include breakpoint (768) {
+                max-width: fit-content;
+                align-self: flex-start;
+                column-gap: 16px;
+            }
+
+            &:hover {
+                background: #E9E9E9;
+            }
+
+
+            img {
+                max-width: 24px;
+            }
+            span {
+                font-weight: 600;
+                @include font (16, 20);
+            }
+        }
+    }
+    .tab-body {
+        padding: 65px 30px 170px 40px;
+        width: 100%;
+
+        @include breakpoint (1220) {
+            padding: 30px 20px 100px 10px;
+        }
+
+        @include breakpoint (768) {
+            padding: 0;
+            display: none;
+
+            &.open {
+                display: block;
+            }
+        }
+
+
+        .activity-item-wrapper {
+            grid-gap: 24px;
+
+            .activity-item {
+                padding: 24px;
+                background: #F5F5F5;
+                border-radius: 10px;
+
+                @include breakpoint (768) {
+                    padding: 16px;
+                }
+
+                .date {
+                    @include font (14, 22);
+                    margin-bottom: 30px;
+
+                    @include breakpoint (768) {
+                        margin-bottom: 12px;
+                    }
+
+                    @include breakpoint (575) {
+                        @include font (12, 22);
+                    }
+                }
+                .product-items {
+                    border-bottom: 1px solid #C0C4CC;
+
+                    .product-item {
+                        margin-bottom: 15px;
+                        color: $secondary;
+                        @include font(16, 22);
+
+                        @include breakpoint (575) {
+                            @include font (14, 22);
+                        }
+                        
+                        .product-title {
+                            font-weight: 500;
+                        }
+                        .product-price {
+                            font-weight: 700;
+                        }
+                    }
+                }
+                .total {
+                    color: $secondary;
+                    font-weight: 700;
+                    @include font(16, 22);
+                    margin: 25px 0;
+
+                    @include breakpoint (768) {
+                        margin: 16px 0 30px;
+                    }
+
+                    @include breakpoint (575) {
+                        @include font (14, 22);
+                    }
+                }
+            }
+        }
+
+        .appointments-item-wrapper {
+
+            .appointments-item {
+                background: #f5f5f5;
+                padding: 24px;
+                border-radius: 10px;
+                width: 100%;
+                max-width: 712px;
+
+                @include breakpoint (768) {
+                    padding: 16px;
+                }
+
+                .api-header {
+                    border-bottom: 1px solid#C0C4CC;
+                    margin-bottom: 24px;
+
+                    .location-date {
+                        margin-bottom: 8px;
+
+                        @include breakpoint (768) {
+                            flex-direction: column-reverse;
+                            row-gap: 24px;
+                        }
+
+                        .ap-type {
+                            color: $secondary;
+                            font-weight: 500;
+                            @include font(18, 22);
+                        }
+                        .ap-date {
+                            @include font (14, 22);
+
+                            @include breakpoint (575) {
+                                @include font (12, 22);
+                            }
+                        }
+                    }
+                    .ap-location {
+                        @include font(13, 18);
+                        margin-bottom: 24px;
+
+                        @include breakpoint (768) {
+                            text-align: start;
+                        }
+                    }
+                }
+
+                .cat-item-wrapper {
+
+                    .cat-item {
+                        margin-bottom: 24px;
+
+
+                        h6 {
+                            color: $secondary;
+
+                            @include breakpoint (768) {
+                                margin-bottom: 8px;
+                            }
+
+                            @include breakpoint (575) {
+                                @include font (14, 21);
+                            }
+                        }
+                        .a-product-item-wrapper {
+                            background: #EAEAEA;
+                            padding: 16px;
+                            border-radius: 5px;
+
+                            @include breakpoint (768) {
+                                padding: 8px;
+                            }
+
+                            .a-product-item {
+                                margin-bottom: 16px;
+                                color: $secondary;
+                                @include font(14, 22);
+
+                                @include breakpoint (575) {
+                                    @include font (12, 22);
+                                }
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+
+                                .product-price {
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+                .time-provider {
+
+                    @include breakpoint (991) {
+                        flex-direction: column;
+                        row-gap: 24px;
+                    }
+
+                    span {
+                        color: $secondary;
+                        font-weight: 600;
+                        @include font(16, 24);
+
+                        @include breakpoint (575) {
+                            @include font (14, 21);
+                        }
+                    }
+                    
+                    .time, .provider {
+                        font-weight: 400;
+                        @include font (14, 22);
+                        background: #EAEAEA;
+                        padding: 16px;
+                        border-radius: 5px;
+
+                        @include breakpoint (768) {
+                            padding: 10px;
+                        }
+
+                        @include breakpoint (575) {
+                            @include font (12, 22);
+                        }
+                    }
+                    .time-wrap {
+                        width: 100%;
+                        max-width: 30%;
+                        row-gap: 12px;
+
+                        @include breakpoint (991) {
+                            max-width: fit-content
+                        }
+                    }
+                    .provider-wrap {
+                        width: 100%;
+                        max-width: 66%;
+                        row-gap: 12px;
+
+                        @include breakpoint (991) {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

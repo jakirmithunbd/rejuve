@@ -418,6 +418,29 @@ ul {
   grid-gap: 32px;
 }
 
+@media only screen and (min-width: 1221px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .hide-tab {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hide-tab {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
 .bars {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -775,6 +798,7 @@ A
 }
 .rejuve-header .header-menu-wrap .main-header-menu li {
   list-style: none;
+  position: relative;
 }
 .rejuve-header .header-menu-wrap .main-header-menu li a {
   font-size: 16px;
@@ -789,6 +813,33 @@ A
 }
 .rejuve-header .header-menu-wrap .main-header-menu li:not(:last-child) {
   margin-right: 15px;
+}
+.rejuve-header .header-menu-wrap .main-header-menu li ul.sub-menu a {
+  font-size: 14px;
+  line-height: 22px;
+}
+@media only screen and (min-width: 1025px) {
+  .rejuve-header .header-menu-wrap .main-header-menu li.has-children > a {
+    position: relative;
+  }
+  .rejuve-header .header-menu-wrap .main-header-menu li.has-children > a::after {
+    position: absolute;
+    content: url("/assets/images/icons/arrow-down.svg");
+    right: -20px;
+    top: 3px;
+  }
+  .rejuve-header .header-menu-wrap .main-header-menu li ul.sub-menu {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    padding: 10px;
+    background: rgba(232, 232, 232, 0.72);
+    display: none;
+  }
+  .rejuve-header .header-menu-wrap .main-header-menu li:hover ul.sub-menu {
+    display: block;
+  }
 }
 .rejuve-header .header-menu-wrap .main-header-menu.header-right-menu li a {
   color: #32c0cc;
@@ -2683,6 +2734,377 @@ A
   line-height: 24px;
   padding: 7px 10px;
   margin-bottom: 15px;
+}
+
+/* #####################################
+*     Account  Page STYLE
+* ##################################### 
+*/
+.account-tab .tab-menu {
+  width: 100%;
+  max-width: 380px;
+  background: #F5F5F5;
+  padding: 65px 20px 220px;
+}
+@media only screen and (max-width: 1220px) {
+  .account-tab .tab-menu {
+    max-width: 300px;
+    padding: 30px 10px 100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-menu {
+    max-width: 100%;
+    padding: 48px 20px 100px;
+    background: transparent;
+    row-gap: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-menu .tab-menu-wrap {
+    width: 100%;
+  }
+}
+.account-tab .tab-menu .tab-menu-wrap .tab-menu-item {
+  width: 100%;
+  min-width: 252px;
+  padding: 16px;
+  -webkit-column-gap: 16px;
+     -moz-column-gap: 16px;
+          column-gap: 16px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.account-tab .tab-menu .tab-menu-wrap .tab-menu-item:hover, .account-tab .tab-menu .tab-menu-wrap .tab-menu-item.active {
+  background: #E9E9E9;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-menu .tab-menu-wrap .tab-menu-item {
+    max-width: 100%;
+    border-bottom: 1px solid #C0C4CC;
+    border-radius: 0;
+    position: relative;
+    margin-bottom: 0;
+  }
+  .account-tab .tab-menu .tab-menu-wrap .tab-menu-item:hover, .account-tab .tab-menu .tab-menu-wrap .tab-menu-item.active {
+    background: transparent;
+  }
+  .account-tab .tab-menu .tab-menu-wrap .tab-menu-item:last-child {
+    border-bottom: 0;
+  }
+  .account-tab .tab-menu .tab-menu-wrap .tab-menu-item::after {
+    position: absolute;
+    content: url("/assets/images/icons/arrow-down.svg");
+    right: 5px;
+    top: 13px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .account-tab .tab-menu .tab-menu-wrap .tab-menu-item.active {
+    border-bottom: 0;
+    padding-left: 57px;
+  }
+  .account-tab .tab-menu .tab-menu-wrap .tab-menu-item.active img {
+    display: none;
+  }
+  .account-tab .tab-menu .tab-menu-wrap .tab-menu-item.active::after {
+    right: inherit;
+    left: 5px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+.account-tab .tab-menu .tab-menu-wrap .tab-menu-item img {
+  max-width: 24px;
+}
+.account-tab .tab-menu .tab-menu-wrap .tab-menu-item span {
+  font-weight: 500;
+  color: #282d41;
+  font-size: 18px;
+  line-height: 22px;
+}
+.account-tab .tab-menu .tab-menu-wrap .tab-menu-item.active span {
+  font-weight: 700;
+}
+.account-tab .tab-menu .sign-out-btn {
+  width: 100%;
+  max-width: 252px;
+  -webkit-column-gap: 55px;
+     -moz-column-gap: 55px;
+          column-gap: 55px;
+  padding: 16px;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-menu .sign-out-btn {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+  }
+}
+.account-tab .tab-menu .sign-out-btn:hover {
+  background: #E9E9E9;
+}
+.account-tab .tab-menu .sign-out-btn img {
+  max-width: 24px;
+}
+.account-tab .tab-menu .sign-out-btn span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.account-tab .tab-body {
+  padding: 65px 30px 170px 40px;
+  width: 100%;
+}
+@media only screen and (max-width: 1220px) {
+  .account-tab .tab-body {
+    padding: 30px 20px 100px 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body {
+    padding: 0;
+    display: none;
+  }
+  .account-tab .tab-body.open {
+    display: block;
+  }
+}
+.account-tab .tab-body .activity-item-wrapper {
+  grid-gap: 24px;
+}
+.account-tab .tab-body .activity-item-wrapper .activity-item {
+  padding: 24px;
+  background: #F5F5F5;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body .activity-item-wrapper .activity-item {
+    padding: 16px;
+  }
+}
+.account-tab .tab-body .activity-item-wrapper .activity-item .date {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body .activity-item-wrapper .activity-item .date {
+    margin-bottom: 12px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .account-tab .tab-body .activity-item-wrapper .activity-item .date {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+.account-tab .tab-body .activity-item-wrapper .activity-item .product-items {
+  border-bottom: 1px solid #C0C4CC;
+}
+.account-tab .tab-body .activity-item-wrapper .activity-item .product-items .product-item {
+  margin-bottom: 15px;
+  color: #282d41;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media only screen and (max-width: 575px) {
+  .account-tab .tab-body .activity-item-wrapper .activity-item .product-items .product-item {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.account-tab .tab-body .activity-item-wrapper .activity-item .product-items .product-item .product-title {
+  font-weight: 500;
+}
+.account-tab .tab-body .activity-item-wrapper .activity-item .product-items .product-item .product-price {
+  font-weight: 700;
+}
+.account-tab .tab-body .activity-item-wrapper .activity-item .total {
+  color: #282d41;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 25px 0;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body .activity-item-wrapper .activity-item .total {
+    margin: 16px 0 30px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .account-tab .tab-body .activity-item-wrapper .activity-item .total {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item {
+  background: #f5f5f5;
+  padding: 24px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 712px;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item {
+    padding: 16px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .api-header {
+  border-bottom: 1px solid #C0C4CC;
+  margin-bottom: 24px;
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .api-header .location-date {
+  margin-bottom: 8px;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .api-header .location-date {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    row-gap: 24px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .api-header .location-date .ap-type {
+  color: #282d41;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .api-header .location-date .ap-date {
+  font-size: 14px;
+  line-height: 22px;
+}
+@media only screen and (max-width: 575px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .api-header .location-date .ap-date {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .api-header .ap-location {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 24px;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .api-header .ap-location {
+    text-align: start;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item {
+  margin-bottom: 24px;
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item h6 {
+  color: #282d41;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item h6 {
+    margin-bottom: 8px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item h6 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item .a-product-item-wrapper {
+  background: #EAEAEA;
+  padding: 16px;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item .a-product-item-wrapper {
+    padding: 8px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item .a-product-item-wrapper .a-product-item {
+  margin-bottom: 16px;
+  color: #282d41;
+  font-size: 14px;
+  line-height: 22px;
+}
+@media only screen and (max-width: 575px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item .a-product-item-wrapper .a-product-item {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item .a-product-item-wrapper .a-product-item:last-child {
+  margin-bottom: 0;
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item .a-product-item-wrapper .a-product-item .product-price {
+  font-weight: 700;
+}
+@media only screen and (max-width: 991px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 24px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider span {
+  color: #282d41;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media only screen and (max-width: 575px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider span {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time, .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  background: #EAEAEA;
+  padding: 16px;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time, .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time, .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time-wrap {
+  width: 100%;
+  max-width: 30%;
+  row-gap: 12px;
+}
+@media only screen and (max-width: 991px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time-wrap {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider-wrap {
+  width: 100%;
+  max-width: 66%;
+  row-gap: 12px;
+}
+@media only screen and (max-width: 991px) {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider-wrap {
+    max-width: 100%;
+  }
 }
 
 .rejuve-service-menu {
