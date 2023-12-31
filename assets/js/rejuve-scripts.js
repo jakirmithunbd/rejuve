@@ -115,6 +115,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       ]
     });
+
+
+
+    // Vertical slider 
+    $('.flip-item-wrapper').slick({
+
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: false,
+      arrows: false,
+      dots: true,
+      vertical: true,
+      verticalSwiping: true
+          
+      });
     
 })(jQuery);
 
