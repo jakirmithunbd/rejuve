@@ -1059,7 +1059,10 @@ A
             }
         }
         .page-banner-content {
-            @include breakpoint(575) {
+            padding: 100px 0;
+
+            @include breakpoint(991) {
+                padding: 10px 0;
                 text-align: center;
             }
 
@@ -1496,14 +1499,18 @@ A
         margin-bottom: 60px;
 
         @include breakpoint(1200) {
-            margin-bottom: 25px;
+            margin-bottom: 40px;
         }
         @include breakpoint(768) {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         h4 {
             @include font(18, 22);
+
+            @include breakpoint (768) {
+                text-align: center;
+            }
         }
 
         .data-input-wrapper {
@@ -1709,6 +1716,7 @@ A
                     min-width: 168px;
                     height: 48px;
                     padding: 10px;
+                    cursor: pointer;
 
                     @include breakpoint(575) {
                         min-width: 140px;
@@ -1791,11 +1799,12 @@ A
 
         @include breakpoint(1200) {
             padding-top: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
         }
         @include breakpoint(768) {
             padding-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 60px;
+            text-align: center;
         }
         &.add-of-single {
             padding-top: 0;
@@ -1812,6 +1821,10 @@ A
     .calculator-box-wrap {
         h4 {
             @include font(18, 22);
+
+            @include breakpoint (768) {
+                text-align: center;
+            }
         }
 
         .calculator-box {
@@ -1919,7 +1932,6 @@ A
             width: 20px;
             height: 20px;
             border: 1px solid#C0C4CC;
-            border-radius: 3px;
             display: inline-block;
             cursor: pointer;
             background: #ffffff;
@@ -1933,7 +1945,6 @@ A
                     width: 10px;
                     height: 10px;
                     background: #32c0cc;
-                    border-radius: 500px;
                     top: calc(50% - 5px);
                     left: calc(50% - 5px);
                 }
@@ -1941,6 +1952,21 @@ A
         }
         .circle {
             border-radius: 500px;
+
+            &.checked {
+                &::after {
+                    border-radius: 500px;
+                }
+            }
+        }
+        .square {
+            border-radius: 1px;
+
+            &.checked {
+                &::after {
+                    border-radius: 1px;
+                }
+            }
         }
         .cm-content {
             width: 90%;
@@ -2082,6 +2108,13 @@ A
             }
         }
     }
+
+    .book-pay-btn {
+
+        @include breakpoint (768) {
+            text-align: center;
+        }
+    }
 }
 
 /* #####################################
@@ -2099,6 +2132,9 @@ A
         color: $secondary;
         @include font(64, 76);
 
+        @include breakpoint(1220) {
+            @include font(48, 57);
+        }
         @include breakpoint(768) {
             @include font(32, 38);
         }
@@ -2722,6 +2758,10 @@ A
             row-gap: 50px;
         }
 
+        h1 {
+            margin-bottom: 16px;
+            @include font (32, 41);
+        }
         .tab-menu-wrap {
 
             @include breakpoint (768) {

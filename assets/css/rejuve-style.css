@@ -1057,8 +1057,12 @@ A
             filter: blur(70px);
   }
 }
-@media only screen and (max-width: 575px) {
+.page-banner .container .page-banner-content {
+  padding: 100px 0;
+}
+@media only screen and (max-width: 991px) {
   .page-banner .container .page-banner-content {
+    padding: 10px 0;
     text-align: center;
   }
 }
@@ -1461,17 +1465,22 @@ A
 }
 @media only screen and (max-width: 1200px) {
   .appointment-section .data-box {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 }
 @media only screen and (max-width: 768px) {
   .appointment-section .data-box {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 .appointment-section .data-box h4 {
   font-size: 18px;
   line-height: 22px;
+}
+@media only screen and (max-width: 768px) {
+  .appointment-section .data-box h4 {
+    text-align: center;
+  }
 }
 .appointment-section .data-box .data-input-wrapper {
   background: #e3faff;
@@ -1707,6 +1716,7 @@ A
   min-width: 168px;
   height: 48px;
   padding: 10px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 575px) {
   .appointment-section .data-box .data-input-wrapper .discount .discount-btn {
@@ -1797,13 +1807,14 @@ A
 @media only screen and (max-width: 1200px) {
   .appointment-section .add-person-btn {
     padding-top: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 }
 @media only screen and (max-width: 768px) {
   .appointment-section .add-person-btn {
     padding-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    text-align: center;
   }
 }
 .appointment-section .add-person-btn.add-of-single {
@@ -1822,6 +1833,11 @@ A
 .appointment-section .calculator-box-wrap h4 {
   font-size: 18px;
   line-height: 22px;
+}
+@media only screen and (max-width: 768px) {
+  .appointment-section .calculator-box-wrap h4 {
+    text-align: center;
+  }
 }
 .appointment-section .calculator-box-wrap .calculator-box {
   padding: 40px 60px;
@@ -1941,7 +1957,6 @@ A
   width: 20px;
   height: 20px;
   border: 1px solid #C0C4CC;
-  border-radius: 3px;
   display: inline-block;
   cursor: pointer;
   background: #ffffff;
@@ -1957,12 +1972,20 @@ A
   width: 10px;
   height: 10px;
   background: #32c0cc;
-  border-radius: 500px;
   top: calc(50% - 5px);
   left: calc(50% - 5px);
 }
 .appointment-section .check-mark .circle {
   border-radius: 500px;
+}
+.appointment-section .check-mark .circle.checked::after {
+  border-radius: 500px;
+}
+.appointment-section .check-mark .square {
+  border-radius: 1px;
+}
+.appointment-section .check-mark .square.checked::after {
+  border-radius: 1px;
 }
 .appointment-section .check-mark .cm-content {
   width: 90%;
@@ -2107,6 +2130,11 @@ A
   display: -ms-grid;
   display: grid;
 }
+@media only screen and (max-width: 768px) {
+  .appointment-section .book-pay-btn {
+    text-align: center;
+  }
+}
 
 /* #####################################
 *     Single Page STYLE
@@ -2124,6 +2152,12 @@ A
   color: #282d41;
   font-size: 64px;
   line-height: 76px;
+}
+@media only screen and (max-width: 1220px) {
+  .single-classic-editor h2 {
+    font-size: 48px;
+    line-height: 57px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .single-classic-editor h2 {
@@ -2745,6 +2779,11 @@ A
     background: transparent;
     row-gap: 50px;
   }
+}
+.account-tab .tab-menu h1 {
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 41px;
 }
 @media only screen and (max-width: 768px) {
   .account-tab .tab-menu .tab-menu-wrap {
