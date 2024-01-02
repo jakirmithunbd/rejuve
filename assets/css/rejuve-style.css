@@ -824,7 +824,7 @@ A
   }
   .rejuve-header .header-menu-wrap .main-header-menu li.has-children > a::after {
     position: absolute;
-    content: url("/assets/images/icons/arrow-down.svg");
+    content: url("./assets/images/icons/arrow-down.svg");
     right: -20px;
     top: 3px;
   }
@@ -1598,7 +1598,7 @@ A
   content: "";
   width: 11px;
   height: 14.5px;
-  background-image: url("/assets/images/icons/mark.svg");
+  background-image: url("./assets/images/icons/mark.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1666,7 +1666,7 @@ A
   content: "";
   width: 13px;
   height: 13px;
-  background-image: url("/assets/images/icons/home-icon.svg");
+  background-image: url("./assets/images/icons/home-icon.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2043,7 +2043,7 @@ A
   height: 16px;
   top: calc(50% - 5px);
   right: 2px;
-  background-image: url("/assets/images/icons/close-icon.svg");
+  background-image: url("./assets/images/icons/close-icon.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2820,7 +2820,7 @@ A
   }
   .account-tab .tab-menu .tab-menu-wrap .tab-menu-item::after {
     position: absolute;
-    content: url("/assets/images/icons/arrow-down.svg");
+    content: url("./assets/images/icons/arrow-down.svg");
     right: 5px;
     top: 13px;
     -webkit-transform: rotate(-90deg);
