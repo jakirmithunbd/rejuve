@@ -31,13 +31,23 @@
     </div>
 </section>
 
+    <?php $logo = get_field('logo', 'options') ; $logoImg = $logo['main_logo'] ? $logo['main_logo']['url'] : get_theme_file_uri('/assets/images/rejuve-logo.svg') ;
+    $social_media = get_field('social_media', 'options');
+    $footer1st_menu = get_field('footer_first_menu', 'options');
+    $footer2nd_menu = get_field('footer_second_menu', 'options');
+    ?>
+
+
         <footer class="footer">
             <div class="container-fluid">
                 <div class="footer-top">
                     <div class="footer-intro">
-                        <a href="#" class="d-block">
-                            <img src="./assets/images/rejuve-logo.svg" alt="" />
-                        </a>
+
+                        <a href="<?php echo site_url(); ?>" class="d-block"
+                        ><img class="transition"
+                                src="<?php echo esc_url( $logoImg ); ?>"
+                                alt="Footer Logo"
+                        /></a>
                     </div>
 
                     <div
@@ -45,101 +55,84 @@
                         grid-col="3, 3, 3, 3, 1"
                     >
                         <div class="footer-menu">
-                            <h6>Treatments</h6>
+                            <?php if($footer1st_menu['title']) {
+                                printf('<h6>%s</h6>', esc_html($footer1st_menu['title']));
+                            } ; ?>
                             <ul>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
+                                <?php $footer1st_menus = $footer1st_menu['page_link'];
+                                
+                                    if($footer1st_menus) {
+                                        foreach($footer1st_menus as $fo1st_menu) {
+                                            $id = $fo1st_menu->ID;
+                                            printf('<li><a href="%s">%s</a></li>', get_the_permalink($id), get_the_title($id));
+                                        } 
+                                    } 
+                                ?>
                             </ul>
                         </div>
 
                         <div class="footer-menu">
-                            <h6>Treatments</h6>
+                            <?php if($footer2nd_menu['title']) {
+                                printf('<h6>%s</h6>', esc_html($footer2nd_menu['title']));
+                            } ; ?>
                             <ul>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
+                                <?php $footer2nd_menu = $footer2nd_menu['page_link'];
+                                
+                                    if($footer2nd_menu) {
+                                        foreach($footer2nd_menu as $fo2nd_menu) {
+                                            $id = $fo2nd_menu->ID;
+                                            printf('<li><a href="%s">%s</a></li>', get_the_permalink($id), get_the_title($id));
+                                        } 
+                                    } 
+                                ?>
                             </ul>
                         </div>
 
                         <div class="footer-menu">
                             <h6><?php _e('Social', 'rejuve'); ?></h6>
                             <div class="social-media">
-                                <a href="#"
-                                    ><img
-                                        src="./assets/images/icons/Facebook.svg"
-                                        alt=""
-                                    />
-                                    <span>Facebook</span>
-                                </a>
-
-                                <a href="#"
-                                    ><img
-                                        src="./assets/images/icons/instagram.svg"
-                                        alt=""
-                                    />
-                                    <span>Instagram</span>
-                                </a>
-
-                                <a href="#"
-                                    ><img
-                                        src="./assets/images/icons/twitter.svg"
-                                        alt=""
-                                    />
-                                    <span>Twitter</span>
-                                </a>
-
-                                <a href="#"
-                                    ><img
-                                        src="./assets/images/icons/youtube.svg"
-                                        alt=""
-                                    />
-                                    <span>YouTube</span>
-                                </a>
+                                <?php
+                                    if (is_array($social_media) && count($social_media) > 0) {
+                                        foreach ($social_media as $item) {
+                                            if (isset($item['link']['url'], $item['social_icon']['url'], $item['link']['title'])) {
+                                                printf(
+                                                    '<a target="_blank" href="%s"><img src="%s" alt="%s"/><span>%s</span></a>',
+                                                    esc_url($item['link']['url']),
+                                                    esc_url($item['social_icon']['url']),
+                                                    esc_attr($item['link']['title']),
+                                                    esc_html($item['link']['title'])
+                                                );
+                                            }
+                                        }
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <?php $copyright_area = get_field('copyright_area', 'options') ;?>
 
                 <div class="footer-bottom">
                     <div
                         class="responsiveGrid d-flex space-between"
                         grid-col="2, 2, 2, 1, 1"
                     >
-                        <span>© 2023 Rejuve. All rights reserved.</span>
+                        <span><?php echo $copyright_area['text']; ?></span>
 
                         <div class="footer-menu">
                             <ul>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
+                                <?php
+                                    $copyright_area_pages = $copyright_area['page_link'];
+
+                                    if (!empty($copyright_area_pages)) {
+                                        foreach ($copyright_area_pages as $copyright_area_page) {
+                                            $id = $copyright_area_page->ID;
+                                            printf('<li><a href="%s">%s</a></li>', esc_url(get_the_permalink($id)), esc_html(get_the_title($id)));
+                                        }
+                                    }
+                                ?>
+
                             </ul>
                         </div>
                     </div>

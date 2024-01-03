@@ -14,14 +14,16 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
+    <?php $logo = get_field('logo', 'options') ; $logoImg = $logo['main_logo'] ? $logo['main_logo']['url'] : get_theme_file_uri('/assets/images/rejuve-logo.svg') ;?>
+
     <header class="rejuve-header">
         <div class="container-fluid">
             <div class="header-menu-wrap d-flex space-between align-center">
                 <div class="logo-wrapper">
-                    <a href="./index.html" class="logo d-flex align-center"
+                    <a href="<?php echo site_url(); ?>" class="logo d-flex align-center"
                         ><img
                             class="transition"
-                            src="./assets/images/rejuve-logo.svg"
+                            src="<?php echo esc_url( $logoImg ); ?>"
                             alt=""
                     /></a>
                     <div class="bars d-none">

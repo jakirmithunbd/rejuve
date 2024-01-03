@@ -20,3 +20,11 @@ function my_acf_json_load_point( $paths ) {
     return $paths;    
 }
 add_filter( 'acf/settings/load_json', 'my_acf_json_load_point' );
+
+
+function rejuve_allow_svg_upload($mimes)
+{
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'rejuve_allow_svg_upload');
