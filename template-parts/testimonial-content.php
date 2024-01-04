@@ -1,14 +1,14 @@
 
-<?php $testimonials = get_field('testimonials', 'options'); ;?>
+<?php 
+$testimonials = get_field('testimonials', 'options') ;
+$testimonial_title = get_field('testimonial_title', 'options') ;
+
+?>
 <section class="testimonials section-spacing">
     <div class="container">
         <div class="section-title text-center">
-            <h2>Most recent customer <strong>reviews</strong></h2>
-            <p>
-                Check out what our clients have to say about us and see
-                why we are the most trusted Med Spa in all of Los
-                Angeles.
-            </p>
+            <?php printf('<h2>%s</h2>', $testimonial_title['title']) ;?>
+            <?php printf($testimonial_title['description']) ;?>
         </div>
 
         <div class="slick-slider-wrapper">
