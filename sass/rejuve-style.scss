@@ -357,20 +357,20 @@ ul {
 }
 
 .hide-desktop {
-    @include minbreakpoint (1221){
+    @include minbreakpoint(1221) {
         display: none;
     }
 }
 .hide-tab {
-    @include breakpoint (1220) {
+    @include breakpoint(1220) {
         display: none;
     }
-    @include breakpoint (768) {
+    @include breakpoint(768) {
         display: block;
     }
 }
 .hide-mobile {
-    @include breakpoint (768) {
+    @include breakpoint(768) {
         display: none;
     }
 }
@@ -788,28 +788,24 @@ A
                     margin-right: 15px;
                 }
 
-
                 // for sub menu css start
                 position: relative;
 
                 ul.sub-menu {
-
                     a {
                         @include font(14, 22);
                     }
                 }
-                @include minbreakpoint (1025) {
+                @include minbreakpoint(1025) {
                     &.has-children {
-
-                        >a {
+                        > a {
                             position: relative;
 
                             &::after {
                                 position: absolute;
-                                content: url("./assets/images/icons/arrow-down.svg");
+                                content: url('/wp-content/themes/rejuve/assets/images/icons/arrow-down.svg');
                                 right: -20px;
                                 top: 3px;
-    
                             }
                         }
                     }
@@ -822,16 +818,14 @@ A
                         background: rgb(232 232 232 / 72%);
                         display: none;
                     }
-    
+
                     &:hover {
                         ul.sub-menu {
                             display: block;
                         }
                     }
                 }
-                // for sub menu css end 
-
-
+                // for sub menu css end
             }
 
             &.header-right-menu {
@@ -1508,7 +1502,7 @@ A
         h4 {
             @include font(18, 22);
 
-            @include breakpoint (768) {
+            @include breakpoint(768) {
                 text-align: center;
             }
         }
@@ -1609,7 +1603,7 @@ A
                     content: '';
                     width: 11px;
                     height: 14.5px;
-                    background-image: url('./assets/images/icons/mark.svg');
+                    background-image: url('/wp-content/themes/rejuve/assets/images/icons/mark.svg');
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -1667,7 +1661,7 @@ A
                             content: '';
                             width: 13px;
                             height: 13px;
-                            background-image: url('./assets/images/icons/home-icon.svg');
+                            background-image: url('/wp-content/themes/rejuve/assets/images/icons/home-icon.svg');
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: cover;
@@ -1822,7 +1816,7 @@ A
         h4 {
             @include font(18, 22);
 
-            @include breakpoint (768) {
+            @include breakpoint(768) {
                 text-align: center;
             }
         }
@@ -2025,7 +2019,7 @@ A
                             height: 16px;
                             top: calc(50% - 5px);
                             right: 2px;
-                            background-image: url('./assets/images/icons/close-icon.svg');
+                            background-image: url('/wp-content/themes/rejuve/assets/images/icons/close-icon.svg');
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: cover;
@@ -2110,8 +2104,7 @@ A
     }
 
     .book-pay-btn {
-
-        @include breakpoint (768) {
+        @include breakpoint(768) {
             text-align: center;
         }
     }
@@ -2372,7 +2365,6 @@ A
 
             .product-item {
                 a {
-
                     .product-title {
                         font-weight: 600;
                         margin-bottom: 12px;
@@ -2400,17 +2392,16 @@ A
 .flip-section {
     padding-top: 250px;
 
-    @include breakpoint (1220) {
+    @include breakpoint(1220) {
         padding-top: 160px;
     }
 
     .flip-item-wrapper {
-
         .flip-item {
             padding: 0 40px 50px;
             border-radius: 0 0 12px 12px;
 
-            @include breakpoint (1220) {
+            @include breakpoint(1220) {
                 padding: 0 40px 40px;
             }
 
@@ -2423,24 +2414,21 @@ A
 
             .responsiveGrid {
                 transform: rotateX(180deg);
-                transition: all .8s ease;
+                transition: all 0.8s ease;
 
                 .classic-editor {
                     padding: 30px 0;
 
-                    @include breakpoint (991) {
+                    @include breakpoint(991) {
                         padding: 20px 0 0;
                     }
                 }
             }
             &.slick-active {
-
                 .responsiveGrid {
-
                     transform: rotateX(0deg);
                 }
             }
-
         }
 
         .slick-dots {
@@ -2456,7 +2444,7 @@ A
                 margin: 0;
                 padding: 0;
 
-                @include breakpoint (1220) {
+                @include breakpoint(1220) {
                     height: 40px;
                 }
 
@@ -2594,16 +2582,16 @@ A
     min-height: 777px;
     padding: 120px 0;
 
-    @include minbreakpoint (769) {
+    @include minbreakpoint(769) {
         display: flex;
         align-items: center;
     }
 
-    @include breakpoint (768) {
+    @include breakpoint(768) {
         padding: 50px 0 40px;
         min-height: inherit;
     }
-    @include breakpoint (575) {
+    @include breakpoint(575) {
         padding: 40px 0 30px;
     }
 
@@ -2613,7 +2601,7 @@ A
         margin-left: auto;
 
         h1 {
-            @include minbreakpoint(1221){
+            @include minbreakpoint(1221) {
                 @include font(56, 72);
             }
         }
@@ -2629,7 +2617,6 @@ A
 * ##################################### 
 */
 .beuty-treatment-section {
-
     .beuty-cat-item {
         margin-bottom: 100px;
 
@@ -2644,13 +2631,12 @@ A
         &:last-child {
             margin-bottom: 40px;
 
-            @include breakpoint(1220){
+            @include breakpoint(1220) {
                 margin-bottom: 0;
             }
         }
 
         .cats-product-wrapper {
-
             .cat-product-item {
                 padding: 50px 10px 10px;
 
@@ -2659,9 +2645,8 @@ A
                 }
 
                 a {
-
                     img {
-                        max-width: 210px
+                        max-width: 210px;
                     }
                 }
                 .title-price {
@@ -2671,10 +2656,10 @@ A
                     color: $secondary;
                     @include font(20, 30);
 
-                    @include breakpoint(1220){
+                    @include breakpoint(1220) {
                         padding: 40px 0 10px;
                     }
-                    @include breakpoint(768){
+                    @include breakpoint(768) {
                         padding: 25px 0 10px;
                     }
 
@@ -2699,19 +2684,18 @@ A
     padding-bottom: 0;
 
     .beuty-banner-content {
-
         h1 {
             font-weight: 600;
-            @include minbreakpoint (1221) {
-                @include font (48, 57);
+            @include minbreakpoint(1221) {
+                @include font(48, 57);
             }
         }
         p {
             color: $secondary;
-            @include font (32, 38);
+            @include font(32, 38);
 
-            @include breakpoint (768) {
-                @include font (20, 28);
+            @include breakpoint(768) {
+                @include font(20, 28);
             }
         }
     }
@@ -2726,9 +2710,9 @@ A
     input {
         width: 150px;
         background: #fff;
-        border: 1px solid #C0C4CC;
+        border: 1px solid #c0c4cc;
         border-radius: 5px;
-        @include font (20, 24);
+        @include font(20, 24);
         padding: 7px 10px;
         margin-bottom: 15px;
     }
@@ -2739,11 +2723,10 @@ A
 * ##################################### 
 */
 .account-tab {
-
     .tab-menu {
         width: 100%;
         max-width: 380px;
-        background:#F5F5F5;
+        background: #f5f5f5;
         padding: 65px 20px 220px;
 
         @include breakpoint(1220) {
@@ -2751,7 +2734,7 @@ A
             padding: 30px 10px 100px;
         }
 
-        @include breakpoint (768) {
+        @include breakpoint(768) {
             max-width: 100%;
             padding: 48px 20px 100px;
             background: transparent;
@@ -2760,11 +2743,10 @@ A
 
         h1 {
             margin-bottom: 16px;
-            @include font (32, 41);
+            @include font(32, 41);
         }
         .tab-menu-wrap {
-
-            @include breakpoint (768) {
+            @include breakpoint(768) {
                 width: 100%;
             }
 
@@ -2776,19 +2758,21 @@ A
                 margin-bottom: 8px;
                 border-radius: 8px;
                 cursor: pointer;
-                
-                &:hover, &.active {
-                    background: #E9E9E9;
+
+                &:hover,
+                &.active {
+                    background: #e9e9e9;
                 }
 
-                @include breakpoint (768) {
+                @include breakpoint(768) {
                     max-width: 100%;
                     border-bottom: 1px solid#C0C4CC;
                     border-radius: 0;
                     position: relative;
                     margin-bottom: 0;
 
-                    &:hover, &.active {
+                    &:hover,
+                    &.active {
                         background: transparent;
                     }
                     &:last-child {
@@ -2797,7 +2781,7 @@ A
 
                     &::after {
                         position: absolute;
-                        content: url("./assets/images/icons/arrow-down.svg");
+                        content: url('/wp-content/themes/rejuve/assets/images/icons/arrow-down.svg');
                         right: 5px;
                         top: 13px;
                         transform: rotate(-90deg);
@@ -2818,7 +2802,6 @@ A
                         }
                     }
                 }
-
 
                 img {
                     max-width: 24px;
@@ -2845,23 +2828,22 @@ A
             padding: 16px;
             border-radius: 8px;
 
-            @include breakpoint (768) {
+            @include breakpoint(768) {
                 max-width: fit-content;
                 align-self: flex-start;
                 column-gap: 16px;
             }
 
             &:hover {
-                background: #E9E9E9;
+                background: #e9e9e9;
             }
-
 
             img {
                 max-width: 24px;
             }
             span {
                 font-weight: 600;
-                @include font (16, 20);
+                @include font(16, 20);
             }
         }
     }
@@ -2869,11 +2851,11 @@ A
         padding: 65px 30px 170px 40px;
         width: 100%;
 
-        @include breakpoint (1220) {
+        @include breakpoint(1220) {
             padding: 30px 20px 100px 10px;
         }
 
-        @include breakpoint (768) {
+        @include breakpoint(768) {
             padding: 0;
             display: none;
 
@@ -2882,43 +2864,42 @@ A
             }
         }
 
-
         .activity-item-wrapper {
             grid-gap: 24px;
 
             .activity-item {
                 padding: 24px;
-                background: #F5F5F5;
+                background: #f5f5f5;
                 border-radius: 10px;
 
-                @include breakpoint (768) {
+                @include breakpoint(768) {
                     padding: 16px;
                 }
 
                 .date {
-                    @include font (14, 22);
+                    @include font(14, 22);
                     margin-bottom: 30px;
 
-                    @include breakpoint (768) {
+                    @include breakpoint(768) {
                         margin-bottom: 12px;
                     }
 
-                    @include breakpoint (575) {
-                        @include font (12, 22);
+                    @include breakpoint(575) {
+                        @include font(12, 22);
                     }
                 }
                 .product-items {
-                    border-bottom: 1px solid #C0C4CC;
+                    border-bottom: 1px solid #c0c4cc;
 
                     .product-item {
                         margin-bottom: 15px;
                         color: $secondary;
                         @include font(16, 22);
 
-                        @include breakpoint (575) {
-                            @include font (14, 22);
+                        @include breakpoint(575) {
+                            @include font(14, 22);
                         }
-                        
+
                         .product-title {
                             font-weight: 500;
                         }
@@ -2933,19 +2914,18 @@ A
                     @include font(16, 22);
                     margin: 25px 0;
 
-                    @include breakpoint (768) {
+                    @include breakpoint(768) {
                         margin: 16px 0 30px;
                     }
 
-                    @include breakpoint (575) {
-                        @include font (14, 22);
+                    @include breakpoint(575) {
+                        @include font(14, 22);
                     }
                 }
             }
         }
 
         .appointments-item-wrapper {
-
             .appointments-item {
                 background: #f5f5f5;
                 padding: 24px;
@@ -2953,7 +2933,7 @@ A
                 width: 100%;
                 max-width: 712px;
 
-                @include breakpoint (768) {
+                @include breakpoint(768) {
                     padding: 16px;
                 }
 
@@ -2964,7 +2944,7 @@ A
                     .location-date {
                         margin-bottom: 8px;
 
-                        @include breakpoint (768) {
+                        @include breakpoint(768) {
                             flex-direction: column-reverse;
                             row-gap: 24px;
                         }
@@ -2975,10 +2955,10 @@ A
                             @include font(18, 22);
                         }
                         .ap-date {
-                            @include font (14, 22);
+                            @include font(14, 22);
 
-                            @include breakpoint (575) {
-                                @include font (12, 22);
+                            @include breakpoint(575) {
+                                @include font(12, 22);
                             }
                         }
                     }
@@ -2986,35 +2966,33 @@ A
                         @include font(13, 18);
                         margin-bottom: 24px;
 
-                        @include breakpoint (768) {
+                        @include breakpoint(768) {
                             text-align: start;
                         }
                     }
                 }
 
                 .cat-item-wrapper {
-
                     .cat-item {
                         margin-bottom: 24px;
-
 
                         h6 {
                             color: $secondary;
 
-                            @include breakpoint (768) {
+                            @include breakpoint(768) {
                                 margin-bottom: 8px;
                             }
 
-                            @include breakpoint (575) {
-                                @include font (14, 21);
+                            @include breakpoint(575) {
+                                @include font(14, 21);
                             }
                         }
                         .a-product-item-wrapper {
-                            background: #EAEAEA;
+                            background: #eaeaea;
                             padding: 16px;
                             border-radius: 5px;
 
-                            @include breakpoint (768) {
+                            @include breakpoint(768) {
                                 padding: 8px;
                             }
 
@@ -3023,8 +3001,8 @@ A
                                 color: $secondary;
                                 @include font(14, 22);
 
-                                @include breakpoint (575) {
-                                    @include font (12, 22);
+                                @include breakpoint(575) {
+                                    @include font(12, 22);
                                 }
 
                                 &:last-child {
@@ -3039,8 +3017,7 @@ A
                     }
                 }
                 .time-provider {
-
-                    @include breakpoint (991) {
+                    @include breakpoint(991) {
                         flex-direction: column;
                         row-gap: 24px;
                     }
@@ -3050,24 +3027,25 @@ A
                         font-weight: 600;
                         @include font(16, 24);
 
-                        @include breakpoint (575) {
-                            @include font (14, 21);
+                        @include breakpoint(575) {
+                            @include font(14, 21);
                         }
                     }
-                    
-                    .time, .provider {
+
+                    .time,
+                    .provider {
                         font-weight: 400;
-                        @include font (14, 22);
-                        background: #EAEAEA;
+                        @include font(14, 22);
+                        background: #eaeaea;
                         padding: 16px;
                         border-radius: 5px;
 
-                        @include breakpoint (768) {
+                        @include breakpoint(768) {
                             padding: 10px;
                         }
 
-                        @include breakpoint (575) {
-                            @include font (12, 22);
+                        @include breakpoint(575) {
+                            @include font(12, 22);
                         }
                     }
                     .time-wrap {
@@ -3075,8 +3053,8 @@ A
                         max-width: 30%;
                         row-gap: 12px;
 
-                        @include breakpoint (991) {
-                            max-width: fit-content
+                        @include breakpoint(991) {
+                            max-width: fit-content;
                         }
                     }
                     .provider-wrap {
@@ -3084,7 +3062,7 @@ A
                         max-width: 66%;
                         row-gap: 12px;
 
-                        @include breakpoint (991) {
+                        @include breakpoint(991) {
                             max-width: 100%;
                         }
                     }
@@ -3093,7 +3071,6 @@ A
         }
     }
 }
-
 
 @import './service-menu';
 @import './membership';

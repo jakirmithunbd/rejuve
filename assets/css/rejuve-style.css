@@ -824,7 +824,7 @@ A
   }
   .rejuve-header .header-menu-wrap .main-header-menu li.has-children > a::after {
     position: absolute;
-    content: url("./assets/images/icons/arrow-down.svg");
+    content: url("/wp-content/themes/rejuve/assets/images/icons/arrow-down.svg");
     right: -20px;
     top: 3px;
   }
@@ -1598,7 +1598,7 @@ A
   content: "";
   width: 11px;
   height: 14.5px;
-  background-image: url("./assets/images/icons/mark.svg");
+  background-image: url("/wp-content/themes/rejuve/assets/images/icons/mark.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1666,7 +1666,7 @@ A
   content: "";
   width: 13px;
   height: 13px;
-  background-image: url("./assets/images/icons/home-icon.svg");
+  background-image: url("/wp-content/themes/rejuve/assets/images/icons/home-icon.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2043,7 +2043,7 @@ A
   height: 16px;
   top: calc(50% - 5px);
   right: 2px;
-  background-image: url("./assets/images/icons/close-icon.svg");
+  background-image: url("/wp-content/themes/rejuve/assets/images/icons/close-icon.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2748,7 +2748,7 @@ A
 .quantity-input-section input {
   width: 150px;
   background: #fff;
-  border: 1px solid #C0C4CC;
+  border: 1px solid #c0c4cc;
   border-radius: 5px;
   font-size: 20px;
   line-height: 24px;
@@ -2763,7 +2763,7 @@ A
 .account-tab .tab-menu {
   width: 100%;
   max-width: 380px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding: 65px 20px 220px;
 }
 @media only screen and (max-width: 1220px) {
@@ -2802,7 +2802,7 @@ A
   cursor: pointer;
 }
 .account-tab .tab-menu .tab-menu-wrap .tab-menu-item:hover, .account-tab .tab-menu .tab-menu-wrap .tab-menu-item.active {
-  background: #E9E9E9;
+  background: #e9e9e9;
 }
 @media only screen and (max-width: 768px) {
   .account-tab .tab-menu .tab-menu-wrap .tab-menu-item {
@@ -2820,7 +2820,7 @@ A
   }
   .account-tab .tab-menu .tab-menu-wrap .tab-menu-item::after {
     position: absolute;
-    content: url("./assets/images/icons/arrow-down.svg");
+    content: url("/wp-content/themes/rejuve/assets/images/icons/arrow-down.svg");
     right: 5px;
     top: 13px;
     -webkit-transform: rotate(-90deg);
@@ -2874,7 +2874,7 @@ A
   }
 }
 .account-tab .tab-menu .sign-out-btn:hover {
-  background: #E9E9E9;
+  background: #e9e9e9;
 }
 .account-tab .tab-menu .sign-out-btn img {
   max-width: 24px;
@@ -2907,7 +2907,7 @@ A
 }
 .account-tab .tab-body .activity-item-wrapper .activity-item {
   padding: 24px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   border-radius: 10px;
 }
 @media only screen and (max-width: 768px) {
@@ -2932,7 +2932,7 @@ A
   }
 }
 .account-tab .tab-body .activity-item-wrapper .activity-item .product-items {
-  border-bottom: 1px solid #C0C4CC;
+  border-bottom: 1px solid #c0c4cc;
 }
 .account-tab .tab-body .activity-item-wrapper .activity-item .product-items .product-item {
   margin-bottom: 15px;
@@ -3042,7 +3042,7 @@ A
   }
 }
 .account-tab .tab-body .appointments-item-wrapper .appointments-item .cat-item-wrapper .cat-item .a-product-item-wrapper {
-  background: #EAEAEA;
+  background: #eaeaea;
   padding: 16px;
   border-radius: 5px;
 }
@@ -3090,21 +3090,24 @@ A
     line-height: 21px;
   }
 }
-.account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time, .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider {
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time,
+.account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider {
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-  background: #EAEAEA;
+  background: #eaeaea;
   padding: 16px;
   border-radius: 5px;
 }
 @media only screen and (max-width: 768px) {
-  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time, .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time,
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider {
     padding: 10px;
   }
 }
 @media only screen and (max-width: 575px) {
-  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time, .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider {
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .time,
+  .account-tab .tab-body .appointments-item-wrapper .appointments-item .time-provider .provider {
     font-size: 12px;
     line-height: 22px;
   }
