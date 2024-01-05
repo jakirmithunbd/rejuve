@@ -23,7 +23,7 @@
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
-                    "type": "file",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -34,9 +34,14 @@
                     },
                     "return_format": "array",
                     "library": "all",
+                    "min_width": "",
+                    "min_height": "",
                     "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "preview_size": "medium"
                 }
             ]
         }
@@ -61,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704358968
+    "modified": 1704463969
 }
