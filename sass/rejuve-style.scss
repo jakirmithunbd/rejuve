@@ -566,7 +566,6 @@ ul {
 
         .icon {
             @extend .radius;
-            background-color: currentColor;
             height: 64px;
             width: 64px;
             flex: 0 0 64px;
@@ -2227,13 +2226,17 @@ A
                 @include font(28, 28);
                 margin-bottom: 15px;
             }
-            h6 {
-                color: #5a5f73;
-                margin-bottom: 15px;
-            }
             p {
                 @include font(16, 24);
                 margin-bottom: 0;
+
+                strong {
+                    display: block;
+                    color: #5a5f73;
+                    margin-bottom: 15px;
+                    font-weight: 600;
+                    @include font(16, 22);
+                }
             }
             &:last-child {
                 margin-bottom: 0;

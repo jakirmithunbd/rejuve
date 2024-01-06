@@ -3,7 +3,11 @@
     <div class="container">
         <div class="responsiveGrid align-center" grid-col="2, 2, 2, 1">
             <div class="page-banner-img">
-                <img src="./assets/images/Hangover_Fix.png" alt="" />
+                <?php 
+                    if(has_post_thumbnail()){
+                        the_post_thumbnail("large", "rejuve");
+                    };
+                ?>
             </div>
             <div class="page-banner-content">
                 <div class="classic-editor">
@@ -16,16 +20,16 @@
                     >
                         <h4 class="price"><?php echo wc_price(get_post_meta(get_the_ID(), '_price', true)); ?></h4>
                         <button class="service-item-btn rejuve-btn">
-                            Book in Clinic
+                            <?php echo __('Book in Clinic', "rejuve"); ?>
                         </button>
-                        <span>*At our locations</span>
+                        <span><?php echo __('*At our locations', 'rejuve'); ?></span>
                     </div>
                     <div class="service-item in-home d-flex flex-col">
                         <h4 class="price"><?php echo wc_price(get_post_meta(get_the_ID(), '_price', true)); ?></h4>
                         <button class="service-item-btn rejuve-btn">
-                            Book House Call
+                           <?php echo __(' Book House Call', 'rejuve'); ?>
                         </button>
-                        <span>*We come to you</span>
+                        <span> <?php echo __('*We come to you', 'rejuve'); ?> </span>
                     </div>
                 </div>
             </div>
@@ -36,65 +40,40 @@
 <section class="section-spacing">
     <div class="container">
         <div class="section-title text-center">
-            <h2>Why Rejuve for IV Therapy?</h2>
+            <h2>
+                <?php
+                $convenience_section_title = get_field('convenience_section_title');
+                if($convenience_section_title) {echo $convenience_section_title;}
+                ?>
+            </h2>
         </div>
 
         <div
             class="rejuve-iconbox-wrapper responsiveGrid"
             grid-col="3, 3, 3, 1"
         >
+
+        <?php 
+           $convenience_list = get_field('convenience_list');
+           if($convenience_list){
+           foreach($convenience_list as $conveniences):
+        ?>
             <div class="icon-box">
-                <div class="icon" style="color: #f1fff9">
-                    <img src="./assets/images/Doctors.svg" alt="" />
+                <div class="icon">
+                <img src="<?php echo $conveniences['convenience_icon']['url']; ?>" alt="<?php echo $conveniences['convenience_icon']['alt']; ?>" />
                 </div>
 
                 <div class="icon-box-content">
-                    <h5>The Right Team of Doctors</h5>
-                    <p>
-                        Whether you are looking to recover from a
-                        hangover, boost your performance, or improve
-                        your overall wellness, we have just what the
-                        doctor ordered!
-                    </p>
+                    <h5><?php echo $conveniences['convenience_title']; ?></h5>
+                    <?php echo $conveniences['convenience_dscription']; ?>
                 </div>
             </div>
 
-            <div class="icon-box">
-                <div class="icon" style="color: #fff4fa">
-                    <img
-                        src="./assets/images/long-lasting.svg"
-                        alt=""
-                    />
-                </div>
+        <?php 
+            endforeach;
+            }
+        ?>
 
-                <div class="icon-box-content">
-                    <h5>Long-Lasting Effects</h5>
-                    <p>
-                        In the short term, you can expect to feel a
-                        difference from your IV therapy for at least 3
-                        or 4 days after your session. Regular IV therapy
-                        sessions will contribute to enhanced health in
-                        the long term.
-                    </p>
-                </div>
-            </div>
-
-            <div class="icon-box">
-                <div class="icon" style="color: #e3faff">
-                    <img src="./assets/images/IV-Drips.svg" alt="" />
-                </div>
-
-                <div class="icon-box-content">
-                    <h5>Wide Section Range of IV Drips</h5>
-                    <p>
-                        In the short term, you can expect to feel a
-                        difference from your IV therapy for at least 3
-                        or 4 days after your session. Regular IV therapy
-                        sessions will contribute to enhanced health in
-                        the long term.
-                    </p>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -102,11 +81,10 @@
 <section class="appointment-section section-spacing">
     <div class="container">
         <div class="classic-editor single-classic-editor text-center">
-            <h6>Advanced Therapies</h6>
-            <h2>Book Ozone Therapy</h2>
-            <h5>
-                Returning customer? <span>Click here to login</span>
-            </h5>
+            <?php
+                $booking_section_title = get_field('booking_section_title');
+                if($booking_section_title){echo $booking_section_title['content']; }
+            ?>
         </div>
 
         <div class="data-box">
@@ -991,10 +969,82 @@
         </div>
 
         <a href="#" class="rejuve-btn"
-            ><img src="./assets/images/icons/lock.svg" alt="" /> Book and
+            ><img src="<?php echo get_theme_file_uri('/assets/images/icons/lock.svg'); ?>" alt="" /> Book and
             Pay</a
         >
     </div>
     <!-- Container  -->
 </section>
+
+<section class="section-spacing" style="background: #f8f8f8">
+    <div class="large-container">
+        <div class="split-layout single-split">
+            <div class="responsiveGrid" grid-col="2, 2, 2, 1">
+
+            <?php $benefits_product = get_field('benefits_of_product_content'); ?>
+
+                <div class="left-content">
+                    <?php
+                        if($benefits_product){echo $benefits_product['title']; }
+                    ?>
+                </div>
+
+                <div class="right-content">
+                    <div class="classic-editor">
+                        <?php
+                            if($benefits_product){echo $benefits_product['content'];}
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="split-image">
+                <img
+                    src="<?php if($benefits_product){echo $benefits_product['add_benefits_product_image']['url'];} ?>"
+                    alt="<?php if($benefits_product){echo $benefits_product['add_benefits_product_image']['alt'];} ?>"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="product-description section-spacing">
+    <div class="large-container">
+        <div class="responsiveGrid" grid-col="2, 2, 1, 1">
+            <div class="left-content">
+                <?php
+                    $ingredients_section_title = get_field('ingredients_section_title');
+                    if($ingredients_section_title){echo $ingredients_section_title;}
+                ?>
+            </div>
+
+            <div class="vertical-scroll-wrap">
+                <div class="vertical-scroll">
+
+                    <?php
+                        $ingredients_list = get_field('ingredients_list');
+                        if($ingredients_list) {
+                            foreach($ingredients_list as $ingredients):
+                    ?>
+
+                        <div
+                            class="description-item"
+                            style="background: <?php echo $ingredients['select_ingredients_i']; ?>"
+                        >
+                            <h3 style="color: <?php echo $ingredients['select_title_color_of_ingredients_item']; ?>">
+                                <?php echo $ingredients['ingredients_title']; ?>
+                            </h3>
+                            <?php echo $ingredients['ingredients_content']; ?>
+                        </div>
+                    <?php
+                    endforeach;
+                    }
+                    ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Product Description  -->
+
 <?php get_footer() ;?>
