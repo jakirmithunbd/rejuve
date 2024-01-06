@@ -1816,6 +1816,9 @@ A
     text-align: center;
   }
 }
+.appointment-section .add-person-btn button {
+  cursor: pointer;
+}
 .appointment-section .add-person-btn.add-of-single {
   padding-top: 0;
 }

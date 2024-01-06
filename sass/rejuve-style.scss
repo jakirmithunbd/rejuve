@@ -1789,7 +1789,7 @@ A
     .add-person-btn {
         padding-top: 40px;
         margin-bottom: 60px;
-
+        
         @include breakpoint(1200) {
             padding-top: 20px;
             margin-bottom: 40px;
@@ -1798,6 +1798,9 @@ A
             padding-top: 10px;
             margin-bottom: 60px;
             text-align: center;
+        }
+        button {
+            cursor: pointer;
         }
         &.add-of-single {
             padding-top: 0;

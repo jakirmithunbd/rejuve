@@ -55,7 +55,7 @@
 
         <?php 
            $convenience_list = get_field('convenience_list');
-           if($convenience_list){
+           if($convenience_list):
            foreach($convenience_list as $conveniences):
         ?>
             <div class="icon-box">
@@ -71,7 +71,7 @@
 
         <?php 
             endforeach;
-            }
+        endif;
         ?>
 
         </div>
@@ -1046,5 +1046,7 @@
     </div>
 </section>
 <!-- Product Description  -->
+
+<?php get_template_part('template-parts/faq', 'content'); ?>
 
 <?php get_footer() ;?>
