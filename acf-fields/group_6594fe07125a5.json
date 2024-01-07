@@ -656,6 +656,109 @@
                     "bidirectional_target": []
                 }
             ]
+        },
+        {
+            "key": "field_6599c5ec36406",
+            "label": "FAQ Section",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6599c62bca670",
+            "label": "Faq Section Title",
+            "name": "faq_section_title",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<h2>Frequently Asked Questions<\/h2>\r\n<p>Here are the answers to some of the most common questions we hear from our appreciated customers.<\/p>",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6599c6b969eca",
+            "label": "Faq list",
+            "name": "faq_list",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Faq Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6599c6f369ecb",
+                    "label": "Question",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_6599c6b969eca"
+                },
+                {
+                    "key": "field_6599c72469ecc",
+                    "label": "Answer",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_6599c6b969eca"
+                }
+            ]
         }
     ],
     "location": [
@@ -676,5 +779,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704337303
+    "modified": 1704577925
 }

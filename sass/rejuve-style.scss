@@ -566,7 +566,6 @@ ul {
 
         .icon {
             @extend .radius;
-            background-color: currentColor;
             height: 64px;
             width: 64px;
             flex: 0 0 64px;
@@ -1790,7 +1789,7 @@ A
     .add-person-btn {
         padding-top: 40px;
         margin-bottom: 60px;
-
+        
         @include breakpoint(1200) {
             padding-top: 20px;
             margin-bottom: 40px;
@@ -1799,6 +1798,9 @@ A
             padding-top: 10px;
             margin-bottom: 60px;
             text-align: center;
+        }
+        button {
+            cursor: pointer;
         }
         &.add-of-single {
             padding-top: 0;
@@ -2227,13 +2229,17 @@ A
                 @include font(28, 28);
                 margin-bottom: 15px;
             }
-            h6 {
-                color: #5a5f73;
-                margin-bottom: 15px;
-            }
             p {
                 @include font(16, 24);
                 margin-bottom: 0;
+
+                strong {
+                    display: block;
+                    color: #5a5f73;
+                    margin-bottom: 15px;
+                    font-weight: 600;
+                    @include font(16, 22);
+                }
             }
             &:last-child {
                 margin-bottom: 0;
