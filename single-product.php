@@ -1,4 +1,6 @@
-<?php get_header() ;?>
+<?php get_header();?>
+
+<div id="rejuve-single-product" data-page_id="<?php the_ID();?>"></div>
 <section class="page-banner" style="background-color: #d0f4f7">
     <div class="container">
         <div class="responsiveGrid align-center" grid-col="2, 2, 2, 1">
@@ -7,21 +9,21 @@
             </div>
             <div class="page-banner-content">
                 <div class="classic-editor">
-                    <h1><?php the_title() ;?></h1>
-                    <?php echo get_the_excerpt() ;?>
+                    <h1><?php the_title();?></h1>
+                    <?php echo get_the_excerpt(); ?>
                 </div>
                 <div class="service-type d-flex">
                     <div
                         class="service-item in-clinic d-flex flex-col active"
                     >
-                        <h4 class="price"><?php echo wc_price(get_post_meta(get_the_ID(), '_price', true)); ?></h4>
+                        <h4 class="price"><?php echo wc_price( get_post_meta( get_the_ID(), '_price', true ) ); ?></h4>
                         <button class="service-item-btn rejuve-btn">
                             Book in Clinic
                         </button>
                         <span>*At our locations</span>
                     </div>
                     <div class="service-item in-home d-flex flex-col">
-                        <h4 class="price"><?php echo wc_price(get_post_meta(get_the_ID(), '_price', true)); ?></h4>
+                        <h4 class="price"><?php echo wc_price( get_post_meta( get_the_ID(), '_price', true ) ); ?></h4>
                         <button class="service-item-btn rejuve-btn">
                             Book House Call
                         </button>
@@ -239,7 +241,7 @@
                 <div class="accordion-item open">
                     <div class="accordion-header">
                         <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri('/assets/images/icons/accordion-arrow.svg') ;?>" alt="Icon" />
+                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
                         </button>
                         <span class="accordion-title"
                             >Choose IV Treatment</span
@@ -345,7 +347,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri('/assets/images/icons/accordion-arrow.svg') ;?>" alt="Icon" />
+                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
                         </button>
                         <span class="accordion-title"
                             >Choose IV Treatment</span
@@ -451,7 +453,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri('/assets/images/icons/accordion-arrow.svg') ;?>" alt="Icon" />
+                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
                         </button>
                         <span class="accordion-title"
                             >Choose IV Treatment</span
@@ -557,7 +559,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri('/assets/images/icons/accordion-arrow.svg') ;?>" alt="Icon" />
+                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
                         </button>
                         <span class="accordion-title"
                             >Choose IV Treatment</span
@@ -665,7 +667,7 @@
         <!-- Accordion Box  -->
 
         <div class="add-person-btn add-of-single">
-            <button class="rejuve-btn"><img src="<?php echo get_theme_file_uri('/assets/images/icons/add-person.svg'); ?>" alt="" />
+            <button class="rejuve-btn"><img src="<?php echo get_theme_file_uri( '/assets/images/icons/add-person.svg' ); ?>" alt="" />
                 Add another person</button>
         </div>
 
@@ -997,4 +999,4 @@
     </div>
     <!-- Container  -->
 </section>
-<?php get_footer() ;?>
+<?php get_footer();?>

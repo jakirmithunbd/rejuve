@@ -7,8 +7,4 @@ function include_rejuve_general_settings() {
 }
 
 // Hook the function to the after_setup_theme action
-add_action('after_setup_theme', 'include_rejuve_general_settings');
-
-
-
-
+add_action( 'after_setup_theme', 'include_rejuve_general_settings' );
