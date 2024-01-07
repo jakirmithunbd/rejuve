@@ -7,10 +7,9 @@ function include_rejuve_general_settings() {
 }
 
 // Hook the function to the after_setup_theme action
-add_action('after_setup_theme', 'include_rejuve_general_settings');
+add_action( 'after_setup_theme', 'include_rejuve_general_settings' );
 
-// Undefined array key "width" "height" 
-add_filter('woocommerce_resize_images', static function() {
+// Undefined array key "width" "height"
+add_filter( 'woocommerce_resize_images', static function () {
     return false;
-});
-
+} );

@@ -133,12 +133,18 @@ document.addEventListener('DOMContentLoaded', function () {
         $('#load-salon-posts').html(
             `<div class='preloader'><img src="${ajax.preloader}"/></div>`
         );
+        const nonce = ajax.nonce;
+
+        const pageId = document.querySelector('#rejuve-single-product');
 
         wp.ajax
-            .post('loadmore_posts', { data, nonce })
+            .post('loadmore_posts', { data, id: pageId.dataset.page_id })
             .done((res) => {
+                console.log(res);
                 if (res) {
-                    $('#load-salon-posts').html(res.page);
+                    $('.page-banner-img').html(
+                        `<img src="${res.data.banner_image.image.url}" alt="Image" />`
+                    );
                 }
             })
             .fail((err) => {

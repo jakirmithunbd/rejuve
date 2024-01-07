@@ -1,35 +1,38 @@
-<?php get_header() ;?>
+<?php get_header();?>
+
+<div id="rejuve-single-product" data-page_id="<?php the_ID();?>"></div>
 <section class="page-banner" style="background-color: #d0f4f7">
     <div class="container">
         <div class="responsiveGrid align-center" grid-col="2, 2, 2, 1">
             <div class="page-banner-img">
-                <?php 
-                    if(has_post_thumbnail()){
-                        the_post_thumbnail("large", "rejuve");
-                    };
-                ?>
+                <?php
+if ( has_post_thumbnail() ) {
+    the_post_thumbnail( "large", "rejuve" );
+}
+;
+?>
             </div>
             <div class="page-banner-content">
                 <div class="classic-editor">
-                    <h1><?php the_title() ;?></h1>
-                    <?php echo get_the_excerpt() ;?>
+                    <h1><?php the_title();?></h1>
+                    <?php echo get_the_excerpt(); ?>
                 </div>
                 <div class="service-type d-flex">
                     <div
                         class="service-item in-clinic d-flex flex-col active"
                     >
-                        <h4 class="price"><?php echo wc_price(get_post_meta(get_the_ID(), '_price', true)); ?></h4>
+                        <h4 class="price"><?php echo wc_price( get_post_meta( get_the_ID(), '_price', true ) ); ?></h4>
                         <button class="service-item-btn rejuve-btn">
-                            <?php echo __('Book in Clinic', "rejuve"); ?>
+                            <?php echo __( 'Book in Clinic', "rejuve" ); ?>
                         </button>
-                        <span><?php echo __('*At our locations', 'rejuve'); ?></span>
+                        <span><?php echo __( '*At our locations', 'rejuve' ); ?></span>
                     </div>
                     <div class="service-item in-home d-flex flex-col">
-                        <h4 class="price"><?php echo wc_price(get_post_meta(get_the_ID(), '_price', true)); ?></h4>
+                        <h4 class="price"><?php echo wc_price( get_post_meta( get_the_ID(), '_price', true ) ); ?></h4>
                         <button class="service-item-btn rejuve-btn">
-                           <?php echo __(' Book House Call', 'rejuve'); ?>
+                           <?php echo __( ' Book House Call', 'rejuve' ); ?>
                         </button>
-                        <span> <?php echo __('*We come to you', 'rejuve'); ?> </span>
+                        <span> <?php echo __( '*We come to you', 'rejuve' ); ?> </span>
                     </div>
                 </div>
             </div>
@@ -86,8 +89,8 @@
     <div class="container">
         <div class="classic-editor single-classic-editor text-center">
             <?php
-                $booking_section_title = get_field('booking_section_title');
-                if($booking_section_title){echo $booking_section_title['content']; }
+            $booking_section_title = get_field( 'booking_section_title' );
+            if ( $booking_section_title ) {echo $booking_section_title['content'];}
             ?>
         </div>
 
@@ -221,7 +224,7 @@
                 <div class="accordion-item open">
                     <div class="accordion-header">
                         <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri('/assets/images/icons/accordion-arrow.svg') ;?>" alt="Icon" />
+                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
                         </button>
                         <span class="accordion-title"
                             >Choose IV Treatment</span
@@ -327,7 +330,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri('/assets/images/icons/accordion-arrow.svg') ;?>" alt="Icon" />
+                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
                         </button>
                         <span class="accordion-title"
                             >Choose IV Treatment</span
@@ -433,7 +436,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri('/assets/images/icons/accordion-arrow.svg') ;?>" alt="Icon" />
+                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
                         </button>
                         <span class="accordion-title"
                             >Choose IV Treatment</span
@@ -539,7 +542,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri('/assets/images/icons/accordion-arrow.svg') ;?>" alt="Icon" />
+                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
                         </button>
                         <span class="accordion-title"
                             >Choose IV Treatment</span
@@ -647,7 +650,7 @@
         <!-- Accordion Box  -->
 
         <div class="add-person-btn add-of-single">
-            <button class="rejuve-btn"><img src="<?php echo get_theme_file_uri('/assets/images/icons/add-person.svg'); ?>" alt="" />
+            <button class="rejuve-btn"><img src="<?php echo get_theme_file_uri( '/assets/images/icons/add-person.svg' ); ?>" alt="" />
                 Add another person</button>
         </div>
 
@@ -973,7 +976,7 @@
         </div>
 
         <a href="#" class="rejuve-btn"
-            ><img src="<?php echo get_theme_file_uri('/assets/images/icons/lock.svg'); ?>" alt="" /> Book and
+            ><img src="<?php echo get_theme_file_uri( '/assets/images/icons/lock.svg' ); ?>" alt="" /> Book and
             Pay</a
         >
     </div>
@@ -1061,6 +1064,6 @@
     <!-- Product Description  -->
 <?php endif; ?>
 
-<?php get_template_part('template-parts/faq', 'content'); ?>
+<?php get_template_part( 'template-parts/faq', 'content' );?>
 
-<?php get_footer() ;?>
+<?php get_footer();?>
