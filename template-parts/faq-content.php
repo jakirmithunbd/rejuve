@@ -15,10 +15,10 @@
                     foreach($faq_list as $faq):
             ?>
 
-            <div class="faq-item">
-                <h6><?php echo $faq['question']; ?></h6>
-                <p><?php echo $faq['answer']; ?></p>
-            </div>
+                <div class="faq-item">
+                    <h6><?php echo $faq['question']; ?></h6>
+                    <p><?php echo $faq['answer']; ?></p>
+                </div>
             <?php
                 endforeach;
             endif;

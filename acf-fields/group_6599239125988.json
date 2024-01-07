@@ -317,7 +317,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "<h2>Hangover IV Drip <span>Ingredients<\/span><\/h2>\r\n <p>Here is how each ingredient in the Hangover IV works to give you the boost and relief that you're craving.<\/p>",
             "maxlength": "",
             "rows": "",
             "placeholder": "",
@@ -446,5 +446,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704573674
+    "modified": 1704636158
 }

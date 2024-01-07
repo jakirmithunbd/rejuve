@@ -37,46 +37,50 @@
     </div>
 </section>
 
-<section class="section-spacing">
-    <div class="container">
-        <div class="section-title text-center">
-            <h2>
-                <?php
-                $convenience_section_title = get_field('convenience_section_title');
-                if($convenience_section_title) {echo $convenience_section_title;}
-                ?>
-            </h2>
-        </div>
-
-        <div
-            class="rejuve-iconbox-wrapper responsiveGrid"
-            grid-col="3, 3, 3, 1"
-        >
-
-        <?php 
-           $convenience_list = get_field('convenience_list');
-           if($convenience_list):
-           foreach($convenience_list as $conveniences):
-        ?>
-            <div class="icon-box">
-                <div class="icon">
-                <img src="<?php echo $conveniences['convenience_icon']['url']; ?>" alt="<?php echo $conveniences['convenience_icon']['alt']; ?>" />
-                </div>
-
-                <div class="icon-box-content">
-                    <h5><?php echo $conveniences['convenience_title']; ?></h5>
-                    <?php echo $conveniences['convenience_dscription']; ?>
-                </div>
+<?php
+    $convenience_section_title = get_field('convenience_section_title');
+    if($convenience_section_title):
+?>
+    <section class="section-spacing">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>
+                    <?php
+                    if($convenience_section_title) {echo $convenience_section_title;}
+                    ?>
+                </h2>
             </div>
 
-        <?php 
-            endforeach;
-        endif;
-        ?>
+            <div
+                class="rejuve-iconbox-wrapper responsiveGrid"
+                grid-col="3, 3, 3, 1"
+            >
 
+            <?php 
+            $convenience_list = get_field('convenience_list');
+            if($convenience_list):
+            foreach($convenience_list as $conveniences):
+            ?>
+                <div class="icon-box">
+                    <div class="icon">
+                    <img src="<?php echo $conveniences['convenience_icon']['url']; ?>" alt="<?php echo $conveniences['convenience_icon']['alt']; ?>" />
+                    </div>
+
+                    <div class="icon-box-content">
+                        <h5><?php echo $conveniences['convenience_title']; ?></h5>
+                        <?php echo $conveniences['convenience_dscription']; ?>
+                    </div>
+                </div>
+
+            <?php 
+                endforeach;
+            endif;
+            ?>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
 
 <section class="appointment-section section-spacing">
     <div class="container">
@@ -976,76 +980,86 @@
     <!-- Container  -->
 </section>
 
-<section class="section-spacing" style="background: #f8f8f8">
-    <div class="large-container">
-        <div class="split-layout single-split">
-            <div class="responsiveGrid" grid-col="2, 2, 2, 1">
 
-            <?php $benefits_product = get_field('benefits_of_product_content'); ?>
+<?php
+    $benefits_product = get_field('benefits_of_product_content');
+    if($benefits_product):
+?>
+    <section class="section-spacing" style="background: #f8f8f8">
+        <div class="large-container">
+            <div class="split-layout single-split">
+                <div class="responsiveGrid" grid-col="2, 2, 2, 1">
 
+
+                    <div class="left-content">
+                        <?php
+                            if($benefits_product){echo $benefits_product['title']; }
+                        ?>
+                    </div>
+
+                    <div class="right-content">
+                        <div class="classic-editor">
+                            <?php
+                                if($benefits_product){echo $benefits_product['content'];}
+                            ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="split-image">
+                    <img
+                        src="<?php if($benefits_product){echo $benefits_product['add_benefits_product_image']['url'];} ?>"
+                        alt="<?php if($benefits_product){echo $benefits_product['add_benefits_product_image']['alt'];} ?>"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+
+<?php
+    $ingredients_section_title = get_field('ingredients_section_title');
+    if($ingredients_section_title):
+?>
+    <section class="product-description section-spacing">
+        <div class="large-container">
+            <div class="responsiveGrid" grid-col="2, 2, 1, 1">
                 <div class="left-content">
                     <?php
-                        if($benefits_product){echo $benefits_product['title']; }
+                        if($ingredients_section_title){echo $ingredients_section_title;}
                     ?>
                 </div>
 
-                <div class="right-content">
-                    <div class="classic-editor">
-                        <?php
-                            if($benefits_product){echo $benefits_product['content'];}
-                        ?>
-                    </div>
-                </div>
-            </div>
-            <div class="split-image">
-                <img
-                    src="<?php if($benefits_product){echo $benefits_product['add_benefits_product_image']['url'];} ?>"
-                    alt="<?php if($benefits_product){echo $benefits_product['add_benefits_product_image']['alt'];} ?>"
-                />
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="product-description section-spacing">
-    <div class="large-container">
-        <div class="responsiveGrid" grid-col="2, 2, 1, 1">
-            <div class="left-content">
-                <?php
-                    $ingredients_section_title = get_field('ingredients_section_title');
-                    if($ingredients_section_title){echo $ingredients_section_title;}
-                ?>
-            </div>
-
-            <div class="vertical-scroll-wrap">
-                <div class="vertical-scroll">
+                <div class="vertical-scroll-wrap">
 
                     <?php
                         $ingredients_list = get_field('ingredients_list');
-                        if($ingredients_list) {
-                            foreach($ingredients_list as $ingredients):
-                    ?>
+                        if($ingredients_list):
+                    ?>            
+                        <div class="vertical-scroll">
 
-                        <div
-                            class="description-item"
-                            style="background: <?php echo $ingredients['select_ingredients_i']; ?>"
-                        >
-                            <h3 style="color: <?php echo $ingredients['select_title_color_of_ingredients_item']; ?>">
-                                <?php echo $ingredients['ingredients_title']; ?>
-                            </h3>
-                            <?php echo $ingredients['ingredients_content']; ?>
+                            <?php
+                                foreach($ingredients_list as $ingredients):
+                            ?>
+                                <div
+                                    class="description-item"
+                                    style="background: <?php echo $ingredients['select_ingredients_i']; ?>"
+                                >
+                                    <h3 style="color: <?php echo $ingredients['select_title_color_of_ingredients_item']; ?>">
+                                        <?php echo $ingredients['ingredients_title']; ?>
+                                    </h3>
+                                    <?php echo $ingredients['ingredients_content']; ?>
+                                </div>
+                            <?php
+                            endforeach;
+                            ?>
                         </div>
-                    <?php
-                    endforeach;
-                    }
-                    ?>
-
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Product Description  -->
+    </section>
+    <!-- Product Description  -->
+<?php endif; ?>
 
 <?php get_template_part('template-parts/faq', 'content'); ?>
 
