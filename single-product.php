@@ -85,7 +85,7 @@ if ( has_post_thumbnail() ) {
     </section>
 <?php endif; ?>
 
-<section class="appointment-section section-spacing">
+<section class="appointment-section section-spacing" id="appointment-section">
     <div class="container">
         <div class="classic-editor single-classic-editor text-center">
             <?php
@@ -218,436 +218,65 @@ if ( has_post_thumbnail() ) {
         <!-- Data Box  -->
 
         <div class="accordion-box">
-            <h4>Choose Treatment</h4>
-            <div class="accordion-wrapper">
-
-                <div class="accordion-item open">
+            
+        <?php $product_categories = get_terms('product_cat'); 
+            printf('<h4>Choose treatment</h4><div class="accordion-wrapper">');
+            if (is_array($product_categories) && count($product_categories) > 0) : 
+                foreach ($product_categories as $index => $product_category) :
+                    $cat_id = $product_category->term_id;
+                    $is_first_iteration = ($index === 0); ?>
+                <div class="accordion-item <?php echo ($is_first_iteration) ? 'open' : ''; ?>">
                     <div class="accordion-header">
                         <button class="open-or-close">
                             <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
                         </button>
                         <span class="accordion-title"
-                            >Choose IV Treatment</span
+                            >Choose <?php echo esc_html($product_category->name); ?></span
                         >
-                        <span class="selected-item">Hangover Fix</span
-                        ><span class="selected-item">Hangover Fix</span>
+                    <div class="selected-items-container"></div>
                     </div>
 
                     <div class="accordion-body">
-                        <div class="treatment-item selected">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
+                        <?php $args = array(
+                            'post_type'      => 'product', 
+                            'posts_per_page' => -1, 
+                            'tax_query'      => array(
+                                array(
+                                    'taxonomy' => 'product_cat',
+                                    'field'    => 'term_id',
+                                    'terms'    => $cat_id,
+                                ),
+                            ),
+                        );
 
-                        <div class="treatment-item selected">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
+                        $products = get_posts($args);
 
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
+                        if ($products) {
+                            foreach ($products as $product) { 
+                                $product_price = get_post_meta($product->ID, '_price', true);
 
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
+                                ?>
 
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
+                                <div class="treatment-item">
+                                    <span class="t-item-name"><?php echo esc_html(get_the_title($product->ID)); ?></span>
+                                    <span class="t-item-price"><?php echo wc_price($product->ID); ?></span>
+                                </div>
 
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
+                                <?php
+                            }
+                        } else {
+                            echo 'No products found in the category.';
+                        }?>
+                        
                     </div>
                 </div>
-                <!-- Accordion-item  -->
 
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
-                        </button>
-                        <span class="accordion-title"
-                            >Choose IV Treatment</span
-                        >
-                        <span class="selected-item">Hangover Fix</span
-                        ><span class="selected-item">Hangover Fix</span>
-                    </div>
-
-                    <div class="accordion-body">
-                        <div class="treatment-item selected">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item selected">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Accordion-item  -->
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
-                        </button>
-                        <span class="accordion-title"
-                            >Choose IV Treatment</span
-                        >
-                        <span class="selected-item">Hangover Fix</span
-                        ><span class="selected-item">Hangover Fix</span>
-                    </div>
-
-                    <div class="accordion-body">
-                        <div class="treatment-item selected">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item selected">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Accordion-item  -->
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <button class="open-or-close">
-                            <img src="<?php echo get_theme_file_uri( '/assets/images/icons/accordion-arrow.svg' ); ?>" alt="Icon" />
-                        </button>
-                        <span class="accordion-title"
-                            >Choose IV Treatment</span
-                        >
-                        <span class="selected-item">Hangover Fix</span
-                        ><span class="selected-item">Hangover Fix</span>
-                    </div>
-
-                    <div class="accordion-body">
-                        <div class="treatment-item selected">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item selected">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-
-                        <div class="treatment-item">
-                            <span class="t-item-name">Anti-Acne</span>
-                            <span class="t-item-price">$250</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Accordion-item  -->
+                    <?php
+                endforeach; 
+            endif;
+            ?>
             </div>
-            <!-- Accordion Wrapper  -->
         </div>
-        <!-- Accordion Box  -->
 
         <div class="add-person-btn add-of-single">
             <button class="rejuve-btn"><img src="<?php echo get_theme_file_uri( '/assets/images/icons/add-person.svg' ); ?>" alt="" />

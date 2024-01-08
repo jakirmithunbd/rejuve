@@ -27,7 +27,7 @@ function rejuve_allow_svg_upload( $mimes ) {
 }
 add_filter( 'upload_mimes', 'rejuve_allow_svg_upload' );
 
-function loadmore_posts() {
+function productData() {
     $id = $_POST['id'];
 
     $data = [
@@ -37,4 +37,4 @@ function loadmore_posts() {
 
     wp_send_json_success( ['data' => $data] );
 }
-add_action( 'wp_ajax_loadmore_posts', 'loadmore_posts' );
+add_action( 'wp_ajax_productData', 'productData' );
