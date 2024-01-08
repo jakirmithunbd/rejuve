@@ -15,12 +15,14 @@ get_header(); ?>
             <section class="services section-spacing">
                 <div class="container">
                     <div class="section-title text-center">
-                        <?php if (get_sub_field('title')) : ?>
-                            <?php printf('<h2>%s</h2>', get_sub_field('title')); ?>
+                        <?php
+                        $features_title = get_sub_field('features_title');
+                        if ($features_title['title']) : ?>
+                            <?php printf('<h2>%s</h2>', $features_title['title']); ?>
                         <?php endif; ?>
 
-                        <?php if (get_sub_field('description')) : ?>
-                            <?php echo wp_kses_post(get_sub_field('description')); ?>
+                        <?php if ($features_title['description']) : ?>
+                            <?php echo wp_kses_post($features_title['description']); ?>
                         <?php endif; ?>
 
                     </div>
