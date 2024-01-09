@@ -32,7 +32,7 @@ get_header(); ?>
                         $features = get_sub_field('features'); 
                         if (is_array($features) && count($features) > 0) :
                             foreach ($features as $feature) : 
-                                $imageAlignment = $feature['image_alignment'] === 'left' ? 'image-left' : '';
+                                $imageAlignment = $feature['image_alignment'] === 'left' ? 'image-left small-image-box' : '';
                                 $img = $feature['image'] ? $feature['image']['url'] : get_theme_file_uri('/assets/images/IV-Therapy.jpg');
                                 ?>
                                 <div class="image-box <?php echo $imageAlignment; ?>">
